@@ -4,12 +4,12 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'acceuil',  // Démarre sur la page d'accueil
+    redirectTo: 'accueil',  // Démarre sur la page d'accueil
     pathMatch: 'full'
   },
   {
-    path: 'acceuil',
-    loadChildren: () => import('./acceuil/acceuil.module').then( m => m.AcceuilPageModule)
+    path: 'accueil',
+    loadChildren: () => import('./accueil/accueil.module').then( m => m.AccueilPageModule)
   },
   {
     path: 'home',

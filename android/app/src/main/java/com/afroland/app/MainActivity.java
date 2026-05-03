@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package com.afroland.app;
 
 import com.getcapacitor.BridgeActivity;
 

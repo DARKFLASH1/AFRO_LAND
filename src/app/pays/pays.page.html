@@ -12,7 +12,7 @@
       <ion-button (click)="partager()" [disabled]="!pays">
         <ion-icon name="share-outline"></ion-icon>
       </ion-button>
-      <ion-button (click)="ajouFavoris()" fill="clear" slot="end">
+      <ion-button (click)="ajouterFavoris()" fill="clear" slot="end">
         <ion-icon slot="icon-only" [name]="isFavoris ? 'heart' : 'heart-outline'"
           [color]="isFavoris ? 'danger' : 'medium'">
         </ion-icon>
@@ -37,7 +37,7 @@
       <img [src]="getImagePrincipale()" [alt]="pays.name" title="Image principale" class="image-banniere" />
       <div class="superposition-banniere">
         <h1>{{ pays.name }}</h1>
-        <p>{{ pays.description }}</p>
+        <p *ngIf="pays.description">{{ pays.description }}</p>
       </div>
     </div>
 

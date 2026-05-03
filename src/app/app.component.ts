@@ -57,7 +57,7 @@ export class AppComponent {
 
       // 2) If we're on the Home page -> exit the app immediately
       const currentUrl = this.router?.url ?? '';
-      if (currentUrl === '/home' || currentUrl === '/' || currentUrl === '/acceuil') {
+      if (currentUrl === '/home' || currentUrl === '/' || currentUrl === '/accueil') {
         try {
           CapacitorApp.exitApp();
         } catch (e) {

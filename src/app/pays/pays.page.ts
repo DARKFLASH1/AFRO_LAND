@@ -459,7 +459,7 @@ export class PaysPage implements OnInit {
       culture: { cuisine: ['Ugali', 'Pilau', 'Nyama choma', 'Zanzibar mix'], languages: ['Swahili', 'Anglais'] },
       economy: { mainSectors: ['Tourisme', 'Agriculture (café, thé, clou de girofle)', 'Mines (or, tanzanite)', 'Pêche'], exports: ['Or', 'Café', 'Coton', 'Tanzanite'] },
       highlights: ['Serengeti (UNESCO, Grande Migration)', 'Kilimandjaro (UNESCO)', 'Zanzibar (Stone Town, UNESCO)', 'Ngorongoro (UNESCO)', 'Lacs Malawi et Tanganyika'],
-      drapeaux: ['assets/images/tanzani.png']
+      drapeaux: ['assets/images/tanzanie.png']
     },
 
     'ouganda': {
@@ -633,7 +633,7 @@ export class PaysPage implements OnInit {
   ngOnInit() { this.paysId = this.route.snapshot.paramMap.get('id')!; this.chargerInfosPays(); }
   defilerVersSection(s: string) { const e = document.getElementById(s); if (e) e.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   getImagePrincipale() { return this.pays?.drapeaux?.[0] || 'assets/default-pays.jpg'; }
-  formaterLangues() { if (!this.pays?.language) return 'Non spécifié'; return Array.isArray(this.pays.language) ? this.pays.language.join(', ') : this.pays.language; }
+  formaterLangues() { if (!this.pays?.culture?.languages) return 'Non spécifié'; return Array.isArray(this.pays.culture.languages) ? this.pays.culture.languages.join(', ') : this.pays.culture.languages; }
   chargerInfosPays() { this.chargement = true; setTimeout(() => { this.pays = this.infosPays[this.paysId]; this.chargement = false; }, 1000); }
   async partager() {
     if (!this.pays) return;
@@ -641,7 +641,7 @@ export class PaysPage implements OnInit {
     const m = `🌍 Découvrez ${this.pays.name} !\n\n📌 Capitale : ${this.pays.capital}\n👥 Population : ${this.pays.population}\n📍 Région : ${this.pays.region}`;
     try { await Share.share({ title: `${this.pays.name} - Infos`, text: m }); } catch (e) { navigator.clipboard.writeText(m); }
   }
-  ajouFavoris() {
+  ajouterFavoris() {
     if (!this.pays || !this.paysId) return;
     let f = JSON.parse(localStorage.getItem('favoris') || '[]');
     const i = f.findIndex((x: any) => x.id === this.paysId);
@@ -656,3 +656,4 @@ export class PaysPage implements OnInit {
   closeImage() { this.isImageModalOpen = false; setTimeout(() => this.selectedImage = null, 300); }
   ouvrirModalImage(i: number) { const url = this.getImageSite(i); this.openImage(url); }
 }
+
