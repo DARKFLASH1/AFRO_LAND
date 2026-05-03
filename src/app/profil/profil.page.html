@@ -1,0 +1,86 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button class="back-button" routerLink="/home" fill="clear">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="text-center">
+      Équipe de Développement
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <div class="responsive-container">
+    <div class="developers-grid">
+      <!-- Carte développeur 1 -->
+      <div class="glass-card animate-card">
+        <img src="assets/images/debo photo.jpg" alt="" class="photo-dev">
+        <h2 class="nom">ILLY Wendyam Nafissatou Deborah</h2>
+        <div class="info-block">
+          <p><strong>Filière :</strong> Systeme D'information et Réseaux</p>
+          <p><strong>Classe :</strong> L2</p>
+          <p><strong>Email :</strong> deborahilly20@gmail.com</p>
+          <p><strong>Compétences :</strong> HTML, CSS, JS, Ionic, Angular</p>
+        </div>
+        <a href="https://wa.me/22672271218" rel="noopener" target="_blank">
+          <button class="btn-whatsapp">Contacter sur WhatsApp</button>
+        </a>
+      </div>
+
+      <!-- Carte développeur 2 -->
+      <div class="glass-card animate-card">
+        <img src="assets/images/bachar photo.jpg" alt="" class="photo-dev">
+        <h2 class="nom">TINGUIERI Mohamad Bachar</h2>
+        <div class="info-block">
+          <p><strong>Filière :</strong> Systeme d'Information et Réseaux</p>
+          <p><strong>Classe :</strong> L2</p>
+          <p><strong>Email :</strong> tinguierimohamadbachar@gmail.com</p>
+          <p><strong>Compétences :</strong> HTML, CSS, JS, Ionic, Angular</p>
+        </div>
+        <a href="https://wa.me/22651589579" rel="noopener" target="_blank">
+          <button class="btn-whatsapp">Contacter sur WhatsApp</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="esta-section">
+      <ion-toolbar class="esta-header">
+        <ion-title>🎓 ESTA SA</ion-title>
+      </ion-toolbar>
+
+      <!-- Présentation résumée -->
+      <ion-card class="ion-padding esta-card">
+        <ion-card-content>
+          <h2 class="title">ESTA SA - Présentation</h2>
+          <p class="description">
+            L'ESTA est un établissement privé situé à Ouagadougou, spécialisé dans les formations techniques 
+            et professionnelles. L'école propose des filières comme l'informatique, le génie biomédical, 
+            l'électrotechnique, avec un enseignement orienté pratique 
+            et des infrastructures modernes.
+          </p>
+          <ion-button expand="block">
+            <a href="https://www.esta.bf" target="_blank" rel="noopener" class="link-button">
+              En savoir plus sur ESTA
+            </a>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+      <!-- Petite galerie -->
+      <ion-card class="ion-padding esta-card">
+        <ion-card-header>
+          <ion-card-title>ESTA en images</ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="ion-padding">
+          <div class="galerie">
+            <img src="assets/images/esta1.jpeg" alt="" >
+            <img src="assets/images/esta2.jpeg" alt="">
+            <img src="assets/images/esta3.jpeg" alt="">
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,92 @@
+<ion-header class="header-toolbar">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text="Retour"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="header-title">Quizz AFRO_LAND</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-background ion-padding">
+  <div *ngIf="!showResult && questions.length > 0">
+    <!-- Barre de progression et Catégorie -->
+    <div class="quiz-info-container">
+      <div class="category-badge">{{ questions[currentQuestionIndex].category }}</div>
+      <ion-progress-bar [value]="(currentQuestionIndex + 1) / questions.length" class="custom-progress"></ion-progress-bar>
+      <p class="progress-text">Question {{ currentQuestionIndex + 1 }} / {{ questions.length }}</p>
+    </div>
+
+    <!-- Question -->
+    <ion-card class="question-card">
+      <ion-card-content>
+        <h2 class="question-text">{{ questions[currentQuestionIndex].question }}</h2>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Options -->
+    <div class="options-container">
+      <ion-button 
+        *ngFor="let option of questions[currentQuestionIndex].options; let i = index"
+        expand="block" 
+        [color]="answered ? (i === questions[currentQuestionIndex].answer ? 'success' : (i === selectedOption ? 'danger' : 'light')) : 'light'"
+        (click)="selectOption(i)"
+        class="option-button"
+        [disabled]="answered">
+        <span class="option-label">{{ ['A', 'B', 'C', 'D'][i] }}</span>
+        <span class="option-text">{{ option }}</span>
+      </ion-button>
+    </div>
+
+    <!-- Explication -->
+    <div *ngIf="answered" class="explanation-container">
+      <ion-card [color]="selectedOption === questions[currentQuestionIndex].answer ? 'success' : 'danger'" class="feedback-card">
+        <ion-card-content>
+          <div class="feedback-header">
+            <ion-icon [name]="selectedOption === questions[currentQuestionIndex].answer ? 'checkmark-circle' : 'close-circle'"></ion-icon>
+            <strong>{{ selectedOption === questions[currentQuestionIndex].answer ? 'Bonne réponse !' : 'Mauvaise réponse...' }}</strong>
+          </div>
+          <p class="explanation-text">{{ questions[currentQuestionIndex].explanation }}</p>
+        </ion-card-content>
+      </ion-card>
+      
+      <ion-button expand="block" (click)="nextQuestion()" class="next-button">
+        {{ currentQuestionIndex < questions.length - 1 ? 'Question Suivante' : 'Voir mon score' }}
+        <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+
+  <!-- Résultat Final -->
+  <div *ngIf="showResult" class="result-container ion-text-center">
+    <ion-card class="result-card">
+      <ion-card-content>
+        <div class="trophy-wrapper">
+          <ion-icon name="trophy" color="warning" class="trophy-icon"></ion-icon>
+        </div>
+        <h2>Quizz terminé !</h2>
+        <h1 class="final-score">{{ score }} / {{ questions.length }}</h1>
+        <div class="score-bar">
+          <div class="score-fill" [style.width.%]="(score / questions.length) * 100"></div>
+        </div>
+        <p class="score-message">
+          {{ score === questions.length ? 'Exceptionnel ! Vous êtes un véritable expert de l\'Afrique ! 🌍✨' : 
+             score >= 7 ? 'Excellent ! Votre connaissance du continent est impressionnante. 👏' : 
+             score >= 5 ? 'Bien joué ! Vous avez de bonnes bases, continuez à explorer ! 👍' : 
+             'L\'Afrique est vaste et riche. Continuez à utiliser AFRO_LAND pour apprendre ! 📖' }}
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+    <div class="result-actions">
+      <ion-button expand="block" (click)="restartQuiz()" class="restart-btn" shape="round">
+        <ion-icon name="refresh-outline" slot="start"></ion-icon>
+        Nouveau Quizz (10 questions)
+      </ion-button>
+      
+      <ion-button expand="block" routerLink="/home" fill="clear" class="home-btn">
+        <ion-icon name="home-outline" slot="start"></ion-icon>
+        Retour à l'accueil
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

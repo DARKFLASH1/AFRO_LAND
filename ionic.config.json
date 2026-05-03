@@ -1,0 +1,7 @@
+{
+  "name": "AFRO_LAND",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,202 @@
+/* Background Principal */
+.page-background {
+  --background: linear-gradient(135deg, #1a1f2e 0%, #2d3e50 50%, #1f2937 100%);
+  color: #eee;
+  overflow-x: hidden;
+}
+
+/* Header avec style moderne */
+.header-toolbar {
+  --background: linear-gradient(90deg, #0f1419 0%, #1a2332 100%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid #ffc97b;
+}
+
+.header-title {
+  color: #ffc97b;
+  font-size: 1.35rem;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.title-icon {
+  margin-right: 8px;
+  font-size: 1.5rem;
+}
+
+/* Conteneur des pays */
+.countries-container {
+  padding: 16px 8px 80px 8px;
+}
+
+/* Cartes des pays */
+.pays-afrique {
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #2a3447 0%, #364257 100%);
+  border: 1px solid rgba(255, 201, 123, 0.15);
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+}
+
+.pays-afrique.card-hover:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(255, 201, 123, 0.2);
+  border-color: rgba(255, 201, 123, 0.4);
+}
+
+/* Image wrapper avec overlay */
+.card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 140px;
+}
+
+.country-flag {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.pays-afrique.card-hover:hover .country-flag {
+  transform: scale(1.15);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pays-afrique.card-hover:hover .card-overlay {
+  opacity: 1;
+}
+
+/* Header de la carte */
+.card-header-custom {
+  background: linear-gradient(135deg, #2a3447 0%, #364257 100%);
+  padding: 14px 16px 10px 16px;
+}
+
+.country-title {
+  color: #ffc97b;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
+}
+
+.country-capital {
+  color: rgba(255, 201, 123, 0.75);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Contenu de la carte */
+.card-content-custom {
+  padding: 8px 16px;
+  min-height: 40px;
+}
+
+/* Bouton Découvrir */
+.btn-discover {
+  --background: linear-gradient(90deg, #ffc97b 0%, #ffb563 100%);
+  color: #1a1f2e;
+  border-radius: 20px;
+  margin: 10px auto;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(255, 201, 123, 0.3);
+  transition: all 0.3s ease;
+  height: 38px;
+  font-size: 0.95rem;
+}
+
+.btn-discover:hover {
+  --background: linear-gradient(90deg, #ffb563 0%, #ff9f4a 100%);
+  box-shadow: 0 8px 25px rgba(255, 201, 123, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-discover ion-icon {
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+}
+
+.btn-discover:hover ion-icon {
+  transform: translateX(2px);
+}
+
+/* Footer */
+.footer-toolbar {
+  --background: linear-gradient(90deg, #0f1419 0%, #1a2332 100%);
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.4);
+  border-top: 2px solid #ffc97b;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.footer-buttons {
+  justify-content: space-around;
+  padding: 8px 0;
+}
+
+.footer-buttons ion-button {
+  color: #ffc97b;
+  font-size: 1.5em;
+  margin: 0;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  width: 48px;
+  height: 48px;
+}
+
+.footer-buttons ion-button:hover,
+.footer-buttons ion-button:active {
+  background: rgba(255, 201, 123, 0.15);
+  transform: scale(1.1);
+  color: #fff;
+}
+
+/* Icones personnalisées dans le footer */
+.footer-toolbar ion-icon {
+  color: #ffc97b;
+  transition: color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  ion-col {
+    width: 100% !important;
+    --ion-grid-column-default-width: calc(100% / 2);
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1.1rem;
+  }
+  
+  .country-title {
+    font-size: 1rem;
+  }
+  
+  .btn-discover {
+    font-size: 0.85rem;
+    height: 36px;
+  }
+}
+

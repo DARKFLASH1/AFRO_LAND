@@ -1,0 +1,171 @@
+/* Harmonisation profil page avec le thème global */
+.background {
+  --background: var(--afro-gradient);
+  color: #eee;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Header */
+ion-toolbar[color="primary"] {
+  --background: var(--afro-header-gradient);
+  --border-color: var(--afro-gold);
+  --color: var(--afro-gold);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid var(--afro-gold);
+}
+
+.header-title,
+.text-center {
+  color: var(--afro-gold);
+  font-size: var(--font-size-base);
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* Grille des développeurs */
+.developers-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 40px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Carte développeur - style amélioré */
+.glass-card {
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 20px;
+  border-radius: var(--app-card-radius);
+  background: linear-gradient(135deg, rgba(42,52,71,0.92) 0%, rgba(54,66,87,0.92) 100%);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(var(--afro-gold-rgb), 0.2);
+  color: #eee;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-dev {
+  width: clamp(100px, 20vw, 130px);
+  height: clamp(100px, 20vw, 130px);
+  border-radius: 50%;
+  border: 4px solid rgba(var(--afro-gold-rgb), 0.6);
+  margin: 0 auto 16px auto;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(var(--afro-gold-rgb), 0.3);
+}
+
+.nom {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  margin: 12px 0 8px 0;
+  font-weight: 700;
+  color: var(--afro-gold);
+  line-height: 1.3;
+}
+
+.info-block {
+  margin-top: auto;
+  font-size: 0.95rem;
+  text-align: left;
+  line-height: 1.6;
+  background: rgba(30, 36, 54, 0.6);
+  padding: 16px;
+  border-radius: 15px;
+  border: 1px solid rgba(var(--afro-gold-rgb), 0.1);
+  
+  p {
+    margin: 8px 0;
+    
+    strong {
+      color: var(--afro-gold);
+      font-weight: 600;
+      margin-right: 8px;
+    }
+  }
+}
+
+.btn-whatsapp {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background: linear-gradient(135deg, #25D366 0%, #1ebe5d 100%);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+}
+
+/* Section ESTA SA */
+.esta-section {
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+.esta-header {
+  --background: rgba(26, 31, 46, 0.8);
+  --color: var(--afro-gold);
+  margin-bottom: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(var(--afro-gold-rgb), 0.2);
+}
+
+.esta-card {
+  --background: linear-gradient(135deg, rgba(42,52,71,0.9) 0%, rgba(54,66,87,0.9) 100%);
+  border: 1px solid rgba(var(--afro-gold-rgb), 0.15);
+  border-radius: var(--app-card-radius);
+  margin: 20px 0;
+}
+
+.title {
+  color: var(--afro-gold);
+  font-size: var(--font-size-h3);
+  font-weight: 600;
+  text-align: center;
+}
+
+.description {
+  color: rgba(238,238,238,0.9);
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  
+  img {
+    width: 100%;
+    height: 150px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid rgba(var(--afro-gold-rgb), 0.3);
+    transition: all 0.3s ease;
+  }
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-card {
+  animation: fadeUp 0.6s ease-out forwards;
+}

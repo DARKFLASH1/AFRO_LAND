@@ -1,0 +1,155 @@
+﻿<ion-header class="header-toolbar">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="back-button" routerLink="/afrique" fill="clear">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="header-title">
+      L'Afrique du Nord
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-background">
+    <div class="countries-container">
+      <ion-grid>
+        <ion-row>        
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Algérie" src="assets/images/algerie.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Algérie</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Alger</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Géante du Sahara avec histoire millénaire et culture méditerranéenne.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('algerie')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Égypte" src="assets/images/egypte.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Égypte</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Le Caire</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Civilisation pharaonique, merveilles antiques et Nil éternel.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('egypte')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Libye" src="assets/images/libye.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Libye</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Tripoli</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Pays méditerranéen avec sites antiques et richesses naturelles.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('libye')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Maroc" src="assets/images/maroc.png" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Maroc</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Rabat</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Porte de l'Afrique, mélange de méditerranée et de désert.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('maroc')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Mauritanie" src="assets/images/mauritanie.png" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Mauritanie</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Nouakchott</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Pays du désert avec frontière océanique et culture bédouine.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('mauritanie')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Soudan" src="assets/images/soud-nord.png" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Soudan</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Khartoum</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Terre du Nil bleu avec patrimoine antique et culture soudanaise riche.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('soudan')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Tunisie" src="assets/images/tunisie.png" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Tunisie</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Tunis</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Perle de la Méditerranée avec plages dorées et histoire phénicienne.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('tunisie')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </div>
+</ion-content>

@@ -1,0 +1,31 @@
+<!-- favoris.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Pays Favoris</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let pays of paysFavoris" [routerLink]="['/pays', pays.id]">
+      <ion-avatar slot="start">
+        <img alt="" [src]="pays.drapeaux?.[0] || 'assets/default-pays.jpg'" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ pays.name }}</h2>
+        <p>{{ pays.capital }} • {{ pays.region }}</p>
+      </ion-label>
+      <ion-button fill="clear" color="danger" (click)="supprimerFavori(pays.id); $event.stopPropagation()">
+        <ion-icon name="heart"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="paysFavoris.length === 0" class="ion-text-center ion-padding">
+    <ion-icon name="heart-outline" size="large" color="medium"></ion-icon>
+    <p>Aucun pays favori pour le moment</p>
+  </div>
+</ion-content>

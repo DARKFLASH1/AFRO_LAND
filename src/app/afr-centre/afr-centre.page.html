@@ -1,0 +1,194 @@
+﻿<ion-header class="header-toolbar">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="back-button" routerLink="/afrique" fill="clear">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="header-title">
+      L'Afrique Centrale
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-background">
+
+    <div class="countries-container">
+      <ion-grid>
+        <ion-row>        
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Angola" src="assets/images/angola.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Angola</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Luanda</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Pays riche en ressources naturelles et culture vibrante.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('angola')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Cameroun" src="assets/images/cameroun.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Cameroun</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Yaoundé</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Carrefour de l'Afrique avec une biodiversité exceptionnelle.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('cameroun')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Centrafrique" src="assets/images/centrafrique.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">République Centrafricaine</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Bangui</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Cœur de l'Afrique avec forêts denses et ressources naturelles.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('centrafrique')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Congo-Brazzaville" src="assets/images/cong-brazza.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Congo-Brazzaville</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Brazzaville</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Pays du fleuve Congo avec culture riche et nature préservée.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('congo-brazzaville')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Congo-Kinshasa" src="assets/images/cong-kins.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Congo-Kinshasa</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Kinshasa</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Géant de l'Afrique centrale avec les plus vastes ressources.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('congo-kinshasa')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Gabon" src="assets/images/gabon.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Gabon</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Libreville</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Pays forêt avec une économie diversifiée et nature intacte.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('gabon')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Guinée équatoriale" src="assets/images/Equatorial_Guinea.png" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Guinée équatoriale</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Malabo</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Petit pays insulaire d'Afrique centrale, riche en biodiversité.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('guinee-equatoriale')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Sao Tomé-et-Principe" src="assets/images/saotome.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Sao Tomé-et-Principe</ion-card-title>
+              <ion-card-subtitle class="country-capital"> São Tomé</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Îles paradisiaques avec culture unique et cacao réputé.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('saotome')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Tchad" src="assets/images/tchad.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Tchad</ion-card-title>
+              <ion-card-subtitle class="country-capital"> N'Djamena</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Pays du Lac Tchad avec culture sahélienne riche et authentique.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('tchad')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </div>
+</ion-content>

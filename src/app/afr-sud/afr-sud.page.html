@@ -1,0 +1,155 @@
+﻿<ion-header class="header-toolbar">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="back-button" routerLink="/afrique" fill="clear">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="header-title">
+      L'Afrique du Sud
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-background">
+    <div class="countries-container">
+      <ion-grid>
+        <ion-row>        
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Afrique du Sud" src="assets/images/afr-du-sud.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Afrique du Sud</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Pretoria</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Pays arc-en-ciel avec richesses naturelles et culturelles exceptionnelles.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('afrique-sud')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Botswana" src="assets/images/botswana.png" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Botswana</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Gaborone</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Terre des diamants et de la savane avec faune abondante.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('botswana')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Eswatini" src="assets/images/Flag_of_Eswatini.svg.png" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Eswatini</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Mbabane</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Petit pays montagneux aux traditions culturelles riches et préservées.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('eswatini')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Lesotho" src="assets/images/leshotoc.png" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Lesotho</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Maseru</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Royaume des montagnes avec paysages spectaculaires et culture unique.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('lesotho')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Namibie" src="assets/images/namibi.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Namibie</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Windhoek</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Déserts infinis et côtes sauvages, nature préservée et majestueux.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('namibie')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Zambie" src="assets/images/zambie.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Zambie</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Lusaka</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Terre des chutes Victoria et de la faune emblématique africaine.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('zambie')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Zimbabwe" src="assets/images/zimbabwe.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Zimbabwe</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Harare</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Patrimoine historique avec les ruines du Grand Zimbabwe et paysages grandioses.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('zimbabwe')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </div>
+</ion-content>

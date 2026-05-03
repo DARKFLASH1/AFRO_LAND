@@ -1,0 +1,136 @@
+/* Background Principal */
+.page-background {
+  --background: var(--afro-gradient);
+  color: #eee;
+  overflow-x: hidden;
+}
+
+/* Header avec style moderne */
+.header-toolbar {
+  --background: var(--afro-header-gradient);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid var(--afro-gold);
+}
+
+.header-title {
+  color: var(--afro-gold);
+  font-size: var(--font-size-base);
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Conteneur de recherche */
+.search-container {
+  padding: 12px 0;
+  background: rgba(20, 26, 43, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.search-bar-stylish {
+  margin: 12px;
+  border-radius: 25px;
+  --background: rgba(44, 53, 80, 0.8);
+  color: var(--afro-gold);
+  --box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  --placeholder-color: rgba(var(--afro-gold-rgb), 0.6);
+  transition: all 0.3s ease;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Résultats de recherche */
+.search-results {
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 0 12px;
+  border-radius: 12px;
+  background: rgba(30, 38, 55, 0.95);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ... (keep existing results-list and no-result styles) ... */
+
+/* Conteneur des pays */
+.countries-container {
+  padding: 16px var(--app-side-padding) 100px var(--app-side-padding);
+}
+
+/* Cartes des régions */
+.parti-afrique {
+  border-radius: var(--app-card-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #2a3447 0%, #364257 100%);
+  border: 1px solid rgba(var(--afro-gold-rgb), 0.15);
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  height: 100%;
+}
+
+/* ... (rest of the styles updated with variables) ... */
+
+.parti-afrique img {
+  width: 100%;
+  height: clamp(120px, 15vh, 180px);
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  border-radius: var(--app-card-radius) var(--app-card-radius) 0 0;
+}
+
+.parti-afrique h3 {
+  color: var(--afro-gold);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-bottom: 8px;
+  padding: 12px 16px 0 16px;
+}
+
+/* Bouton Découvrir */
+.bouton-afrique {
+  --background: linear-gradient(90deg, var(--afro-gold) 0%, #ffb563 100%);
+  --color: #1a1f2e;
+  color: #1a1f2e;
+  border-radius: 20px;
+  margin: 8px auto;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(var(--afro-gold-rgb), 0.3);
+  transition: all 0.3s ease;
+  height: 38px;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+.footer-toolbar {
+  --background: var(--afro-header-gradient);
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.4);
+  border-top: 2px solid var(--afro-gold);
+}
+
+.footer-buttons {
+  justify-content: space-around;
+  padding: 8px 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-buttons ion-button {
+  color: var(--afro-gold);
+  font-size: 1.5em;
+  margin: 0;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  width: 48px;
+  height: 48px;
+}

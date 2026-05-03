@@ -1,0 +1,308 @@
+﻿<ion-header class="header-toolbar">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="back-button" routerLink="/afrique" fill="clear">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="header-title">
+      L'Afrique de l'Est
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-background">
+
+    <div class="countries-container">
+      <ion-grid>
+        <ion-row>        
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Burundi" src="assets/images/burundi.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Burundi</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Gitega</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Pays des Mille Collines avec lacs et montagnes verdoyantes.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('burundi')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Comores" src="assets/images/comores.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Comores</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Moroni</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Archipel de l'océan Indien avec îles volcaniques et culture unique.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('comores')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Djibouti" src="assets/images/djibuti.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Djibouti</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Djibouti</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Carrefour océanique avec paysages désertiques et couches géologiques fascinantes.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('djibouti')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Érythrée" src="assets/images/erytrhe.png" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Érythrée</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Asmara</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Jeune nation avec côtes pittoresques et histoire ancienne.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('erythree')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Éthiopie" src="assets/images/ethiopi.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Éthiopie</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Addis-Abeba</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Berceau de l'humanité avec civilisation millénaire et montagnes majestueuses.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('ethiopie')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Kenya" src="assets/images/kenya.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Kenya</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Nairobi</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Pays du safari avec montagnes, côtes et vie sauvage exceptionnelle.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('kenya')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Madagascar" src="assets/images/madagascar.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Madagascar</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Antananarivo</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Grande île continentale avec écosystème unique et biodiversité exceptionnelle.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('madagascar')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Malawi" src="assets/images/malawi.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Malawi</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Lilongwe</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Perle de l'Afrique avec lac géant et accueil chaleureux.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('malawi')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Maurice" src="assets/images/maurice.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Maurice</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Port-Louis</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Île paradisiaque de l'océan Indien avec faune et plages spectaculaires.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('maurice')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Mozambique" src="assets/images/mozambique.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Mozambique</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Maputo</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Pays côtier avec récifs coralliens et culture musicale dynamique.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('mozambique')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Ouganda" src="assets/images/ouganda.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Ouganda</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Kampala</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Perle de l'Afrique avec lacs, montagnes et gorilles des montagnes.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('ouganda')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Rwanda" src="assets/images/rwanda.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Rwanda</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Kigali</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Pays des Mille Collines avec gorilles et beauté naturelle préservée.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('rwanda')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Seychelles" src="assets/images/aeychelles.jpg" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Seychelles</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Victoria</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Archipel luxuriant avec plages vierges et biodiversité marine exceptionnelle.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('seychelles')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Somalie" src="assets/images/somali.png" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Somalie</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Mogadiscio</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Pays côtier avec culture nomade riche et paysages désertiques.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('somalie')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="pays-afrique card-hover">
+            <div class="card-image-wrapper">
+              <img alt="Tanzanie" src="assets/images/tanzani.png" class="country-flag" />
+              <div class="card-overlay"></div>
+            </div>
+            <ion-card-header class="card-header-custom">
+              <ion-card-title class="country-title">Tanzanie</ion-card-title>
+              <ion-card-subtitle class="country-capital"> Dar es-Salaam</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="card-content-custom">
+              Pays du Kilimandjaro avec parcs nationaux et riche patrimoine naturel.
+            </ion-card-content>
+            <ion-button (click)="ouvrirPays('tanzanie')" fill="solid" class="btn-discover">
+              <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+              En savoir plus
+            </ion-button>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </div>
+</ion-content>

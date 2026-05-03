@@ -1,0 +1,125 @@
+<ion-header class="header-toolbar">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="back-button" routerLink="/home" fill="clear">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="header-title">
+      L'Afrique
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-background">
+
+  <div class="search-container">
+    <ion-searchbar
+      *ngIf="showSearchbar"
+      class="search-bar-stylish"
+      placeholder="Rechercher un pays..."
+      show-clear-button="focus"
+      [(ngModel)]="searchValue"
+      (ionInput)="onSearchChange($event)"
+      debounce="300">
+    </ion-searchbar>
+    <div *ngIf="showSearchbar && searchValue && searchValue.length > 0" class="search-results">
+      <ion-list *ngIf="filtrerPays.length > 0" class="results-list">
+        <ion-item *ngFor="let pays of filtrerPays" (click)="ouvrirPays(pays.id)" button detail>
+          <ion-label>{{ pays.nom }}</ion-label>
+        </ion-item>
+      </ion-list>
+      <div class="no-result" *ngIf="filtrerPays.length === 0">
+        <ion-icon name="search-outline"></ion-icon>
+        <span>Aucun pays trouvé pour "{{ searchValue }}"</span>
+      </div>
+    </div>
+  </div>
+
+    <div class="countries-container">
+      <ion-grid>
+        <ion-row>
+        <ion-col size="12" size-sm="6" size-md="4" size-xl="3">
+          <ion-card class="parti-afrique">
+            <img src="assets/images/afno.gif" alt="Afrique du nord" />
+            <ion-card-content>
+              <h3>🌍 Afrique du Nord</h3>
+              <ion-button routerLink="/afr-nord" fill="clear" class="bouton-afrique" shape="round">
+                <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+                Découvrir
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        
+        <ion-col size="12" size-sm="6" size-md="4" size-xl="3">
+          <ion-card class="parti-afrique">
+            <img src="assets/images/afrique-australe-repc3a9rage.png" alt="Afrique Australe" />
+            <ion-card-content>
+              <h3>🏔️ Afrique Australe</h3>
+              <ion-button routerLink="/afr-sud" fill="clear" class="bouton-afrique" shape="round">
+                <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+                Découvrir
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        
+        <ion-col size="12" size-sm="6" size-md="4" size-xl="3">
+          <ion-card class="parti-afrique">
+            <img src="assets/images/afou.jpg" alt="Afrique de l'Ouest" />
+            <ion-card-content>
+              <h3>🌴 Afrique de l'Ouest</h3>
+              <ion-button routerLink="/afr-ouest" fill="clear" class="bouton-afrique" shape="round">
+                <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+                Découvrir
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-sm="6" size-md="4" size-xl="3">
+          <ion-card class="parti-afrique">
+            <img src="assets/images/Economie-Afrique-de-lOuest-dr.jpg" alt="Afrique de l'Est" />
+            <ion-card-content>
+              <h3>🦁 Afrique de l'Est</h3>
+              <ion-button routerLink="/afr-est" fill="clear" class="bouton-afrique" shape="round">
+                <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+                Découvrir
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-sm="6" size-md="4" size-xl="3">
+          <ion-card class="parti-afrique">
+            <img src="assets/images/afce.jpg" alt="Afrique Centrale" />
+            <ion-card-content>
+              <h3>🌿 Afrique Centrale</h3>
+              <ion-button routerLink="/afr-centre" fill="clear" class="bouton-afrique" shape="round">
+                <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+                Découvrir
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar class="footer-toolbar">
+    <ion-buttons class="footer-buttons">
+      <ion-button routerLink="/home" fill="clear">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" (click)="toggleSearchbar()">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+      <ion-button routerLink="/quiz" fill="clear">
+        <ion-icon name="help-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button routerLink="/profil" fill="clear"> 
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

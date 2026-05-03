@@ -1,0 +1,78 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+/* Global Responsive Base */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fluid Typography Classes */
+.text-responsive-h1 { font-size: var(--font-size-h1); }
+.text-responsive-h2 { font-size: var(--font-size-h2); }
+.text-responsive-h3 { font-size: var(--font-size-h3); }
+.text-responsive-base { font-size: var(--font-size-base); }
+
+/* Global Header Toolbar Styles */
+.header-toolbar .back-button {
+	--background: transparent;
+	--padding-start: 6px;
+	--padding-end: 6px;
+	color: var(--afro-gold);
+	border-radius: 10px;
+	transition: background 0.18s ease, transform 0.12s ease;
+}
+
+.header-toolbar .back-button ion-icon {
+	font-size: 1.25rem;
+	color: var(--afro-gold);
+}
+
+.header-toolbar .back-button:hover {
+	background: rgba(var(--afro-gold-rgb), 0.08);
+	transform: translateX(-2px);
+}
+
+/* Message 'Aucun résultat' pour suggestions de recherche */
+.no-result {
+	color: var(--afro-gold);
+	text-align: center;
+	padding: 8px 12px;
+	font-weight: 600;
+}
+
+/* Global Card Enhancements */
+ion-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (min-width: 992px) {
+  ion-card:hover {
+    transform: translateY(-5px);
+  }
+}

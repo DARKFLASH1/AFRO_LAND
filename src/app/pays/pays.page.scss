@@ -1,0 +1,141 @@
+/* Background Principal */
+ion-content {
+  --background: var(--afro-gradient);
+  color: #eee;
+}
+
+/* Header */
+ion-toolbar {
+  --background: var(--afro-header-gradient);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid var(--afro-gold);
+}
+
+ion-title {
+  color: var(--afro-gold);
+  font-size: var(--font-size-base);
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Bannière avec image principale */
+.banniere-pays {
+  position: relative;
+  margin: -16px -16px 20px -16px;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .image-banniere {
+    width: 100%;
+    height: clamp(200px, 30vh, 400px);
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .superposition-banniere {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: clamp(16px, 4vw, 32px);
+
+    h1 {
+      margin: 0 0 8px 0;
+      font-size: var(--font-size-h1);
+      font-weight: bold;
+      color: var(--afro-gold);
+    }
+
+    p {
+      margin: 0;
+      opacity: 0.9;
+      font-size: 1rem;
+    }
+  }
+}
+
+/* Navigation rapide (segments) */
+.navigation-rapide {
+  margin: 16px auto 24px auto;
+  --background: rgba(20, 26, 43, 0.5);
+  border-radius: 20px;
+  max-width: 800px;
+
+  ion-segment-button {
+    --indicator-color: var(--afro-gold);
+    --color: rgba(var(--afro-gold-rgb), 0.6);
+    --color-checked: var(--afro-gold);
+
+    ion-label {
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+  }
+}
+
+/* Cartes avec informations */
+ion-card {
+  border-radius: var(--app-card-radius);
+  background: linear-gradient(135deg, #2a3447 0%, #364257 100%);
+  border: 1px solid rgba(var(--afro-gold-rgb), 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin: 0 auto 20px auto;
+  max-width: 900px;
+  overflow: hidden;
+}
+
+ion-card-title {
+  color: var(--afro-gold);
+  font-size: var(--font-size-h3);
+}
+
+/* Grille d'informations */
+.grille-infos {
+  ion-item {
+    --background: transparent;
+
+    ion-icon {
+      color: var(--afro-gold);
+    }
+
+    h3 {
+      color: var(--afro-gold);
+    }
+  }
+}
+
+/* Chips */
+ion-chip {
+  --background: rgba(var(--afro-gold-rgb), 0.1);
+  --color: var(--afro-gold);
+  border: 1px solid rgba(var(--afro-gold-rgb), 0.3);
+}
+
+/* Chronologie */
+.marqueur-chronologie {
+  background: var(--afro-gold);
+  box-shadow: 0 0 0 2px var(--afro-gold);
+}
+
+.contenu-chronologie h3 {
+  color: var(--afro-gold);
+}
+
+/* Galerie d'images */
+.grille-galerie {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(100px, 15vw, 150px), 1fr));
+  gap: 12px;
+}
+
+/* Section Contenu Container */
+.section-contenu {
+  max-width: 1000px;
+  margin: 0 auto 24px auto;
+}
