@@ -1,18 +1,18 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header class="ion-no-border">
+  <ion-toolbar class="header-toolbar">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/afrique"></ion-back-button>
+      <ion-back-button defaultHref="/afrique" class="back-button"></ion-back-button>
     </ion-buttons>
     <ion-title>
       <span *ngIf="pays"> {{ pays.name }}</span>
-      <span *ngIf="!pays && !chargement">Pays non trouvé</span>
-      <ion-skeleton-text *ngIf="chargement" animated class="skeleton-title"></ion-skeleton-text>
+      <span *ngIf="!pays && !chargement">Détails du Pays</span>
+      <ion-skeleton-text *ngIf="chargement" animated style="width: 150px; height: 20px;"></ion-skeleton-text>
     </ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="partager()" [disabled]="!pays">
-        <ion-icon name="share-outline"></ion-icon>
+        <ion-icon slot="icon-only" name="share-social-outline"></ion-icon>
       </ion-button>
-      <ion-button (click)="ajouterFavoris()" fill="clear" slot="end">
+      <ion-button (click)="ajouterFavoris()" [disabled]="!pays">
         <ion-icon slot="icon-only" [name]="isFavoris ? 'heart' : 'heart-outline'"
           [color]="isFavoris ? 'danger' : 'medium'">
         </ion-icon>
@@ -21,401 +21,308 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content>
 
   <!-- État de chargement -->
-  <div *ngIf="chargement" class="container-chargement">
-    <ion-spinner name="crescent"></ion-spinner>
-    <p>Chargement des informations du pays...</p>
+  <div *ngIf="chargement" class="container-chargement ion-padding">
+    <ion-spinner name="crescent" color="primary"></ion-spinner>
+    <p>Exploration des données...</p>
   </div>
 
   <!-- Contenu principal -->
-  <div *ngIf="!chargement && pays">
+  <div *ngIf="!chargement && pays" class="animate__animated animate__fadeIn">
 
     <!-- Bannière avec image principale -->
-    <div class="banniere-pays" (click)="openImage(getImagePrincipale())">
-      <img [src]="getImagePrincipale()" [alt]="pays.name" title="Image principale" class="image-banniere" />
-      <div class="superposition-banniere">
+    <div class="banniere-hero" (click)="openImage(getImagePrincipale())">
+      <div class="image-wrapper">
+        <img [src]="getImagePrincipale()" [alt]="pays.name" class="image-banniere" />
+        <div class="overlay-gradient"></div>
+      </div>
+      <div class="info-hero">
+        <div class="tag-region">{{ pays.region }}</div>
         <h1>{{ pays.name }}</h1>
-        <p *ngIf="pays.description">{{ pays.description }}</p>
+        <p class="motto" *ngIf="pays.motto">"{{ pays.motto }}"</p>
       </div>
     </div>
 
-    <!-- Navigation rapide -->
-    <ion-segment scrollable value="general" (ionChange)="onSegmentChange($event)" class="navigation-rapide">
-      <ion-segment-button value="general">
-        <ion-label>Général</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="geographie">
-        <ion-label>Géographie</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="culture">
-        <ion-label>Culture</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="histoire">
-        <ion-label>Histoire</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="economie">
-        <ion-label>Économie</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="tourisme">
-        <ion-label>Tourisme</ion-label>
-      </ion-segment-button>
-    </ion-segment>
+    <!-- Barre de statistiques rapides -->
+    <div class="barre-stats">
+      <div class="stat-item">
+        <ion-icon name="business"></ion-icon>
+        <div class="stat-label">Capitale</div>
+        <div class="stat-value">{{ pays.capital || '---' }}</div>
+      </div>
+      <div class="stat-item">
+        <ion-icon name="people"></ion-icon>
+        <div class="stat-label">Population</div>
+        <div class="stat-value">{{ pays.population || '---' }}</div>
+      </div>
+      <div class="stat-item">
+        <ion-icon name="cash"></ion-icon>
+        <div class="stat-label">Monnaie</div>
+        <div class="stat-value">{{ pays.currency || '---' }}</div>
+      </div>
+    </div>
 
-    <!-- Informations générales -->
-    <section id="general" class="section-contenu">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>📊 Informations Générales</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <ion-grid class="grille-infos">
+    <div class="ion-padding responsive-container">
+      
+      <!-- Navigation par segments -->
+      <ion-segment scrollable value="general" (ionChange)="onSegmentChange($event)" class="navigation-segments">
+        <ion-segment-button value="general">
+          <ion-label>Général</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="geographie">
+          <ion-label>Géo</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="culture">
+          <ion-label>Culture</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="histoire">
+          <ion-label>Histoire</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="economie">
+          <ion-label>Éco</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="tourisme">
+          <ion-label>Sites</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+
+      <!-- Informations détaillées -->
+      <div class="sections-container">
+        
+        <!-- SECTION GÉNÉRALE -->
+        <section id="general" class="section-pays" [class.active]="activeSegment === 'general'">
+          <div class="section-header">
+            <ion-icon name="information-circle"></ion-icon>
+            <h2>Informations Générales</h2>
+          </div>
+          
+          <ion-grid class="ion-no-padding">
             <ion-row>
               <ion-col size="12" size-md="6">
-                <ion-item lines="none">
-                  <ion-icon name="business-outline" slot="start"></ion-icon>
-                  <ion-label>
-                    <h3>Capitale</h3>
-                    <p>{{ pays.capital || 'Non spécifié' }}</p>
-                  </ion-label>
-                </ion-item>
+                <ion-card class="info-card">
+                  <ion-item lines="none">
+                    <ion-icon name="language" slot="start" color="primary"></ion-icon>
+                    <ion-label>
+                      <h3>Langues officielles</h3>
+                      <p>{{ formaterLangues() }}</p>
+                    </ion-label>
+                  </ion-item>
+                </ion-card>
               </ion-col>
               <ion-col size="12" size-md="6">
-                <ion-item lines="none">
-                  <ion-icon name="language-outline" slot="start"></ion-icon>
-                  <ion-label>
-                    <h3>Langues</h3>
-                    <p>{{ formaterLangues() }}</p>
-                  </ion-label>
-                </ion-item>
-              </ion-col>
-            </ion-row>
-
-            <ion-row>
-              <ion-col size="12" size-md="6">
-                <ion-item lines="none">
-                  <ion-icon name="people-outline" slot="start"></ion-icon>
-                  <ion-label>
-                    <h3>Population</h3>
-                    <p>{{ pays.population || 'Non spécifié' }}</p>
-                  </ion-label>
-                </ion-item>
+                <ion-card class="info-card">
+                  <ion-item lines="none">
+                    <ion-icon name="earth" slot="start" color="primary"></ion-icon>
+                    <ion-label>
+                      <h3>Superficie</h3>
+                      <p>{{ pays.area || 'Non spécifié' }}</p>
+                    </ion-label>
+                  </ion-item>
+                </ion-card>
               </ion-col>
               <ion-col size="12" size-md="6">
-                <ion-item lines="none">
-                  <ion-icon name="cash-outline" slot="start"></ion-icon>
-                  <ion-label>
-                    <h3>Monnaie</h3>
-                    <p>{{ pays.currency || 'Non spécifié' }}</p>
-                  </ion-label>
-                </ion-item>
+                <ion-card class="info-card">
+                  <ion-item lines="none">
+                    <ion-icon name="calendar" slot="start" color="primary"></ion-icon>
+                    <ion-label>
+                      <h3>Indépendance</h3>
+                      <p>{{ pays.independence || 'Non spécifié' }}</p>
+                    </ion-label>
+                  </ion-item>
+                </ion-card>
               </ion-col>
-            </ion-row>
-
-            <ion-row>
-              <ion-col size="12" size-md="6">
-                <ion-item lines="none">
-                  <ion-icon name="earth-outline" slot="start"></ion-icon>
-                  <ion-label>
-                    <h3>Superficie</h3>
-                    <p>{{ pays.area || 'Non spécifié' }}</p>
-                  </ion-label>
-                </ion-item>
+              <ion-col size="12" size-md="6" *ngIf="pays.president">
+                <ion-card class="info-card">
+                  <ion-item lines="none">
+                    <ion-icon name="person" slot="start" color="primary"></ion-icon>
+                    <ion-label>
+                      <h3>Chef d'État</h3>
+                      <p>{{ pays.president }}</p>
+                    </ion-label>
+                  </ion-item>
+                </ion-card>
               </ion-col>
-              <ion-col size="12" size-md="6">
-                <ion-item lines="none">
-                  <ion-icon name="calendar-outline" slot="start"></ion-icon>
-                  <ion-label>
-                    <h3>Indépendance</h3>
-                    <p>{{ pays.independence || 'Non spécifié' }}</p>
-                  </ion-label>
-                </ion-item>
-              </ion-col>
-            </ion-row>
-
-            <ion-row *ngIf="pays.president">
-              <ion-col size="12">
-                <ion-item lines="none">
-                  <ion-icon name="person-outline" slot="start"></ion-icon>
-                  <ion-label>
-                    <h3>Chef d'État</h3>
-                    <p>{{ pays.president }}</p>
-                  </ion-label>
-                </ion-item>
-              </ion-col>
-            </ion-row>
-
-            <ion-row *ngIf="pays.motto">
-              <ion-col size="12">
-                <ion-item lines="none">
-                  <ion-icon name="quote-outline" slot="start"></ion-icon>
-                  <ion-label>
-                    <h3>Devise</h3>
-                    <p>{{ pays.motto }}</p>
-                  </ion-label>
-                </ion-item>
-              </ion-col>
-            </ion-row>
-
-            <ion-row *ngIf="pays.timezone">
-              <ion-col size="12">
-                <ion-item lines="none">
-                  <ion-icon name="time-outline" slot="start"></ion-icon>
-                  <ion-label>
-                    <h3>Fuseau horaire</h3>
-                    <p>{{ pays.timezone }}</p>
-                  </ion-label>
-                </ion-item>
+              <ion-col size="12" *ngIf="pays.timezone">
+                <ion-card class="info-card">
+                  <ion-item lines="none">
+                    <ion-icon name="time" slot="start" color="primary"></ion-icon>
+                    <ion-label>
+                      <h3>Fuseau horaire</h3>
+                      <p>{{ pays.timezone }}</p>
+                    </ion-label>
+                  </ion-item>
+                </ion-card>
               </ion-col>
             </ion-row>
           </ion-grid>
-        </ion-card-content>
-      </ion-card>
-    </section>
+        </section>
 
-    <!-- Géographie -->
-    <section id="geographie" class="section-contenu" *ngIf="pays.geography">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>🗺️ Géographie</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <ion-grid>
-            <ion-row>
-              <ion-col size="12" size-md="6" *ngIf="pays.geography.position">
-                <h3>Position</h3>
+        <!-- GÉOGRAPHIE -->
+        <section id="geographie" class="section-pays" *ngIf="pays.geography" [class.active]="activeSegment === 'geographie'">
+          <div class="section-header">
+            <ion-icon name="map"></ion-icon>
+            <h2>Géographie</h2>
+          </div>
+          
+          <ion-card class="detail-card">
+            <ion-card-content>
+              <div class="detail-item" *ngIf="pays.geography.position">
+                <label>Position géographique</label>
                 <p>{{ pays.geography.position }}</p>
-              </ion-col>
-              <ion-col size="12" size-md="6" *ngIf="pays.geography.neighbors">
-                <h3>Pays voisins</h3>
-                <ion-chip *ngFor="let voisin of pays.geography.neighbors" outline>
-                  {{ voisin }}
-                </ion-chip>
-              </ion-col>
-            </ion-row>
-
-            <ion-row>
-              <ion-col size="12" size-md="6" *ngIf="pays.geography.climate">
-                <h3>Climat</h3>
+              </div>
+              
+              <div class="detail-item" *ngIf="pays.geography.climate">
+                <label>Climat</label>
                 <p>{{ pays.geography.climate }}</p>
-              </ion-col>
-              <ion-col size="12" size-md="6" *ngIf="pays.geography.rivers">
-                <h3>Cours d'eau</h3>
-                <p>{{ pays.geography.rivers.join(', ') }}</p>
-              </ion-col>
-            </ion-row>
+              </div>
 
-            <ion-row *ngIf="pays.geography.highestPoint">
-              <ion-col size="12">
-                <h3>Point culminant</h3>
-                <p>{{ pays.geography.highestPoint }}</p>
-              </ion-col>
-            </ion-row>
+              <div class="detail-item" *ngIf="pays.geography.neighbors">
+                <label>Pays frontaliers</label>
+                <div class="chips-container">
+                  <ion-chip *ngFor="let voisin of pays.geography.neighbors">
+                    <ion-label>{{ voisin }}</ion-label>
+                  </ion-chip>
+                </div>
+              </div>
 
-            <ion-row *ngIf="pays.geography.particularity">
-              <ion-col size="12">
-                <h3>Particularité</h3>
-                <p>{{ pays.geography.particularity }}</p>
-              </ion-col>
-            </ion-row>
+              <div class="grid-details">
+                <div class="grid-item" *ngIf="pays.geography.highestPoint">
+                  <label>Point culminant</label>
+                  <span>{{ pays.geography.highestPoint }}</span>
+                </div>
+                <div class="grid-item" *ngIf="pays.geography.coastline">
+                  <label>Littoral</label>
+                  <span>{{ pays.geography.coastline }}</span>
+                </div>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </section>
 
-            <ion-row *ngIf="pays.geography.coastline">
-              <ion-col size="12">
-                <h3>Littoral</h3>
-                <p>{{ pays.geography.coastline }}</p>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
-    </section>
+        <!-- CULTURE -->
+        <section id="culture" class="section-pays" *ngIf="pays.culture" [class.active]="activeSegment === 'culture'">
+          <div class="section-header">
+            <ion-icon name="color-palette"></ion-icon>
+            <h2>Culture & Traditions</h2>
+          </div>
 
-    <!-- Culture -->
-    <section id="culture" class="section-contenu" *ngIf="pays.culture">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>🎭 Culture et Traditions</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <ion-grid>
-            <ion-row *ngIf="pays.culture.ethnicGroups">
-              <ion-col size="12">
-                <h3>Groupes ethniques</h3>
-                <ion-chip *ngFor="let groupe of pays.culture.ethnicGroups" outline>
-                  {{ groupe }}
-                </ion-chip>
-              </ion-col>
-            </ion-row>
+          <ion-card class="detail-card">
+            <ion-card-content>
+              <div class="detail-item" *ngIf="pays.culture.cuisine">
+                <label>Spécialités culinaires</label>
+                <div class="chips-container">
+                  <ion-chip *ngFor="let plat of pays.culture.cuisine" color="warning" outline>
+                    <ion-icon name="restaurant-outline"></ion-icon>
+                    <ion-label>{{ plat }}</ion-label>
+                  </ion-chip>
+                </div>
+              </div>
 
-            <ion-row *ngIf="pays.culture.religions">
-              <ion-col size="12">
-                <h3>Religions</h3>
-                <ion-chip *ngFor="let religion of pays.culture.religions" outline>
-                  {{ religion }}
-                </ion-chip>
-              </ion-col>
-            </ion-row>
+              <div class="detail-item" *ngIf="pays.culture.religions">
+                <label>Religions</label>
+                <p>{{ pays.culture.religions.join(', ') }}</p>
+              </div>
 
-            <ion-row *ngIf="pays.culture.arts">
-              <ion-col size="12" size-md="6">
-                <h3>Arts traditionnels</h3>
-                <p>{{ pays.culture.arts.join(', ') }}</p>
-              </ion-col>
-              <ion-col size="12" size-md="6" *ngIf="pays.culture.music">
-                <h3>Musique et danse</h3>
-                <p>{{ pays.culture.music.join(', ') }}</p>
-              </ion-col>
-            </ion-row>
+              <div class="detail-item" *ngIf="pays.culture.arts || pays.culture.music">
+                <label>Patrimoine immatériel</label>
+                <p>{{ (pays.culture.arts || []).concat(pays.culture.music || []).join(', ') }}</p>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </section>
 
-            <ion-row *ngIf="pays.culture.cuisine">
-              <ion-col size="12">
-                <h3>Cuisine traditionnelle</h3>
-                <ion-chip *ngFor="let plat of pays.culture.cuisine" outline>
-                  {{ plat }}
-                </ion-chip>
-              </ion-col>
-            </ion-row>
+        <!-- HISTOIRE -->
+        <section id="histoire" class="section-pays" *ngIf="pays.history || pays.independence" [class.active]="activeSegment === 'histoire'">
+          <div class="section-header">
+            <ion-icon name="receipt"></ion-icon>
+            <h2>Histoire</h2>
+          </div>
 
-            <ion-row *ngIf="pays.culture.festivals">
-              <ion-col size="12">
-                <h3>Festivals et événements</h3>
-                <p>{{ pays.culture.festivals.join(', ') }}</p>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
-    </section>
-
-    <!-- Histoire -->
-    <section id="histoire" class="section-contenu" *ngIf="pays.history">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>📜 Histoire</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <div class="chronologie">
-            <div class="element-chronologie" *ngIf="pays.history.precolonial">
-              <div class="marqueur-chronologie"></div>
-              <div class="contenu-chronologie">
-                <h3>Période précoloniale</h3>
+          <div class="timeline">
+            <div class="timeline-item" *ngIf="pays.history?.precolonial">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Période Précoloniale</h3>
                 <p>{{ pays.history.precolonial }}</p>
               </div>
             </div>
-
-            <div class="element-chronologie" *ngIf="pays.history.colonial">
-              <div class="marqueur-chronologie"></div>
-              <div class="contenu-chronologie">
-                <h3>Période coloniale</h3>
+            
+            <div class="timeline-item" *ngIf="pays.history?.colonial">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Période Coloniale</h3>
                 <p>{{ pays.history.colonial }}</p>
               </div>
             </div>
 
-            <div class="element-chronologie" *ngIf="pays.independence">
-              <div class="marqueur-chronologie"></div>
-              <div class="contenu-chronologie">
+            <div class="timeline-item highlight" *ngIf="pays.independence">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
                 <h3>Indépendance</h3>
                 <p>{{ pays.independence }}</p>
               </div>
             </div>
 
-            <div class="element-chronologie" *ngIf="pays.history.nameChange">
-              <div class="marqueur-chronologie"></div>
-              <div class="contenu-chronologie">
-                <h3>Changement de nom</h3>
-                <p>{{ pays.history.nameChange }}</p>
-              </div>
-            </div>
-
-            <div class="element-chronologie" *ngIf="pays.history.historicalFigures">
-              <div class="marqueur-chronologie"></div>
-              <div class="contenu-chronologie">
-                <h3>Figures historiques</h3>
+            <div class="timeline-item" *ngIf="pays.history?.historicalFigures">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Figures Historiques</h3>
                 <p>{{ pays.history.historicalFigures.join(', ') }}</p>
               </div>
             </div>
           </div>
-        </ion-card-content>
-      </ion-card>
-    </section>
+        </section>
 
-    <!-- Économie -->
-    <section id="economie" class="section-contenu" *ngIf="pays.economy">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>💼 Économie</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <ion-grid>
-            <ion-row *ngIf="pays.economy.mainSectors">
-              <ion-col size="12">
-                <h3>Secteurs économiques principaux</h3>
-                <ion-chip *ngFor="let secteur of pays.economy.mainSectors" outline>
-                  {{ secteur }}
-                </ion-chip>
-              </ion-col>
-            </ion-row>
+        <!-- ÉCONOMIE -->
+        <section id="economie" class="section-pays" *ngIf="pays.economy" [class.active]="activeSegment === 'economie'">
+          <div class="section-header">
+            <ion-icon name="trending-up"></ion-icon>
+            <h2>Économie</h2>
+          </div>
 
-            <ion-row *ngIf="pays.economy.exports">
-              <ion-col size="12">
-                <h3>Principales exportations</h3>
-                <ion-chip *ngFor="let exportation of pays.economy.exports" t outline>
-                  {{ exportation }}
-                </ion-chip>
-              </ion-col>
-            </ion-row>
+          <ion-card class="detail-card">
+            <ion-card-content>
+              <div class="detail-item" *ngIf="pays.economy.mainSectors">
+                <label>Secteurs clés</label>
+                <div class="chips-container">
+                  <ion-chip *ngFor="let secteur of pays.economy.mainSectors" color="secondary">
+                    <ion-label>{{ secteur }}</ion-label>
+                  </ion-chip>
+                </div>
+              </div>
 
-            <ion-row *ngIf="pays.economy.challenges">
-              <ion-col size="12">
-                <h3>Défis économiques</h3>
-                <p>{{ pays.economy.challenges.join(', ') }}</p>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
-    </section>
+              <div class="detail-item" *ngIf="pays.economy.exports">
+                <label>Exportations majeures</label>
+                <p>{{ pays.economy.exports.join(', ') }}</p>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </section>
 
-    <!-- Tourisme -->
-    <section id="tourisme" class="section-contenu" *ngIf="pays.highlights && pays.highlights.length > 0">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>🏞️ Sites Touristiques</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <ion-list lines="none">
-            <ion-item *ngFor="let site of pays.highlights; let i = index" class="item-site" (click)="ouvrirModalImage(i)">
-              <ion-thumbnail slot="start">
-                <img [src]="getImageSite(i)" [alt]="getTitreSite(site)" title="Image du site touristique" />
-              </ion-thumbnail>
-              <ion-label>
-                <h2>{{ getTitreSite(site) }}</h2>
+        <!-- TOURISME -->
+        <section id="tourisme" class="section-pays" *ngIf="pays.highlights" [class.active]="activeSegment === 'tourisme'">
+          <div class="section-header">
+            <ion-icon name="camera"></ion-icon>
+            <h2>Sites Touristiques</h2>
+          </div>
+
+          <div class="highlights-grid">
+            <div class="highlight-item" *ngFor="let site of pays.highlights; let i = index" (click)="ouvrirModalImage(i)">
+              <div class="highlight-img-container">
+                <img [src]="getImageSite(i)" [alt]="getTitreSite(site)" />
+              </div>
+              <div class="highlight-info">
+                <h3>{{ getTitreSite(site) }}</h3>
                 <p>{{ getDescriptionSite(site) }}</p>
-              </ion-label>
-            </ion-item>
-          </ion-list>
-        </ion-card-content>
-      </ion-card>
-    </section>
-
-    <!-- Galerie -->
-    <section class="section-contenu" *ngIf="pays.images && pays.images.length > 0">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>📸 Galerie</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <div class="grille-galerie">
-            <div class="element-galerie" *ngFor="let image of pays.images; let i = index">
-              <img [src]="image" [alt]="'Image ' + (i + 1) + ' de ' + pays.name" title="Image de la galerie"
-                (click)="openImage(image)" />
+              </div>
             </div>
           </div>
-        </ion-card-content>
-      </ion-card>
-    </section>
+        </section>
 
+      </div>
+    </div>
   </div>
 
   <!-- Visionneuse d'image plein écran -->
@@ -431,13 +338,12 @@
   </ion-modal>
 
   <!-- Erreur si pays non trouvé -->
-  <div *ngIf="!chargement && !pays" class="container-erreur">
+  <div *ngIf="!chargement && !pays" class="container-erreur ion-padding ion-text-center">
     <ion-icon name="alert-circle-outline" size="large" color="danger"></ion-icon>
-    <h2>Pays non trouvé</h2>
-    <p>Le pays demandé n'existe pas dans notre base de données.</p>
-    <ion-button routerLink="/home" expand="block" color="primary">
-      <ion-icon name="home-outline" slot="start"></ion-icon>
-      Retour à l'accueil
+    <h2>Oups !</h2>
+    <p>Ce pays reste encore à explorer dans notre base de données.</p>
+    <ion-button routerLink="/afrique" expand="block" fill="outline" color="primary" class="ion-margin-top">
+      Continuer l'exploration
     </ion-button>
   </div>
 
