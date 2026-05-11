@@ -1,31 +1,76 @@
-<!-- favoris.page.html -->
+<!-- favoris.page.html — Point 2 : Système de Favoris complet -->
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
     <ion-title>Pays Favoris</ion-title>
+    <ion-buttons slot="end">
+      <!-- Badge affichant le nombre de favoris -->
+      <ion-badge *ngIf="paysFavoris.length > 0" color="warning" class="favoris-badge">
+        {{ paysFavoris.length }}
+      </ion-badge>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let pays of paysFavoris" [routerLink]="['/pays', pays.id]">
-      <ion-avatar slot="start">
-        <img alt="" [src]="pays.drapeaux?.[0] || 'assets/default-pays.jpg'" />
+
+  <!-- SKELETONS pendant le chargement -->
+  <ion-list *ngIf="chargement" class="skeleton-list">
+    <ion-item *ngFor="let i of [1,2,3,4]" class="skeleton-item">
+      <ion-avatar slot="start" class="skeleton-avatar">
+        <ion-skeleton-text animated></ion-skeleton-text>
       </ion-avatar>
       <ion-label>
-        <h2>{{ pays.name }}</h2>
-        <p>{{ pays.capital }} • {{ pays.region }}</p>
+        <h2><ion-skeleton-text animated style="width: 55%;"></ion-skeleton-text></h2>
+        <p><ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text></p>
       </ion-label>
-      <ion-button fill="clear" color="danger" (click)="supprimerFavori(pays.id); $event.stopPropagation()">
-        <ion-icon name="heart"></ion-icon>
-      </ion-button>
     </ion-item>
   </ion-list>
 
-  <div *ngIf="paysFavoris.length === 0" class="ion-text-center ion-padding">
-    <ion-icon name="heart-outline" size="large" color="medium"></ion-icon>
-    <p>Aucun pays favori pour le moment</p>
+  <!-- LISTE des favoris avec swipe gauche pour supprimer -->
+  <ion-list *ngIf="!chargement && paysFavoris.length > 0">
+    <ion-item-sliding *ngFor="let pays of paysFavoris">
+
+      <!-- Option de suppression révélée au swipe gauche -->
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="supprimerFavori(pays.id)" expandable>
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <!-- Item principal -->
+      <ion-item (click)="ouvrirPays(pays.id)" button detail>
+        <ion-avatar slot="start">
+          <!-- Champ corrigé : flag (plus drapeaux?.[0]) -->
+          <img [src]="pays.flag" [alt]="pays.name" />
+        </ion-avatar>
+        <ion-label>
+          <h2>{{ pays.name }}</h2>
+          <p>{{ pays.capital }} · {{ pays.region }}</p>
+        </ion-label>
+        <!-- Bouton coeur pour retirer le favori -->
+        <ion-button fill="clear" color="danger" slot="end"
+          (click)="supprimerFavori(pays.id); $event.stopPropagation()">
+          <ion-icon name="heart" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-item>
+
+    </ion-item-sliding>
+  </ion-list>
+
+  <!-- ETAT VIDE ameliore -->
+  <div *ngIf="!chargement && paysFavoris.length === 0" class="empty-state">
+    <div class="empty-icon-wrapper">
+      <ion-icon name="heart-outline"></ion-icon>
+    </div>
+    <h2>Aucun favori pour l'instant</h2>
+    <p>Explore l'Afrique et ajoute des pays à tes favoris pour les retrouver ici.</p>
+    <ion-button (click)="explorerAfrique()" color="warning" shape="round" class="explore-btn">
+      <ion-icon name="earth-outline" slot="start"></ion-icon>
+      Explorer l'Afrique
+    </ion-button>
   </div>
+
 </ion-content>

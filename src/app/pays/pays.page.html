@@ -128,7 +128,7 @@
                     <ion-icon name="calendar" slot="start" color="primary"></ion-icon>
                     <ion-label>
                       <h3>Indépendance</h3>
-                      <p>{{ pays.independence || 'Non spécifié' }}</p>
+                      <p>{{ pays.history.independence || 'Non spécifié' }}</p>
                     </ion-label>
                   </ion-item>
                 </ion-card>
@@ -234,7 +234,7 @@
         </section>
 
         <!-- HISTOIRE -->
-        <section id="histoire" class="section-pays" *ngIf="pays.history || pays.independence" [class.active]="activeSegment === 'histoire'">
+        <section id="histoire" class="section-pays" *ngIf="pays.history?.independence" [class.active]="activeSegment === 'histoire'">
           <div class="section-header">
             <ion-icon name="receipt"></ion-icon>
             <h2>Histoire</h2>
@@ -257,11 +257,11 @@
               </div>
             </div>
 
-            <div class="timeline-item highlight" *ngIf="pays.independence">
+            <div class="timeline-item highlight" *ngIf="pays.history?.independence">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
                 <h3>Indépendance</h3>
-                <p>{{ pays.independence }}</p>
+                <p>{{ pays.history.independence }}</p>
               </div>
             </div>
 
@@ -269,7 +269,7 @@
               <div class="timeline-dot"></div>
               <div class="timeline-content">
                 <h3>Figures Historiques</h3>
-                <p>{{ pays.history.historicalFigures.join(', ') }}</p>
+                <p>{{ pays.history.historicalFigures?.join(', ') }}</p>
               </div>
             </div>
           </div>
@@ -309,7 +309,7 @@
           </div>
 
           <div class="highlights-grid">
-            <div class="highlight-item" *ngFor="let site of pays.highlights; let i = index" (click)="ouvrirModalImage(i)">
+            <div class="highlight-item" *ngFor="let site of pays.highlights; let i = index" (click)="openImage(getImageSite(i))">
               <div class="highlight-img-container">
                 <img [src]="getImageSite(i)" [alt]="getTitreSite(site)" />
               </div>
