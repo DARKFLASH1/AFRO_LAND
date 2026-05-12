@@ -1,5 +1,6 @@
 // ─── AFRO_LAND — Modèle de données ──────────────────────────────────────────
 // Étape 1 : Types dont tout le reste dépend
+// Mis à jour (Partie 7) : champs enrichis superficie, pib, hdi, religion, wikipedia
 // ─────────────────────────────────────────────────────────────────────────────
 
 export interface PaysGeography {
@@ -37,12 +38,20 @@ export interface Pays {
   population: string;
   currency: string;
   region: string;
-  flag: string;          // URL CDN : https://flagcdn.com/w160/{iso2}.png
-  drapeaux?: string[];   // ← compatibilité rétro avec pays.page.ts existant
+  flag: string;           // URL CDN : https://flagcdn.com/w160/{iso2}.png
+  drapeaux?: string[];    // ← compatibilité rétro (à supprimer après migration complète)
   motto?: string;
   area?: string;
   president?: string;
   timezone?: string;
+
+  // ── Champs enrichis (Partie 7) ──────────────────────────────────────────
+  superficie?: number;    // en km²
+  pib?: number;           // PIB en milliards USD (données ~2023)
+  hdi?: number;           // Indice de développement humain (0–1, données ~2022)
+  religion?: string;      // Religion majoritaire
+  wikipedia?: string;     // URL Wikipedia francophone du pays
+
   geography: PaysGeography;
   history: PaysHistory;
   culture: PaysCulture;

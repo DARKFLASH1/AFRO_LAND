@@ -6,11 +6,49 @@
     "currency": "DZD",
     "region": "Afrique du Nord",
     "flag": "https://flagcdn.com/w160/dz.png",
-    "geography": { "position": "Nord de l'Afrique, côte méditerranéenne", "climate": "Méditerranéen au nord, Désertique (Sahara) au sud" },
-    "history": { "independence": "1962", "colonisateur": "France" },
-    "culture": { "cuisine": ["Couscous", "Tajine", "Chorba", "Méchoui"], "languages": ["Arabe", "Tamazight", "Français"] },
-    "economy": { "mainSectors": ["Hydrocarbures", "Agriculture", "BTP"], "exports": ["Pétrole", "Gaz naturel"] },
-    "highlights": ["Parc national du Tassili n'Ajjer (UNESCO)", "Casbah d'Alger (UNESCO)", "Ghardaïa (UNESCO)", "Tipaza (ruines romaines)"]
+    "geography": {
+      "position": "Nord de l'Afrique, côte méditerranéenne",
+      "climate": "Méditerranéen au nord, Désertique (Sahara) au sud"
+    },
+    "history": {
+      "independence": "1962",
+      "colonisateur": "France"
+    },
+    "culture": {
+      "cuisine": [
+        "Couscous",
+        "Tajine",
+        "Chorba",
+        "Méchoui"
+      ],
+      "languages": [
+        "Arabe",
+        "Tamazight",
+        "Français"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Hydrocarbures",
+        "Agriculture",
+        "BTP"
+      ],
+      "exports": [
+        "Pétrole",
+        "Gaz naturel"
+      ]
+    },
+    "highlights": [
+      "Parc national du Tassili n'Ajjer (UNESCO)",
+      "Casbah d'Alger (UNESCO)",
+      "Ghardaïa (UNESCO)",
+      "Tipaza (ruines romaines)"
+    ],
+    "superficie": 2381741,
+    "pib": 239.0,
+    "hdi": 0.745,
+    "religion": "Islam sunnite",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Alg%C3%A9rie"
   },
   "egypte": {
     "name": "Égypte",
@@ -19,11 +57,50 @@
     "currency": "EGP",
     "region": "Afrique du Nord",
     "flag": "https://flagcdn.com/w160/eg.png",
-    "geography": { "position": "Nord-Est de l'Afrique, bordé par la Méditerranée et la mer Rouge", "climate": "Aride désertique" },
-    "history": { "independence": "1953", "colonisateur": "Royaume-Uni" },
-    "culture": { "cuisine": ["Koshary", "Falafel", "Ful medames", "Molokhiya"], "languages": ["Arabe"] },
-    "economy": { "mainSectors": ["Tourisme", "Canal de Suez", "Agriculture", "Pétrole"], "exports": ["Pétrole", "Gaz", "Textiles"] },
-    "highlights": ["Pyramides de Gizeh (UNESCO)", "Louxor et Karnak", "Vallée des Rois", "Abu Simbel", "Mer Rouge (plongée)"]
+    "geography": {
+      "position": "Nord-Est de l'Afrique, bordé par la Méditerranée et la mer Rouge",
+      "climate": "Aride désertique"
+    },
+    "history": {
+      "independence": "1953",
+      "colonisateur": "Royaume-Uni"
+    },
+    "culture": {
+      "cuisine": [
+        "Koshary",
+        "Falafel",
+        "Ful medames",
+        "Molokhiya"
+      ],
+      "languages": [
+        "Arabe"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Tourisme",
+        "Canal de Suez",
+        "Agriculture",
+        "Pétrole"
+      ],
+      "exports": [
+        "Pétrole",
+        "Gaz",
+        "Textiles"
+      ]
+    },
+    "highlights": [
+      "Pyramides de Gizeh (UNESCO)",
+      "Louxor et Karnak",
+      "Vallée des Rois",
+      "Abu Simbel",
+      "Mer Rouge (plongée)"
+    ],
+    "superficie": 1002450,
+    "pib": 396.0,
+    "hdi": 0.728,
+    "religion": "Islam sunnite",
+    "wikipedia": "https://fr.wikipedia.org/wiki/%C3%89gypte"
   },
   "libye": {
     "name": "Libye",
@@ -32,11 +109,43 @@
     "currency": "LYD",
     "region": "Afrique du Nord",
     "flag": "https://flagcdn.com/w160/ly.png",
-    "geography": { "position": "Nord de l'Afrique, côte méditerranéenne", "climate": "Méditerranéen sur la côte, Désertique à l'intérieur" },
-    "history": { "independence": "1951", "colonisateur": "Italie" },
-    "culture": { "cuisine": ["Bazeen", "Shorba", "Makarouna"], "languages": ["Arabe"] },
-    "economy": { "mainSectors": ["Pétrole & gaz"], "exports": ["Pétrole"] },
-    "highlights": ["Leptis Magna (UNESCO)", "Sabratha (UNESCO)", "Côtes méditerranéennes", "Désert du Sahara"]
+    "geography": {
+      "position": "Nord de l'Afrique, côte méditerranéenne",
+      "climate": "Méditerranéen sur la côte, Désertique à l'intérieur"
+    },
+    "history": {
+      "independence": "1951",
+      "colonisateur": "Italie"
+    },
+    "culture": {
+      "cuisine": [
+        "Bazeen",
+        "Shorba",
+        "Makarouna"
+      ],
+      "languages": [
+        "Arabe"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Pétrole & gaz"
+      ],
+      "exports": [
+        "Pétrole"
+      ]
+    },
+    "highlights": [
+      "Leptis Magna (UNESCO)",
+      "Sabratha (UNESCO)",
+      "Côtes méditerranéennes",
+      "Désert du Sahara"
+    ],
+    "superficie": 1759540,
+    "pib": 51.0,
+    "hdi": 0.718,
+    "religion": "Islam sunnite",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Libye"
   },
   "maroc": {
     "name": "Maroc",
@@ -45,11 +154,52 @@
     "currency": "MAD",
     "region": "Afrique du Nord",
     "flag": "https://flagcdn.com/w160/ma.png",
-    "geography": { "position": "Nord-Ouest de l'Afrique, façades Atlantique et Méditerranée", "climate": "Méditerranéen, semi-aride au sud" },
-    "history": { "independence": "1956", "colonisateur": "France / Espagne" },
-    "culture": { "cuisine": ["Tajine", "Pastilla", "Couscous", "Harira"], "languages": ["Arabe", "Tamazight", "Français"] },
-    "economy": { "mainSectors": ["Phosphates", "Tourisme", "Agriculture", "Industrie automobile"], "exports": ["Phosphates", "Voitures", "Agrumes"] },
-    "highlights": ["Médina de Fès (UNESCO)", "Médina de Marrakech (UNESCO)", "Aït Benhaddou (UNESCO)", "Désert de Merzouga", "Essaouira"]
+    "geography": {
+      "position": "Nord-Ouest de l'Afrique, façades Atlantique et Méditerranée",
+      "climate": "Méditerranéen, semi-aride au sud"
+    },
+    "history": {
+      "independence": "1956",
+      "colonisateur": "France / Espagne"
+    },
+    "culture": {
+      "cuisine": [
+        "Tajine",
+        "Pastilla",
+        "Couscous",
+        "Harira"
+      ],
+      "languages": [
+        "Arabe",
+        "Tamazight",
+        "Français"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Phosphates",
+        "Tourisme",
+        "Agriculture",
+        "Industrie automobile"
+      ],
+      "exports": [
+        "Phosphates",
+        "Voitures",
+        "Agrumes"
+      ]
+    },
+    "highlights": [
+      "Médina de Fès (UNESCO)",
+      "Médina de Marrakech (UNESCO)",
+      "Aït Benhaddou (UNESCO)",
+      "Désert de Merzouga",
+      "Essaouira"
+    ],
+    "superficie": 710850,
+    "pib": 141.0,
+    "hdi": 0.698,
+    "religion": "Islam malékite",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Maroc"
   },
   "soudan": {
     "name": "Soudan",
@@ -58,11 +208,48 @@
     "currency": "SDG",
     "region": "Afrique du Nord",
     "flag": "https://flagcdn.com/w160/sd.png",
-    "geography": { "position": "Nord-Est de l'Afrique, le long du Nil", "climate": "Aride au nord, semi-aride au centre et au sud" },
-    "history": { "independence": "1956", "colonisateur": "Royaume-Uni / Égypte" },
-    "culture": { "cuisine": ["Ful medames", "Kisra", "Shaiyah"], "languages": ["Arabe", "Anglais"] },
-    "economy": { "mainSectors": ["Agriculture", "Pétrole", "Or"], "exports": ["Or", "Pétrole", "Coton"] },
-    "highlights": ["Pyramides de Méroé (UNESCO)", "Vallée du Nil", "Réserve naturelle de Dinder", "Ruines de Musawwarat"]
+    "geography": {
+      "position": "Nord-Est de l'Afrique, le long du Nil",
+      "climate": "Aride au nord, semi-aride au centre et au sud"
+    },
+    "history": {
+      "independence": "1956",
+      "colonisateur": "Royaume-Uni / Égypte"
+    },
+    "culture": {
+      "cuisine": [
+        "Ful medames",
+        "Kisra",
+        "Shaiyah"
+      ],
+      "languages": [
+        "Arabe",
+        "Anglais"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Agriculture",
+        "Pétrole",
+        "Or"
+      ],
+      "exports": [
+        "Or",
+        "Pétrole",
+        "Coton"
+      ]
+    },
+    "highlights": [
+      "Pyramides de Méroé (UNESCO)",
+      "Vallée du Nil",
+      "Réserve naturelle de Dinder",
+      "Ruines de Musawwarat"
+    ],
+    "superficie": 1861484,
+    "pib": 36.0,
+    "hdi": 0.516,
+    "religion": "Islam sunnite",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Soudan"
   },
   "tunisie": {
     "name": "Tunisie",
@@ -71,11 +258,51 @@
     "currency": "TND",
     "region": "Afrique du Nord",
     "flag": "https://flagcdn.com/w160/tn.png",
-    "geography": { "position": "Nord de l'Afrique, côte méditerranéenne", "climate": "Méditerranéen au nord, Désertique au sud" },
-    "history": { "independence": "1956", "colonisateur": "France" },
-    "culture": { "cuisine": ["Couscous", "Brik", "Lablabi", "Ojja"], "languages": ["Arabe", "Français"] },
-    "economy": { "mainSectors": ["Tourisme", "Phosphates", "Textile", "Agriculture"], "exports": ["Phosphates", "Huile d'olive", "Textiles"] },
-    "highlights": ["Médina de Tunis (UNESCO)", "Carthage (UNESCO)", "El Jem (UNESCO)", "Sahara (Douz)", "Île de Djerba"]
+    "geography": {
+      "position": "Nord de l'Afrique, côte méditerranéenne",
+      "climate": "Méditerranéen au nord, Désertique au sud"
+    },
+    "history": {
+      "independence": "1956",
+      "colonisateur": "France"
+    },
+    "culture": {
+      "cuisine": [
+        "Couscous",
+        "Brik",
+        "Lablabi",
+        "Ojja"
+      ],
+      "languages": [
+        "Arabe",
+        "Français"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Tourisme",
+        "Phosphates",
+        "Textile",
+        "Agriculture"
+      ],
+      "exports": [
+        "Phosphates",
+        "Huile d'olive",
+        "Textiles"
+      ]
+    },
+    "highlights": [
+      "Médina de Tunis (UNESCO)",
+      "Carthage (UNESCO)",
+      "El Jem (UNESCO)",
+      "Sahara (Douz)",
+      "Île de Djerba"
+    ],
+    "superficie": 163610,
+    "pib": 46.0,
+    "hdi": 0.731,
+    "religion": "Islam sunnite",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Tunisie"
   },
   "mauritanie": {
     "name": "Mauritanie",
@@ -84,11 +311,51 @@
     "currency": "MRU",
     "region": "Afrique du Nord",
     "flag": "https://flagcdn.com/w160/mr.png",
-    "geography": { "position": "Nord-Ouest de l'Afrique, façade atlantique", "climate": "Désertique (Sahara) au nord, semi-aride au sud" },
-    "history": { "independence": "1960", "colonisateur": "France" },
-    "culture": { "cuisine": ["Thiéboudiène", "Mechoui", "Zrig"], "languages": ["Arabe", "Français", "Pulaar", "Wolof", "Soninké"] },
-    "economy": { "mainSectors": ["Pêche", "Mines (fer)", "Élevage"], "exports": ["Minerai de fer", "Poissons", "Or"] },
-    "highlights": ["Villes anciennes de Chinguetti (UNESCO)", "Parc national du Banc d'Arguin (UNESCO)", "Désert du Sahara", "Adrar (oasis)"]
+    "geography": {
+      "position": "Nord-Ouest de l'Afrique, façade atlantique",
+      "climate": "Désertique (Sahara) au nord, semi-aride au sud"
+    },
+    "history": {
+      "independence": "1960",
+      "colonisateur": "France"
+    },
+    "culture": {
+      "cuisine": [
+        "Thiéboudiène",
+        "Mechoui",
+        "Zrig"
+      ],
+      "languages": [
+        "Arabe",
+        "Français",
+        "Pulaar",
+        "Wolof",
+        "Soninké"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Pêche",
+        "Mines (fer)",
+        "Élevage"
+      ],
+      "exports": [
+        "Minerai de fer",
+        "Poissons",
+        "Or"
+      ]
+    },
+    "highlights": [
+      "Villes anciennes de Chinguetti (UNESCO)",
+      "Parc national du Banc d'Arguin (UNESCO)",
+      "Désert du Sahara",
+      "Adrar (oasis)"
+    ],
+    "superficie": 1030700,
+    "pib": 10.0,
+    "hdi": 0.54,
+    "religion": "Islam sunnite",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Mauritanie"
   },
   "benin": {
     "name": "Bénin",
@@ -97,11 +364,50 @@
     "currency": "XOF",
     "region": "Afrique de l'Ouest",
     "flag": "https://flagcdn.com/w160/bj.png",
-    "geography": { "position": "Golfe de Guinée, Afrique de l'Ouest", "climate": "Tropical humide au sud, semi-aride au nord" },
-    "history": { "independence": "1960", "colonisateur": "France" },
-    "culture": { "cuisine": ["Akassa", "Amiwo", "Djenkoumé"], "languages": ["Français", "Fon", "Yoruba", "Bariba"] },
-    "economy": { "mainSectors": ["Agriculture", "Commerce (port de Cotonou)", "Tourisme"], "exports": ["Coton", "Noix de cajou", "Huile de palme"] },
-    "highlights": ["Palais royaux d'Abomey (UNESCO)", "Ville lacustre de Ganvié", "Parc national de la Pendjari", "Ouidah (route des esclaves)"]
+    "geography": {
+      "position": "Golfe de Guinée, Afrique de l'Ouest",
+      "climate": "Tropical humide au sud, semi-aride au nord"
+    },
+    "history": {
+      "independence": "1960",
+      "colonisateur": "France"
+    },
+    "culture": {
+      "cuisine": [
+        "Akassa",
+        "Amiwo",
+        "Djenkoumé"
+      ],
+      "languages": [
+        "Français",
+        "Fon",
+        "Yoruba",
+        "Bariba"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Agriculture",
+        "Commerce (port de Cotonou)",
+        "Tourisme"
+      ],
+      "exports": [
+        "Coton",
+        "Noix de cajou",
+        "Huile de palme"
+      ]
+    },
+    "highlights": [
+      "Palais royaux d'Abomey (UNESCO)",
+      "Ville lacustre de Ganvié",
+      "Parc national de la Pendjari",
+      "Ouidah (route des esclaves)"
+    ],
+    "superficie": 114763,
+    "pib": 18.0,
+    "hdi": 0.525,
+    "religion": "Christianisme / Islam / Vodoun",
+    "wikipedia": "https://fr.wikipedia.org/wiki/B%C3%A9nin"
   },
   "burkina": {
     "name": "Burkina Faso",
@@ -110,11 +416,50 @@
     "currency": "XOF",
     "region": "Afrique de l'Ouest",
     "flag": "https://flagcdn.com/w160/bf.png",
-    "geography": { "position": "Enclavé, Afrique de l'Ouest", "climate": "Semi-aride (Sahel), saison sèche longue" },
-    "history": { "independence": "1960", "colonisateur": "France" },
-    "culture": { "cuisine": ["Tô", "Riz gras", "Ragout d'arachides"], "languages": ["Français", "Mooré", "Dioula", "Fulfuldé"] },
-    "economy": { "mainSectors": ["Agriculture", "Or", "Élevage"], "exports": ["Or", "Coton", "Noix de cajou"] },
-    "highlights": ["FESPACO (festival du cinéma africain)", "Ruines de Loropéni (UNESCO)", "Parc national d'Arli", "Réserve de Nazinga"]
+    "geography": {
+      "position": "Enclavé, Afrique de l'Ouest",
+      "climate": "Semi-aride (Sahel), saison sèche longue"
+    },
+    "history": {
+      "independence": "1960",
+      "colonisateur": "France"
+    },
+    "culture": {
+      "cuisine": [
+        "Tô",
+        "Riz gras",
+        "Ragout d'arachides"
+      ],
+      "languages": [
+        "Français",
+        "Mooré",
+        "Dioula",
+        "Fulfuldé"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Agriculture",
+        "Or",
+        "Élevage"
+      ],
+      "exports": [
+        "Or",
+        "Coton",
+        "Noix de cajou"
+      ]
+    },
+    "highlights": [
+      "FESPACO (festival du cinéma africain)",
+      "Ruines de Loropéni (UNESCO)",
+      "Parc national d'Arli",
+      "Réserve de Nazinga"
+    ],
+    "superficie": 274200,
+    "pib": 18.0,
+    "hdi": 0.449,
+    "religion": "Islam sunnite",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Burkina_Faso"
   },
   "cap-vert": {
     "name": "Cap-Vert",
@@ -123,11 +468,47 @@
     "currency": "CVE",
     "region": "Afrique de l'Ouest",
     "flag": "https://flagcdn.com/w160/cv.png",
-    "geography": { "position": "Archipel atlantique à 570 km de Dakar", "climate": "Tropical sec, tempéré par les alizés" },
-    "history": { "independence": "1975", "colonisateur": "Portugal" },
-    "culture": { "cuisine": ["Cachupa", "Morabeza (ambiance)"], "languages": ["Portugais", "Créole capverdien"] },
-    "economy": { "mainSectors": ["Tourisme", "Pêche", "Services"], "exports": ["Poissons", "Chaussures", "Vêtements"] },
-    "highlights": ["Île de Santiago (Cidade Velha - UNESCO)", "Pico do Fogo (volcan)", "Plages de Sal et Boa Vista", "Musique Morna"]
+    "geography": {
+      "position": "Archipel atlantique à 570 km de Dakar",
+      "climate": "Tropical sec, tempéré par les alizés"
+    },
+    "history": {
+      "independence": "1975",
+      "colonisateur": "Portugal"
+    },
+    "culture": {
+      "cuisine": [
+        "Cachupa",
+        "Morabeza (ambiance)"
+      ],
+      "languages": [
+        "Portugais",
+        "Créole capverdien"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Tourisme",
+        "Pêche",
+        "Services"
+      ],
+      "exports": [
+        "Poissons",
+        "Chaussures",
+        "Vêtements"
+      ]
+    },
+    "highlights": [
+      "Île de Santiago (Cidade Velha - UNESCO)",
+      "Pico do Fogo (volcan)",
+      "Plages de Sal et Boa Vista",
+      "Musique Morna"
+    ],
+    "superficie": 4033,
+    "pib": 2.2,
+    "hdi": 0.662,
+    "religion": "Christianisme catholique",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Cap-Vert"
   },
   "cote-ivoire": {
     "name": "Côte d'Ivoire",
@@ -136,11 +517,53 @@
     "currency": "XOF",
     "region": "Afrique de l'Ouest",
     "flag": "https://flagcdn.com/w160/ci.png",
-    "geography": { "position": "Golfe de Guinée, Afrique de l'Ouest", "climate": "Tropical humide au sud, semi-aride au nord" },
-    "history": { "independence": "1960", "colonisateur": "France" },
-    "culture": { "cuisine": ["Attiéké", "Foutou", "Kedjenou", "Aloco"], "languages": ["Français", "Dioula", "Baoulé", "Bété"] },
-    "economy": { "mainSectors": ["Cacao", "Café", "Agriculture", "Industrie"], "exports": ["Cacao (1er mondial)", "Cajou", "Café", "Or"] },
-    "highlights": ["Basilique Notre-Dame de la Paix (Yamoussoukro)", "Parc national de Taï (UNESCO)", "Parc national de la Comoé", "Plages d'Assinie"]
+    "geography": {
+      "position": "Golfe de Guinée, Afrique de l'Ouest",
+      "climate": "Tropical humide au sud, semi-aride au nord"
+    },
+    "history": {
+      "independence": "1960",
+      "colonisateur": "France"
+    },
+    "culture": {
+      "cuisine": [
+        "Attiéké",
+        "Foutou",
+        "Kedjenou",
+        "Aloco"
+      ],
+      "languages": [
+        "Français",
+        "Dioula",
+        "Baoulé",
+        "Bété"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Cacao",
+        "Café",
+        "Agriculture",
+        "Industrie"
+      ],
+      "exports": [
+        "Cacao (1er mondial)",
+        "Cajou",
+        "Café",
+        "Or"
+      ]
+    },
+    "highlights": [
+      "Basilique Notre-Dame de la Paix (Yamoussoukro)",
+      "Parc national de Taï (UNESCO)",
+      "Parc national de la Comoé",
+      "Plages d'Assinie"
+    ],
+    "superficie": 322463,
+    "pib": 78.0,
+    "hdi": 0.55,
+    "religion": "Islam / Christianisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/C%C3%B4te_d%27Ivoire"
   },
   "gambie": {
     "name": "Gambie",
@@ -149,11 +572,49 @@
     "currency": "GMD",
     "region": "Afrique de l'Ouest",
     "flag": "https://flagcdn.com/w160/gm.png",
-    "geography": { "position": "Plus petit pays d'Afrique continentale, enclave dans le Sénégal, le long du fleuve Gambie", "climate": "Tropical, saison sèche novembre-mai" },
-    "history": { "independence": "1965", "colonisateur": "Royaume-Uni" },
-    "culture": { "cuisine": ["Benachin (riz yassa)", "Domoda", "Superkanja"], "languages": ["Anglais", "Mandingue", "Wolof", "Fula"] },
-    "economy": { "mainSectors": ["Tourisme", "Pêche", "Agriculture"], "exports": ["Arachides", "Poissons"] },
-    "highlights": ["Kunta Kinteh Island (UNESCO)", "Parc national du fleuve Gambie", "Réserve naturelle de Abuko", "Plages de Kololi"]
+    "geography": {
+      "position": "Plus petit pays d'Afrique continentale, enclave dans le Sénégal, le long du fleuve Gambie",
+      "climate": "Tropical, saison sèche novembre-mai"
+    },
+    "history": {
+      "independence": "1965",
+      "colonisateur": "Royaume-Uni"
+    },
+    "culture": {
+      "cuisine": [
+        "Benachin (riz yassa)",
+        "Domoda",
+        "Superkanja"
+      ],
+      "languages": [
+        "Anglais",
+        "Mandingue",
+        "Wolof",
+        "Fula"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Tourisme",
+        "Pêche",
+        "Agriculture"
+      ],
+      "exports": [
+        "Arachides",
+        "Poissons"
+      ]
+    },
+    "highlights": [
+      "Kunta Kinteh Island (UNESCO)",
+      "Parc national du fleuve Gambie",
+      "Réserve naturelle de Abuko",
+      "Plages de Kololi"
+    ],
+    "superficie": 11295,
+    "pib": 2.4,
+    "hdi": 0.496,
+    "religion": "Islam sunnite",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Gambie"
   },
   "ghana": {
     "name": "Ghana",
@@ -162,11 +623,53 @@
     "currency": "GHS",
     "region": "Afrique de l'Ouest",
     "flag": "https://flagcdn.com/w160/gh.png",
-    "geography": { "position": "Golfe de Guinée, Afrique de l'Ouest", "climate": "Tropical humide au sud, semi-aride au nord" },
-    "history": { "independence": "1957", "colonisateur": "Royaume-Uni" },
-    "culture": { "cuisine": ["Fufu", "Jollof Rice", "Kelewele", "Kontomire"], "languages": ["Anglais", "Akan", "Ewe", "Hausa"] },
-    "economy": { "mainSectors": ["Or", "Cacao", "Pétrole", "Services"], "exports": ["Or", "Cacao", "Pétrole", "Diamants"] },
-    "highlights": ["Forts et châteaux côtiers (UNESCO)", "Parc national de Mole", "Lac Volta", "Cape Coast Castle"]
+    "geography": {
+      "position": "Golfe de Guinée, Afrique de l'Ouest",
+      "climate": "Tropical humide au sud, semi-aride au nord"
+    },
+    "history": {
+      "independence": "1957",
+      "colonisateur": "Royaume-Uni"
+    },
+    "culture": {
+      "cuisine": [
+        "Fufu",
+        "Jollof Rice",
+        "Kelewele",
+        "Kontomire"
+      ],
+      "languages": [
+        "Anglais",
+        "Akan",
+        "Ewe",
+        "Hausa"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Or",
+        "Cacao",
+        "Pétrole",
+        "Services"
+      ],
+      "exports": [
+        "Or",
+        "Cacao",
+        "Pétrole",
+        "Diamants"
+      ]
+    },
+    "highlights": [
+      "Forts et châteaux côtiers (UNESCO)",
+      "Parc national de Mole",
+      "Lac Volta",
+      "Cape Coast Castle"
+    ],
+    "superficie": 238533,
+    "pib": 76.0,
+    "hdi": 0.632,
+    "religion": "Christianisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Ghana"
   },
   "guinee": {
     "name": "Guinée",
@@ -175,11 +678,51 @@
     "currency": "GNF",
     "region": "Afrique de l'Ouest",
     "flag": "https://flagcdn.com/w160/gn.png",
-    "geography": { "position": "Façade atlantique, Afrique de l'Ouest", "climate": "Tropical humide" },
-    "history": { "independence": "1958", "colonisateur": "France" },
-    "culture": { "cuisine": ["Soupe kandia", "Riz djolof", "Fouti"], "languages": ["Français", "Pular", "Malinké", "Soussou"] },
-    "economy": { "mainSectors": ["Bauxite (1er mondial)", "Or", "Diamants", "Agriculture"], "exports": ["Bauxite", "Or", "Diamants"] },
-    "highlights": ["Chutes de Kinkon", "Mont Nimba (UNESCO)", "Îles de Los", "Fouta Djallon (massif)"]
+    "geography": {
+      "position": "Façade atlantique, Afrique de l'Ouest",
+      "climate": "Tropical humide"
+    },
+    "history": {
+      "independence": "1958",
+      "colonisateur": "France"
+    },
+    "culture": {
+      "cuisine": [
+        "Soupe kandia",
+        "Riz djolof",
+        "Fouti"
+      ],
+      "languages": [
+        "Français",
+        "Pular",
+        "Malinké",
+        "Soussou"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Bauxite (1er mondial)",
+        "Or",
+        "Diamants",
+        "Agriculture"
+      ],
+      "exports": [
+        "Bauxite",
+        "Or",
+        "Diamants"
+      ]
+    },
+    "highlights": [
+      "Chutes de Kinkon",
+      "Mont Nimba (UNESCO)",
+      "Îles de Los",
+      "Fouta Djallon (massif)"
+    ],
+    "superficie": 245857,
+    "pib": 19.0,
+    "hdi": 0.465,
+    "religion": "Islam sunnite",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Guin%C3%A9e"
   },
   "guinee-bissau": {
     "name": "Guinée-Bissau",
@@ -188,11 +731,47 @@
     "currency": "XOF",
     "region": "Afrique de l'Ouest",
     "flag": "https://flagcdn.com/w160/gw.png",
-    "geography": { "position": "Côte atlantique entre Guinée et Sénégal", "climate": "Tropical, saison humide juin-novembre" },
-    "history": { "independence": "1974", "colonisateur": "Portugal" },
-    "culture": { "cuisine": ["Caldo", "Caldo de Mancarra", "Pirão"], "languages": ["Portugais", "Créole guinéen", "Mandingue"] },
-    "economy": { "mainSectors": ["Pêche", "Agriculture", "Noix de cajou"], "exports": ["Noix de cajou (1er exportateur africain/habitant)", "Poissons"] },
-    "highlights": ["Archipel Bijagos (réserve UNESCO)", "Parc national de Orango", "Mangroves et faune marine"]
+    "geography": {
+      "position": "Côte atlantique entre Guinée et Sénégal",
+      "climate": "Tropical, saison humide juin-novembre"
+    },
+    "history": {
+      "independence": "1974",
+      "colonisateur": "Portugal"
+    },
+    "culture": {
+      "cuisine": [
+        "Caldo",
+        "Caldo de Mancarra",
+        "Pirão"
+      ],
+      "languages": [
+        "Portugais",
+        "Créole guinéen",
+        "Mandingue"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Pêche",
+        "Agriculture",
+        "Noix de cajou"
+      ],
+      "exports": [
+        "Noix de cajou (1er exportateur africain/habitant)",
+        "Poissons"
+      ]
+    },
+    "highlights": [
+      "Archipel Bijagos (réserve UNESCO)",
+      "Parc national de Orango",
+      "Mangroves et faune marine"
+    ],
+    "superficie": 36125,
+    "pib": 1.7,
+    "hdi": 0.483,
+    "religion": "Islam / Animisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Guin%C3%A9e-Bissau"
   },
   "liberia": {
     "name": "Liberia",
@@ -201,11 +780,52 @@
     "currency": "LRD",
     "region": "Afrique de l'Ouest",
     "flag": "https://flagcdn.com/w160/lr.png",
-    "geography": { "position": "Golfe de Guinée, Afrique de l'Ouest", "climate": "Tropical humide" },
-    "history": { "independence": "1847", "colonisateur": "Fondé par des Afro-Américains libres" },
-    "culture": { "cuisine": ["Jollof Rice", "Fufu", "Palm Butter Soup"], "languages": ["Anglais", "Kpelle", "Bassa", "Grebo"] },
-    "economy": { "mainSectors": ["Caoutchouc", "Minerai de fer", "Pêche", "Bois"], "exports": ["Caoutchouc", "Minerai de fer", "Or", "Diamants"] },
-    "highlights": ["Réserve naturelle de Sapo", "Chutes de Kpatawee", "Plages de Harper", "Monts Nimba"]
+    "geography": {
+      "position": "Golfe de Guinée, Afrique de l'Ouest",
+      "climate": "Tropical humide"
+    },
+    "history": {
+      "independence": "1847",
+      "colonisateur": "Fondé par des Afro-Américains libres"
+    },
+    "culture": {
+      "cuisine": [
+        "Jollof Rice",
+        "Fufu",
+        "Palm Butter Soup"
+      ],
+      "languages": [
+        "Anglais",
+        "Kpelle",
+        "Bassa",
+        "Grebo"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Caoutchouc",
+        "Minerai de fer",
+        "Pêche",
+        "Bois"
+      ],
+      "exports": [
+        "Caoutchouc",
+        "Minerai de fer",
+        "Or",
+        "Diamants"
+      ]
+    },
+    "highlights": [
+      "Réserve naturelle de Sapo",
+      "Chutes de Kpatawee",
+      "Plages de Harper",
+      "Monts Nimba"
+    ],
+    "superficie": 111369,
+    "pib": 4.1,
+    "hdi": 0.481,
+    "religion": "Christianisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Liberia"
   },
   "mali": {
     "name": "Mali",
@@ -214,11 +834,50 @@
     "currency": "XOF",
     "region": "Afrique de l'Ouest",
     "flag": "https://flagcdn.com/w160/ml.png",
-    "geography": { "position": "Enclavé, Afrique de l'Ouest, Sahara au nord", "climate": "Désertique au nord, semi-aride (Sahel) au centre, tropical au sud" },
-    "history": { "independence": "1960", "colonisateur": "France" },
-    "culture": { "cuisine": ["Tô", "Riz au gras", "Brochettes"], "languages": ["Français", "Bambara", "Peul", "Songhaï"] },
-    "economy": { "mainSectors": ["Or", "Coton", "Agriculture", "Élevage"], "exports": ["Or", "Coton"] },
-    "highlights": ["Tombouctou (UNESCO)", "Djenné (UNESCO)", "Falaises de Bandiagara - pays dogon (UNESCO)", "Tombeau des Askia (UNESCO)"]
+    "geography": {
+      "position": "Enclavé, Afrique de l'Ouest, Sahara au nord",
+      "climate": "Désertique au nord, semi-aride (Sahel) au centre, tropical au sud"
+    },
+    "history": {
+      "independence": "1960",
+      "colonisateur": "France"
+    },
+    "culture": {
+      "cuisine": [
+        "Tô",
+        "Riz au gras",
+        "Brochettes"
+      ],
+      "languages": [
+        "Français",
+        "Bambara",
+        "Peul",
+        "Songhaï"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Or",
+        "Coton",
+        "Agriculture",
+        "Élevage"
+      ],
+      "exports": [
+        "Or",
+        "Coton"
+      ]
+    },
+    "highlights": [
+      "Tombouctou (UNESCO)",
+      "Djenné (UNESCO)",
+      "Falaises de Bandiagara - pays dogon (UNESCO)",
+      "Tombeau des Askia (UNESCO)"
+    ],
+    "superficie": 1240192,
+    "pib": 19.0,
+    "hdi": 0.428,
+    "religion": "Islam sunnite",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Mali"
   },
   "niger": {
     "name": "Niger",
@@ -227,11 +886,50 @@
     "currency": "XOF",
     "region": "Afrique de l'Ouest",
     "flag": "https://flagcdn.com/w160/ne.png",
-    "geography": { "position": "Enclavé, plus grande partie du Sahara", "climate": "Désertique au nord, semi-aride (Sahel) au sud" },
-    "history": { "independence": "1960", "colonisateur": "France" },
-    "culture": { "cuisine": ["Dambou", "Fari masa", "Tuo zaafi"], "languages": ["Français", "Hausa", "Djerma", "Tamasheq"] },
-    "economy": { "mainSectors": ["Uranium", "Or", "Agriculture", "Élevage"], "exports": ["Uranium", "Or", "Oignons"] },
-    "highlights": ["Désert de l'Aïr et Ténéré (UNESCO)", "Parc national du W (UNESCO)", "Agadez (architecture touareg)"]
+    "geography": {
+      "position": "Enclavé, plus grande partie du Sahara",
+      "climate": "Désertique au nord, semi-aride (Sahel) au sud"
+    },
+    "history": {
+      "independence": "1960",
+      "colonisateur": "France"
+    },
+    "culture": {
+      "cuisine": [
+        "Dambou",
+        "Fari masa",
+        "Tuo zaafi"
+      ],
+      "languages": [
+        "Français",
+        "Hausa",
+        "Djerma",
+        "Tamasheq"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Uranium",
+        "Or",
+        "Agriculture",
+        "Élevage"
+      ],
+      "exports": [
+        "Uranium",
+        "Or",
+        "Oignons"
+      ]
+    },
+    "highlights": [
+      "Désert de l'Aïr et Ténéré (UNESCO)",
+      "Parc national du W (UNESCO)",
+      "Agadez (architecture touareg)"
+    ],
+    "superficie": 1267000,
+    "pib": 13.0,
+    "hdi": 0.394,
+    "religion": "Islam sunnite",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Niger"
   },
   "nigeria": {
     "name": "Nigéria",
@@ -240,11 +938,54 @@
     "currency": "NGN",
     "region": "Afrique de l'Ouest",
     "flag": "https://flagcdn.com/w160/ng.png",
-    "geography": { "position": "Golfe de Guinée, Afrique de l'Ouest, 1ère économie africaine", "climate": "Tropical au sud, semi-aride au nord" },
-    "history": { "independence": "1960", "colonisateur": "Royaume-Uni" },
-    "culture": { "cuisine": ["Jollof Rice", "Egusi Soup", "Suya", "Puff Puff", "Pounded Yam"], "languages": ["Anglais", "Hausa", "Yoruba", "Igbo"] },
-    "economy": { "mainSectors": ["Pétrole & gaz (1er producteur africain)", "Agriculture", "Services", "Industrie"], "exports": ["Pétrole brut", "Cacao", "Caoutchouc"] },
-    "highlights": ["Parc national d'Yankari", "Lagos (mégapole côtière)", "Groove du Sukur (UNESCO)", "Culture Nollywood", "Osun-Osogbo (UNESCO)"]
+    "geography": {
+      "position": "Golfe de Guinée, Afrique de l'Ouest, 1ère économie africaine",
+      "climate": "Tropical au sud, semi-aride au nord"
+    },
+    "history": {
+      "independence": "1960",
+      "colonisateur": "Royaume-Uni"
+    },
+    "culture": {
+      "cuisine": [
+        "Jollof Rice",
+        "Egusi Soup",
+        "Suya",
+        "Puff Puff",
+        "Pounded Yam"
+      ],
+      "languages": [
+        "Anglais",
+        "Hausa",
+        "Yoruba",
+        "Igbo"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Pétrole & gaz (1er producteur africain)",
+        "Agriculture",
+        "Services",
+        "Industrie"
+      ],
+      "exports": [
+        "Pétrole brut",
+        "Cacao",
+        "Caoutchouc"
+      ]
+    },
+    "highlights": [
+      "Parc national d'Yankari",
+      "Lagos (mégapole côtière)",
+      "Groove du Sukur (UNESCO)",
+      "Culture Nollywood",
+      "Osun-Osogbo (UNESCO)"
+    ],
+    "superficie": 923768,
+    "pib": 477.0,
+    "hdi": 0.548,
+    "religion": "Islam / Christianisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Nigeria"
   },
   "senegal": {
     "name": "Sénégal",
@@ -253,11 +994,55 @@
     "currency": "XOF",
     "region": "Afrique de l'Ouest",
     "flag": "https://flagcdn.com/w160/sn.png",
-    "geography": { "position": "Pointe ouest de l'Afrique, façade atlantique", "climate": "Tropical avec saison sèche et saison humide" },
-    "history": { "independence": "1960", "colonisateur": "France" },
-    "culture": { "cuisine": ["Thiéboudiène", "Yassa poulet", "Mafé", "Thiof"], "languages": ["Français", "Wolof", "Pulaar", "Sérère", "Mandingue"] },
-    "economy": { "mainSectors": ["Pêche", "Phosphates", "Tourisme", "Agriculture", "Pétrole (en développement)"], "exports": ["Poissons", "Arachides", "Phosphates"] },
-    "highlights": ["Île de Gorée (UNESCO)", "Parc national des oiseaux de Djoudj (UNESCO)", "Parc national du Niokolo-Koba (UNESCO)", "Lac Rose", "Casamance"]
+    "geography": {
+      "position": "Pointe ouest de l'Afrique, façade atlantique",
+      "climate": "Tropical avec saison sèche et saison humide"
+    },
+    "history": {
+      "independence": "1960",
+      "colonisateur": "France"
+    },
+    "culture": {
+      "cuisine": [
+        "Thiéboudiène",
+        "Yassa poulet",
+        "Mafé",
+        "Thiof"
+      ],
+      "languages": [
+        "Français",
+        "Wolof",
+        "Pulaar",
+        "Sérère",
+        "Mandingue"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Pêche",
+        "Phosphates",
+        "Tourisme",
+        "Agriculture",
+        "Pétrole (en développement)"
+      ],
+      "exports": [
+        "Poissons",
+        "Arachides",
+        "Phosphates"
+      ]
+    },
+    "highlights": [
+      "Île de Gorée (UNESCO)",
+      "Parc national des oiseaux de Djoudj (UNESCO)",
+      "Parc national du Niokolo-Koba (UNESCO)",
+      "Lac Rose",
+      "Casamance"
+    ],
+    "superficie": 196712,
+    "pib": 30.0,
+    "hdi": 0.517,
+    "religion": "Islam sunnite",
+    "wikipedia": "https://fr.wikipedia.org/wiki/S%C3%A9n%C3%A9gal"
   },
   "sierra-leone": {
     "name": "Sierra Leone",
@@ -266,11 +1051,52 @@
     "currency": "SLE",
     "region": "Afrique de l'Ouest",
     "flag": "https://flagcdn.com/w160/sl.png",
-    "geography": { "position": "Golfe de Guinée, Afrique de l'Ouest", "climate": "Tropical humide, forêts côtières" },
-    "history": { "independence": "1961", "colonisateur": "Royaume-Uni" },
-    "culture": { "cuisine": ["Plasas", "Groundnut Soup", "Fufu"], "languages": ["Anglais", "Krio", "Temne", "Mende"] },
-    "economy": { "mainSectors": ["Diamants", "Or", "Rutile", "Agriculture"], "exports": ["Diamants", "Rutile", "Or", "Cacao"] },
-    "highlights": ["Plages de Tokeh et Lumley", "Parc national de Outamba-Kilimi", "Réserve de Tiwai Island", "Chimpanzés de Tacugama"]
+    "geography": {
+      "position": "Golfe de Guinée, Afrique de l'Ouest",
+      "climate": "Tropical humide, forêts côtières"
+    },
+    "history": {
+      "independence": "1961",
+      "colonisateur": "Royaume-Uni"
+    },
+    "culture": {
+      "cuisine": [
+        "Plasas",
+        "Groundnut Soup",
+        "Fufu"
+      ],
+      "languages": [
+        "Anglais",
+        "Krio",
+        "Temne",
+        "Mende"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Diamants",
+        "Or",
+        "Rutile",
+        "Agriculture"
+      ],
+      "exports": [
+        "Diamants",
+        "Rutile",
+        "Or",
+        "Cacao"
+      ]
+    },
+    "highlights": [
+      "Plages de Tokeh et Lumley",
+      "Parc national de Outamba-Kilimi",
+      "Réserve de Tiwai Island",
+      "Chimpanzés de Tacugama"
+    ],
+    "superficie": 71740,
+    "pib": 4.2,
+    "hdi": 0.477,
+    "religion": "Islam / Christianisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Sierra_Leone"
   },
   "togo": {
     "name": "Togo",
@@ -279,11 +1105,50 @@
     "currency": "XOF",
     "region": "Afrique de l'Ouest",
     "flag": "https://flagcdn.com/w160/tg.png",
-    "geography": { "position": "Golfe de Guinée, étroit corridor nord-sud, Afrique de l'Ouest", "climate": "Tropical humide au sud, semi-aride au nord" },
-    "history": { "independence": "1960", "colonisateur": "France" },
-    "culture": { "cuisine": ["Fufu", "Akumé", "Gboma Dessi"], "languages": ["Français", "Ewe", "Kabiyé"] },
-    "economy": { "mainSectors": ["Phosphates", "Agriculture", "Commerce", "Port de Lomé"], "exports": ["Phosphates", "Coton", "Cacao"] },
-    "highlights": ["Marché des féticheurs (Lomé)", "Parc national Fazao-Malfakassa", "Tamberma (pays Batammariba - UNESCO)", "Cascades de Kpalimé"]
+    "geography": {
+      "position": "Golfe de Guinée, étroit corridor nord-sud, Afrique de l'Ouest",
+      "climate": "Tropical humide au sud, semi-aride au nord"
+    },
+    "history": {
+      "independence": "1960",
+      "colonisateur": "France"
+    },
+    "culture": {
+      "cuisine": [
+        "Fufu",
+        "Akumé",
+        "Gboma Dessi"
+      ],
+      "languages": [
+        "Français",
+        "Ewe",
+        "Kabiyé"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Phosphates",
+        "Agriculture",
+        "Commerce",
+        "Port de Lomé"
+      ],
+      "exports": [
+        "Phosphates",
+        "Coton",
+        "Cacao"
+      ]
+    },
+    "highlights": [
+      "Marché des féticheurs (Lomé)",
+      "Parc national Fazao-Malfakassa",
+      "Tamberma (pays Batammariba - UNESCO)",
+      "Cascades de Kpalimé"
+    ],
+    "superficie": 56785,
+    "pib": 8.4,
+    "hdi": 0.539,
+    "religion": "Christianisme / Animisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Togo"
   },
   "cameroun": {
     "name": "Cameroun",
@@ -292,11 +1157,56 @@
     "currency": "XAF",
     "region": "Afrique Centrale",
     "flag": "https://flagcdn.com/w160/cm.png",
-    "geography": { "position": "Carrefour de l'Afrique centrale et de l'Ouest, « Afrique en miniature »", "climate": "Tropical humide au sud, semi-aride au nord, montagnard à l'ouest" },
-    "history": { "independence": "1960", "colonisateur": "France / Royaume-Uni" },
-    "culture": { "cuisine": ["Ndolé", "Eru", "Koki", "Sanga"], "languages": ["Français", "Anglais", "Fulfulde", "Bamiléké", "Duala"] },
-    "economy": { "mainSectors": ["Pétrole", "Agriculture", "Forêts", "Industrie"], "exports": ["Pétrole", "Cacao", "Café", "Bois", "Coton"] },
-    "highlights": ["Mont Cameroun (4 095 m)", "Parc national de Waza", "Réserve du Dja (UNESCO)", "Chutes de la Lobé", "Lac Nyos"]
+    "geography": {
+      "position": "Carrefour de l'Afrique centrale et de l'Ouest, « Afrique en miniature »",
+      "climate": "Tropical humide au sud, semi-aride au nord, montagnard à l'ouest"
+    },
+    "history": {
+      "independence": "1960",
+      "colonisateur": "France / Royaume-Uni"
+    },
+    "culture": {
+      "cuisine": [
+        "Ndolé",
+        "Eru",
+        "Koki",
+        "Sanga"
+      ],
+      "languages": [
+        "Français",
+        "Anglais",
+        "Fulfulde",
+        "Bamiléké",
+        "Duala"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Pétrole",
+        "Agriculture",
+        "Forêts",
+        "Industrie"
+      ],
+      "exports": [
+        "Pétrole",
+        "Cacao",
+        "Café",
+        "Bois",
+        "Coton"
+      ]
+    },
+    "highlights": [
+      "Mont Cameroun (4 095 m)",
+      "Parc national de Waza",
+      "Réserve du Dja (UNESCO)",
+      "Chutes de la Lobé",
+      "Lac Nyos"
+    ],
+    "superficie": 475442,
+    "pib": 47.0,
+    "hdi": 0.576,
+    "religion": "Christianisme / Islam",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Cameroun"
   },
   "centrafrique": {
     "name": "République Centrafricaine",
@@ -305,11 +1215,49 @@
     "currency": "XAF",
     "region": "Afrique Centrale",
     "flag": "https://flagcdn.com/w160/cf.png",
-    "geography": { "position": "Cœur de l'Afrique, enclavé", "climate": "Tropical humide" },
-    "history": { "independence": "1960", "colonisateur": "France" },
-    "culture": { "cuisine": ["Gozo", "Ngbako", "Sésame sauce"], "languages": ["Français", "Sango"] },
-    "economy": { "mainSectors": ["Diamants", "Or", "Bois", "Agriculture"], "exports": ["Diamants", "Or", "Bois", "Coton"] },
-    "highlights": ["Parc national de Dzanga-Sangha (UNESCO)", "Forêts tropicales denses", "Fleuve Oubangui"]
+    "geography": {
+      "position": "Cœur de l'Afrique, enclavé",
+      "climate": "Tropical humide"
+    },
+    "history": {
+      "independence": "1960",
+      "colonisateur": "France"
+    },
+    "culture": {
+      "cuisine": [
+        "Gozo",
+        "Ngbako",
+        "Sésame sauce"
+      ],
+      "languages": [
+        "Français",
+        "Sango"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Diamants",
+        "Or",
+        "Bois",
+        "Agriculture"
+      ],
+      "exports": [
+        "Diamants",
+        "Or",
+        "Bois",
+        "Coton"
+      ]
+    },
+    "highlights": [
+      "Parc national de Dzanga-Sangha (UNESCO)",
+      "Forêts tropicales denses",
+      "Fleuve Oubangui"
+    ],
+    "superficie": 622984,
+    "pib": 2.5,
+    "hdi": 0.404,
+    "religion": "Christianisme / Islam",
+    "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9publique_centrafricaine"
   },
   "tchad": {
     "name": "Tchad",
@@ -318,11 +1266,50 @@
     "currency": "XAF",
     "region": "Afrique Centrale",
     "flag": "https://flagcdn.com/w160/td.png",
-    "geography": { "position": "Centre du continent, enclavé, du Sahara au Sahel", "climate": "Désertique au nord, semi-aride au centre, tropical au sud" },
-    "history": { "independence": "1960", "colonisateur": "France" },
-    "culture": { "cuisine": ["Boule de mil", "Mouton grillé", "Brochettes"], "languages": ["Français", "Arabe", "Sara", "Kanembou"] },
-    "economy": { "mainSectors": ["Pétrole", "Agriculture", "Élevage"], "exports": ["Pétrole", "Coton", "Bétail"] },
-    "highlights": ["Massif du Tibesti", "Lac Tchad (en recul)", "Parc national de Zakouma", "Ennedi (UNESCO)"]
+    "geography": {
+      "position": "Centre du continent, enclavé, du Sahara au Sahel",
+      "climate": "Désertique au nord, semi-aride au centre, tropical au sud"
+    },
+    "history": {
+      "independence": "1960",
+      "colonisateur": "France"
+    },
+    "culture": {
+      "cuisine": [
+        "Boule de mil",
+        "Mouton grillé",
+        "Brochettes"
+      ],
+      "languages": [
+        "Français",
+        "Arabe",
+        "Sara",
+        "Kanembou"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Pétrole",
+        "Agriculture",
+        "Élevage"
+      ],
+      "exports": [
+        "Pétrole",
+        "Coton",
+        "Bétail"
+      ]
+    },
+    "highlights": [
+      "Massif du Tibesti",
+      "Lac Tchad (en recul)",
+      "Parc national de Zakouma",
+      "Ennedi (UNESCO)"
+    ],
+    "superficie": 1284000,
+    "pib": 12.0,
+    "hdi": 0.394,
+    "religion": "Islam sunnite",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Tchad"
   },
   "congo-brazzaville": {
     "name": "Congo (Brazzaville)",
@@ -331,11 +1318,51 @@
     "currency": "XAF",
     "region": "Afrique Centrale",
     "flag": "https://flagcdn.com/w160/cg.png",
-    "geography": { "position": "Équateur, façade atlantique, fleuve Congo", "climate": "Tropical équatorial humide" },
-    "history": { "independence": "1960", "colonisateur": "France" },
-    "culture": { "cuisine": ["Saka-saka", "Maboke", "Fufu"], "languages": ["Français", "Lingala", "Kituba", "Monokutuba"] },
-    "economy": { "mainSectors": ["Pétrole", "Bois", "Agriculture", "Mines"], "exports": ["Pétrole", "Bois", "Potasse"] },
-    "highlights": ["Parc national d'Odzala-Kokoua", "Lac Télé (gorilles)", "Pool Malebo (Congo-Brazzaville face à Kinshasa)", "Forêts tropicales"]
+    "geography": {
+      "position": "Équateur, façade atlantique, fleuve Congo",
+      "climate": "Tropical équatorial humide"
+    },
+    "history": {
+      "independence": "1960",
+      "colonisateur": "France"
+    },
+    "culture": {
+      "cuisine": [
+        "Saka-saka",
+        "Maboke",
+        "Fufu"
+      ],
+      "languages": [
+        "Français",
+        "Lingala",
+        "Kituba",
+        "Monokutuba"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Pétrole",
+        "Bois",
+        "Agriculture",
+        "Mines"
+      ],
+      "exports": [
+        "Pétrole",
+        "Bois",
+        "Potasse"
+      ]
+    },
+    "highlights": [
+      "Parc national d'Odzala-Kokoua",
+      "Lac Télé (gorilles)",
+      "Pool Malebo (Congo-Brazzaville face à Kinshasa)",
+      "Forêts tropicales"
+    ],
+    "superficie": 342000,
+    "pib": 15.0,
+    "hdi": 0.571,
+    "religion": "Christianisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9publique_du_Congo"
   },
   "congo-kinshasa": {
     "name": "République Démocratique du Congo",
@@ -344,11 +1371,55 @@
     "currency": "CDF",
     "region": "Afrique Centrale",
     "flag": "https://flagcdn.com/w160/cd.png",
-    "geography": { "position": "Cœur de l'Afrique, 2e plus grand pays du continent, bassin du Congo", "climate": "Équatorial humide au centre, tropical au nord et au sud" },
-    "history": { "independence": "1960", "colonisateur": "Belgique" },
-    "culture": { "cuisine": ["Pondu (feuilles de manioc)", "Liboke", "Fufu", "Moambe"], "languages": ["Français", "Lingala", "Swahili", "Kikongo", "Tshiluba"] },
-    "economy": { "mainSectors": ["Mines (cobalt, coltan, or, diamants)", "Agriculture", "Hydroélectricité"], "exports": ["Cobalt", "Coltan", "Or", "Diamants", "Pétrole"] },
-    "highlights": ["Parc national des Virunga (UNESCO)", "Parc national de la Salonga (UNESCO)", "Gorilles des montagnes", "Chutes Boyoma", "Fleuve Congo"]
+    "geography": {
+      "position": "Cœur de l'Afrique, 2e plus grand pays du continent, bassin du Congo",
+      "climate": "Équatorial humide au centre, tropical au nord et au sud"
+    },
+    "history": {
+      "independence": "1960",
+      "colonisateur": "Belgique"
+    },
+    "culture": {
+      "cuisine": [
+        "Pondu (feuilles de manioc)",
+        "Liboke",
+        "Fufu",
+        "Moambe"
+      ],
+      "languages": [
+        "Français",
+        "Lingala",
+        "Swahili",
+        "Kikongo",
+        "Tshiluba"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Mines (cobalt, coltan, or, diamants)",
+        "Agriculture",
+        "Hydroélectricité"
+      ],
+      "exports": [
+        "Cobalt",
+        "Coltan",
+        "Or",
+        "Diamants",
+        "Pétrole"
+      ]
+    },
+    "highlights": [
+      "Parc national des Virunga (UNESCO)",
+      "Parc national de la Salonga (UNESCO)",
+      "Gorilles des montagnes",
+      "Chutes Boyoma",
+      "Fleuve Congo"
+    ],
+    "superficie": 2344858,
+    "pib": 65.0,
+    "hdi": 0.481,
+    "religion": "Christianisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9publique_d%C3%A9mocratique_du_Congo"
   },
   "guinee-equatoriale": {
     "name": "Guinée Équatoriale",
@@ -357,11 +1428,51 @@
     "currency": "XAF",
     "region": "Afrique Centrale",
     "flag": "https://flagcdn.com/w160/gq.png",
-    "geography": { "position": "Côte atlantique et île de Bioko, seul pays hispanophone d'Afrique", "climate": "Tropical équatorial humide" },
-    "history": { "independence": "1968", "colonisateur": "Espagne" },
-    "culture": { "cuisine": ["Sopa de pescado", "Pépé soupe", "Succotash"], "languages": ["Espagnol", "Français", "Portugais", "Fang", "Bubi"] },
-    "economy": { "mainSectors": ["Pétrole & gaz", "Agriculture", "Forêts"], "exports": ["Pétrole", "Gaz naturel", "Méthanol", "Bois"] },
-    "highlights": ["Île de Bioko (forêts vierges)", "Parc national de Monte Alen", "Réserves de singes endémiques"]
+    "geography": {
+      "position": "Côte atlantique et île de Bioko, seul pays hispanophone d'Afrique",
+      "climate": "Tropical équatorial humide"
+    },
+    "history": {
+      "independence": "1968",
+      "colonisateur": "Espagne"
+    },
+    "culture": {
+      "cuisine": [
+        "Sopa de pescado",
+        "Pépé soupe",
+        "Succotash"
+      ],
+      "languages": [
+        "Espagnol",
+        "Français",
+        "Portugais",
+        "Fang",
+        "Bubi"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Pétrole & gaz",
+        "Agriculture",
+        "Forêts"
+      ],
+      "exports": [
+        "Pétrole",
+        "Gaz naturel",
+        "Méthanol",
+        "Bois"
+      ]
+    },
+    "highlights": [
+      "Île de Bioko (forêts vierges)",
+      "Parc national de Monte Alen",
+      "Réserves de singes endémiques"
+    ],
+    "superficie": 28051,
+    "pib": 12.0,
+    "hdi": 0.596,
+    "religion": "Christianisme catholique",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Guin%C3%A9e_%C3%A9quatoriale"
   },
   "gabon": {
     "name": "Gabon",
@@ -370,11 +1481,51 @@
     "currency": "XAF",
     "region": "Afrique Centrale",
     "flag": "https://flagcdn.com/w160/ga.png",
-    "geography": { "position": "Équateur, façade atlantique, 85% de forêts tropicales", "climate": "Tropical équatorial humide" },
-    "history": { "independence": "1960", "colonisateur": "France" },
-    "culture": { "cuisine": ["Poulet nyembwe", "Brochettes de banane", "Atannga"], "languages": ["Français", "Fang", "Myène", "Nzebi"] },
-    "economy": { "mainSectors": ["Pétrole", "Manganèse (1er mondial)", "Bois", "Agriculture"], "exports": ["Pétrole", "Manganèse", "Bois"] },
-    "highlights": ["Parc national de Lopé (UNESCO)", "13 parcs nationaux (11% du territoire protégé)", "Gorilles de plaine", "Baleines à bosse d'Omboué"]
+    "geography": {
+      "position": "Équateur, façade atlantique, 85% de forêts tropicales",
+      "climate": "Tropical équatorial humide"
+    },
+    "history": {
+      "independence": "1960",
+      "colonisateur": "France"
+    },
+    "culture": {
+      "cuisine": [
+        "Poulet nyembwe",
+        "Brochettes de banane",
+        "Atannga"
+      ],
+      "languages": [
+        "Français",
+        "Fang",
+        "Myène",
+        "Nzebi"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Pétrole",
+        "Manganèse (1er mondial)",
+        "Bois",
+        "Agriculture"
+      ],
+      "exports": [
+        "Pétrole",
+        "Manganèse",
+        "Bois"
+      ]
+    },
+    "highlights": [
+      "Parc national de Lopé (UNESCO)",
+      "13 parcs nationaux (11% du territoire protégé)",
+      "Gorilles de plaine",
+      "Baleines à bosse d'Omboué"
+    ],
+    "superficie": 267668,
+    "pib": 19.0,
+    "hdi": 0.703,
+    "religion": "Christianisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Gabon"
   },
   "saotome": {
     "name": "Sao Tomé-et-Principe",
@@ -383,11 +1534,48 @@
     "currency": "STN",
     "region": "Afrique Centrale",
     "flag": "https://flagcdn.com/w160/st.png",
-    "geography": { "position": "Archipel de l'équateur atlantique, golfe de Guinée", "climate": "Tropical équatorial très humide" },
-    "history": { "independence": "1975", "colonisateur": "Portugal" },
-    "culture": { "cuisine": ["Calulú", "Banana pão", "Frango assado"], "languages": ["Portugais", "Forro", "Angolar"] },
-    "economy": { "mainSectors": ["Cacao", "Tourisme", "Pêche"], "exports": ["Cacao", "Poissons"] },
-    "highlights": ["Pico de São Tomé (2 024 m)", "Roça Sundy (colonial)", "Plages de Praia Piscina", "Forêts tropicales humides"]
+    "geography": {
+      "position": "Archipel de l'équateur atlantique, golfe de Guinée",
+      "climate": "Tropical équatorial très humide"
+    },
+    "history": {
+      "independence": "1975",
+      "colonisateur": "Portugal"
+    },
+    "culture": {
+      "cuisine": [
+        "Calulú",
+        "Banana pão",
+        "Frango assado"
+      ],
+      "languages": [
+        "Portugais",
+        "Forro",
+        "Angolar"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Cacao",
+        "Tourisme",
+        "Pêche"
+      ],
+      "exports": [
+        "Cacao",
+        "Poissons"
+      ]
+    },
+    "highlights": [
+      "Pico de São Tomé (2 024 m)",
+      "Roça Sundy (colonial)",
+      "Plages de Praia Piscina",
+      "Forêts tropicales humides"
+    ],
+    "superficie": 964,
+    "pib": 0.6,
+    "hdi": 0.618,
+    "religion": "Christianisme catholique",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Sao_Tom%C3%A9-et-Principe"
   },
   "angola": {
     "name": "Angola",
@@ -396,11 +1584,51 @@
     "currency": "AOA",
     "region": "Afrique Centrale",
     "flag": "https://flagcdn.com/w160/ao.png",
-    "geography": { "position": "Côte atlantique, Afrique australe-centrale", "climate": "Semi-aride au sud, tropical au nord" },
-    "history": { "independence": "1975", "colonisateur": "Portugal" },
-    "culture": { "cuisine": ["Muamba de galinha", "Calulu", "Funje"], "languages": ["Portugais", "Umbundu", "Kimbundu", "Kikongo"] },
-    "economy": { "mainSectors": ["Pétrole", "Diamants", "Agriculture", "Construction"], "exports": ["Pétrole brut", "Diamants", "Gaz"] },
-    "highlights": ["Chutes de Kalandula", "Désert du Namib (Tombua)", "Parc national de Kissama", "Forêts de Maiombe"]
+    "geography": {
+      "position": "Côte atlantique, Afrique australe-centrale",
+      "climate": "Semi-aride au sud, tropical au nord"
+    },
+    "history": {
+      "independence": "1975",
+      "colonisateur": "Portugal"
+    },
+    "culture": {
+      "cuisine": [
+        "Muamba de galinha",
+        "Calulu",
+        "Funje"
+      ],
+      "languages": [
+        "Portugais",
+        "Umbundu",
+        "Kimbundu",
+        "Kikongo"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Pétrole",
+        "Diamants",
+        "Agriculture",
+        "Construction"
+      ],
+      "exports": [
+        "Pétrole brut",
+        "Diamants",
+        "Gaz"
+      ]
+    },
+    "highlights": [
+      "Chutes de Kalandula",
+      "Désert du Namib (Tombua)",
+      "Parc national de Kissama",
+      "Forêts de Maiombe"
+    ],
+    "superficie": 1246700,
+    "pib": 84.0,
+    "hdi": 0.586,
+    "religion": "Christianisme catholique",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Angola"
   },
   "burundi": {
     "name": "Burundi",
@@ -409,11 +1637,50 @@
     "currency": "BIF",
     "region": "Afrique de l'Est",
     "flag": "https://flagcdn.com/w160/bi.png",
-    "geography": { "position": "Grands Lacs africains, enclavé", "climate": "Tropical, modéré par l'altitude" },
-    "history": { "independence": "1962", "colonisateur": "Belgique" },
-    "culture": { "cuisine": ["Ugali", "Ibihaza", "Isombe"], "languages": ["Kirundi", "Français", "Swahili"] },
-    "economy": { "mainSectors": ["Agriculture", "Mines (nickel, or)", "Café", "Thé"], "exports": ["Café", "Thé", "Or"] },
-    "highlights": ["Lac Tanganyika", "Tambours de Gishora", "Parc national de la Kibira", "Source du Nil Blanc (Rutovu)"]
+    "geography": {
+      "position": "Grands Lacs africains, enclavé",
+      "climate": "Tropical, modéré par l'altitude"
+    },
+    "history": {
+      "independence": "1962",
+      "colonisateur": "Belgique"
+    },
+    "culture": {
+      "cuisine": [
+        "Ugali",
+        "Ibihaza",
+        "Isombe"
+      ],
+      "languages": [
+        "Kirundi",
+        "Français",
+        "Swahili"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Agriculture",
+        "Mines (nickel, or)",
+        "Café",
+        "Thé"
+      ],
+      "exports": [
+        "Café",
+        "Thé",
+        "Or"
+      ]
+    },
+    "highlights": [
+      "Lac Tanganyika",
+      "Tambours de Gishora",
+      "Parc national de la Kibira",
+      "Source du Nil Blanc (Rutovu)"
+    ],
+    "superficie": 27834,
+    "pib": 3.7,
+    "hdi": 0.426,
+    "religion": "Christianisme catholique",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Burundi"
   },
   "rwanda": {
     "name": "Rwanda",
@@ -422,11 +1689,52 @@
     "currency": "RWF",
     "region": "Afrique de l'Est",
     "flag": "https://flagcdn.com/w160/rw.png",
-    "geography": { "position": "Pays des mille collines, Grands Lacs, enclavé", "climate": "Tropical modéré par l'altitude" },
-    "history": { "independence": "1962", "colonisateur": "Belgique" },
-    "culture": { "cuisine": ["Ugali", "Isombe (feuilles de manioc)", "Brochettes"], "languages": ["Kinyarwanda", "Anglais", "Français", "Swahili"] },
-    "economy": { "mainSectors": ["Tourisme", "Mines (coltan, cassitérite)", "Agriculture", "Services"], "exports": ["Thé", "Café", "Coltan", "Cassitérite"] },
-    "highlights": ["Gorilles des volcans (Parc national des volcans)", "Lac Kivu", "Mémorial du génocide de Kigali", "Nyungwe (forêt - chimpanzés)"]
+    "geography": {
+      "position": "Pays des mille collines, Grands Lacs, enclavé",
+      "climate": "Tropical modéré par l'altitude"
+    },
+    "history": {
+      "independence": "1962",
+      "colonisateur": "Belgique"
+    },
+    "culture": {
+      "cuisine": [
+        "Ugali",
+        "Isombe (feuilles de manioc)",
+        "Brochettes"
+      ],
+      "languages": [
+        "Kinyarwanda",
+        "Anglais",
+        "Français",
+        "Swahili"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Tourisme",
+        "Mines (coltan, cassitérite)",
+        "Agriculture",
+        "Services"
+      ],
+      "exports": [
+        "Thé",
+        "Café",
+        "Coltan",
+        "Cassitérite"
+      ]
+    },
+    "highlights": [
+      "Gorilles des volcans (Parc national des volcans)",
+      "Lac Kivu",
+      "Mémorial du génocide de Kigali",
+      "Nyungwe (forêt - chimpanzés)"
+    ],
+    "superficie": 26338,
+    "pib": 14.0,
+    "hdi": 0.543,
+    "religion": "Christianisme catholique",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Rwanda"
   },
   "djibouti": {
     "name": "Djibouti",
@@ -435,11 +1743,49 @@
     "currency": "DJF",
     "region": "Afrique de l'Est",
     "flag": "https://flagcdn.com/w160/dj.png",
-    "geography": { "position": "Corne de l'Afrique, Mer Rouge, détroit de Bab-el-Mandeb", "climate": "Désertique, très chaud et sec" },
-    "history": { "independence": "1977", "colonisateur": "France" },
-    "culture": { "cuisine": ["Skoudahkaris", "Fah-fah", "Lahoh"], "languages": ["Français", "Arabe", "Somali", "Afar"] },
-    "economy": { "mainSectors": ["Port stratégique", "Bases militaires étrangères", "Services"], "exports": ["Services portuaires", "Sel"] },
-    "highlights": ["Lac Assal (point le plus bas d'Afrique, -155m)", "Lac Abbé (cheminées de calcaire)", "Golfe de Tadjourah (requins baleines)", "Parc national du Day"]
+    "geography": {
+      "position": "Corne de l'Afrique, Mer Rouge, détroit de Bab-el-Mandeb",
+      "climate": "Désertique, très chaud et sec"
+    },
+    "history": {
+      "independence": "1977",
+      "colonisateur": "France"
+    },
+    "culture": {
+      "cuisine": [
+        "Skoudahkaris",
+        "Fah-fah",
+        "Lahoh"
+      ],
+      "languages": [
+        "Français",
+        "Arabe",
+        "Somali",
+        "Afar"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Port stratégique",
+        "Bases militaires étrangères",
+        "Services"
+      ],
+      "exports": [
+        "Services portuaires",
+        "Sel"
+      ]
+    },
+    "highlights": [
+      "Lac Assal (point le plus bas d'Afrique, -155m)",
+      "Lac Abbé (cheminées de calcaire)",
+      "Golfe de Tadjourah (requins baleines)",
+      "Parc national du Day"
+    ],
+    "superficie": 23200,
+    "pib": 3.9,
+    "hdi": 0.524,
+    "religion": "Islam sunnite",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Djibouti"
   },
   "erythree": {
     "name": "Érythrée",
@@ -448,11 +1794,50 @@
     "currency": "ERN",
     "region": "Afrique de l'Est",
     "flag": "https://flagcdn.com/w160/er.png",
-    "geography": { "position": "Corne de l'Afrique, Mer Rouge", "climate": "Désertique sur la côte, semi-aride à l'intérieur" },
-    "history": { "independence": "1993", "colonisateur": "Italie / Éthiopie" },
-    "culture": { "cuisine": ["Injera", "Zigni", "Ful"], "languages": ["Tigrigna", "Arabe", "Tigré"] },
-    "economy": { "mainSectors": ["Agriculture", "Mines (or, cuivre, zinc)", "Pêche"], "exports": ["Or", "Cuivre", "Zinc", "Poissons"] },
-    "highlights": ["Asmara (architecture Art Déco - UNESCO)", "Massawa (ville historique)", "Mer Rouge (plongée)", "Montagnes du Dahlak"]
+    "geography": {
+      "position": "Corne de l'Afrique, Mer Rouge",
+      "climate": "Désertique sur la côte, semi-aride à l'intérieur"
+    },
+    "history": {
+      "independence": "1993",
+      "colonisateur": "Italie / Éthiopie"
+    },
+    "culture": {
+      "cuisine": [
+        "Injera",
+        "Zigni",
+        "Ful"
+      ],
+      "languages": [
+        "Tigrigna",
+        "Arabe",
+        "Tigré"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Agriculture",
+        "Mines (or, cuivre, zinc)",
+        "Pêche"
+      ],
+      "exports": [
+        "Or",
+        "Cuivre",
+        "Zinc",
+        "Poissons"
+      ]
+    },
+    "highlights": [
+      "Asmara (architecture Art Déco - UNESCO)",
+      "Massawa (ville historique)",
+      "Mer Rouge (plongée)",
+      "Montagnes du Dahlak"
+    ],
+    "superficie": 121320,
+    "pib": 2.8,
+    "hdi": 0.492,
+    "religion": "Christianisme / Islam",
+    "wikipedia": "https://fr.wikipedia.org/wiki/%C3%89rythr%C3%A9e"
   },
   "ethiopie": {
     "name": "Éthiopie",
@@ -461,11 +1846,54 @@
     "currency": "ETB",
     "region": "Afrique de l'Est",
     "flag": "https://flagcdn.com/w160/et.png",
-    "geography": { "position": "Corne de l'Afrique, pays sans littoral, hauts plateaux et vallée du Rift", "climate": "Tropical modéré par l'altitude, aride à l'est" },
-    "history": { "independence": "Jamais colonisé (victoire d'Adoua 1896)", "colonisateur": "Résistance à l'Italie" },
-    "culture": { "cuisine": ["Injera + wot", "Tibs", "Kitfo", "Café éthiopien (origine du café)"], "languages": ["Amharique", "Oromo", "Somali", "Tigrigna"] },
-    "economy": { "mainSectors": ["Agriculture (café, khat)", "Textiles", "Hydroélectricité", "Tourisme"], "exports": ["Café", "Légumineuses", "Fleurs", "Khat"] },
-    "highlights": ["Lalibela (églises rupestres - UNESCO)", "Axoum (stèles - UNESCO)", "Harar (vieille ville - UNESCO)", "Simien (UNESCO)", "Vallée de l'Omo (UNESCO)"]
+    "geography": {
+      "position": "Corne de l'Afrique, pays sans littoral, hauts plateaux et vallée du Rift",
+      "climate": "Tropical modéré par l'altitude, aride à l'est"
+    },
+    "history": {
+      "independence": "Jamais colonisé (victoire d'Adoua 1896)",
+      "colonisateur": "Résistance à l'Italie"
+    },
+    "culture": {
+      "cuisine": [
+        "Injera + wot",
+        "Tibs",
+        "Kitfo",
+        "Café éthiopien (origine du café)"
+      ],
+      "languages": [
+        "Amharique",
+        "Oromo",
+        "Somali",
+        "Tigrigna"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Agriculture (café, khat)",
+        "Textiles",
+        "Hydroélectricité",
+        "Tourisme"
+      ],
+      "exports": [
+        "Café",
+        "Légumineuses",
+        "Fleurs",
+        "Khat"
+      ]
+    },
+    "highlights": [
+      "Lalibela (églises rupestres - UNESCO)",
+      "Axoum (stèles - UNESCO)",
+      "Harar (vieille ville - UNESCO)",
+      "Simien (UNESCO)",
+      "Vallée de l'Omo (UNESCO)"
+    ],
+    "superficie": 1104300,
+    "pib": 126.0,
+    "hdi": 0.492,
+    "religion": "Christianisme orthodoxe / Islam",
+    "wikipedia": "https://fr.wikipedia.org/wiki/%C3%89thiopie"
   },
   "kenya": {
     "name": "Kenya",
@@ -474,11 +1902,54 @@
     "currency": "KES",
     "region": "Afrique de l'Est",
     "flag": "https://flagcdn.com/w160/ke.png",
-    "geography": { "position": "Equateur, côte Indien + hauts plateaux + savane + désert", "climate": "Tropical à équatorial, varié selon altitude" },
-    "history": { "independence": "1963", "colonisateur": "Royaume-Uni" },
-    "culture": { "cuisine": ["Ugali", "Nyama Choma", "Pilau", "Githeri"], "languages": ["Swahili", "Anglais", "Kikuyu", "Luo"] },
-    "economy": { "mainSectors": ["Tourisme", "Agriculture (thé, café, fleurs)", "Télécoms (M-Pesa)", "Services"], "exports": ["Thé", "Café", "Horticulture", "Pétrole raffiné"] },
-    "highlights": ["Masai Mara (Grande Migration)", "Mont Kenya (UNESCO)", "Lac Nakuru (flamants roses)", "Amboseli (Kilimandjaro)", "Parcs Tsavo"]
+    "geography": {
+      "position": "Equateur, côte Indien + hauts plateaux + savane + désert",
+      "climate": "Tropical à équatorial, varié selon altitude"
+    },
+    "history": {
+      "independence": "1963",
+      "colonisateur": "Royaume-Uni"
+    },
+    "culture": {
+      "cuisine": [
+        "Ugali",
+        "Nyama Choma",
+        "Pilau",
+        "Githeri"
+      ],
+      "languages": [
+        "Swahili",
+        "Anglais",
+        "Kikuyu",
+        "Luo"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Tourisme",
+        "Agriculture (thé, café, fleurs)",
+        "Télécoms (M-Pesa)",
+        "Services"
+      ],
+      "exports": [
+        "Thé",
+        "Café",
+        "Horticulture",
+        "Pétrole raffiné"
+      ]
+    },
+    "highlights": [
+      "Masai Mara (Grande Migration)",
+      "Mont Kenya (UNESCO)",
+      "Lac Nakuru (flamants roses)",
+      "Amboseli (Kilimandjaro)",
+      "Parcs Tsavo"
+    ],
+    "superficie": 580367,
+    "pib": 113.0,
+    "hdi": 0.601,
+    "religion": "Christianisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Kenya"
   },
   "somalie": {
     "name": "Somalie",
@@ -487,11 +1958,49 @@
     "currency": "SOS",
     "region": "Afrique de l'Est",
     "flag": "https://flagcdn.com/w160/so.png",
-    "geography": { "position": "Corne de l'Afrique, la plus longue côte d'Afrique (3 300 km)", "climate": "Aride à semi-aride" },
-    "history": { "independence": "1960", "colonisateur": "Italie / Royaume-Uni" },
-    "culture": { "cuisine": ["Bariis iskukaris", "Cambuulo", "Muqmad"], "languages": ["Somali", "Arabe"] },
-    "economy": { "mainSectors": ["Élevage", "Pêche", "Télécommunications", "Transferts de fonds"], "exports": ["Bétail", "Bananes", "Peaux"] },
-    "highlights": ["Plages de Berbera", "Grottes du Laas Geel (peintures rupestres)", "Réserve de Lag Badana", "Architecture de Mogadiscio"]
+    "geography": {
+      "position": "Corne de l'Afrique, la plus longue côte d'Afrique (3 300 km)",
+      "climate": "Aride à semi-aride"
+    },
+    "history": {
+      "independence": "1960",
+      "colonisateur": "Italie / Royaume-Uni"
+    },
+    "culture": {
+      "cuisine": [
+        "Bariis iskukaris",
+        "Cambuulo",
+        "Muqmad"
+      ],
+      "languages": [
+        "Somali",
+        "Arabe"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Élevage",
+        "Pêche",
+        "Télécommunications",
+        "Transferts de fonds"
+      ],
+      "exports": [
+        "Bétail",
+        "Bananes",
+        "Peaux"
+      ]
+    },
+    "highlights": [
+      "Plages de Berbera",
+      "Grottes du Laas Geel (peintures rupestres)",
+      "Réserve de Lag Badana",
+      "Architecture de Mogadiscio"
+    ],
+    "superficie": 637657,
+    "pib": 10.0,
+    "hdi": 0.38,
+    "religion": "Islam sunnite",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Somalie"
   },
   "soudan-du-sud": {
     "name": "Soudan du Sud",
@@ -500,11 +2009,47 @@
     "currency": "SSP",
     "region": "Afrique de l'Est",
     "flag": "https://flagcdn.com/w160/ss.png",
-    "geography": { "position": "Plus jeune nation du monde (2011), enclavé, Nil Blanc", "climate": "Tropical humide" },
-    "history": { "independence": "2011", "colonisateur": "Soudan / Royaume-Uni" },
-    "culture": { "cuisine": ["Aseeda", "Kisra", "Viande de bœuf grillée"], "languages": ["Anglais", "Arabe", "Dinka", "Nuer"] },
-    "economy": { "mainSectors": ["Pétrole", "Agriculture", "Élevage"], "exports": ["Pétrole brut"] },
-    "highlights": ["Parc national de Boma (grandes migrations terrestres)", "Fleuve Nil Blanc", "Jonglei Canal"]
+    "geography": {
+      "position": "Plus jeune nation du monde (2011), enclavé, Nil Blanc",
+      "climate": "Tropical humide"
+    },
+    "history": {
+      "independence": "2011",
+      "colonisateur": "Soudan / Royaume-Uni"
+    },
+    "culture": {
+      "cuisine": [
+        "Aseeda",
+        "Kisra",
+        "Viande de bœuf grillée"
+      ],
+      "languages": [
+        "Anglais",
+        "Arabe",
+        "Dinka",
+        "Nuer"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Pétrole",
+        "Agriculture",
+        "Élevage"
+      ],
+      "exports": [
+        "Pétrole brut"
+      ]
+    },
+    "highlights": [
+      "Parc national de Boma (grandes migrations terrestres)",
+      "Fleuve Nil Blanc",
+      "Jonglei Canal"
+    ],
+    "superficie": 644329,
+    "pib": 4.6,
+    "hdi": 0.385,
+    "religion": "Christianisme / Animisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Soudan_du_Sud"
   },
   "tanzanie": {
     "name": "Tanzanie",
@@ -513,11 +2058,52 @@
     "currency": "TZS",
     "region": "Afrique de l'Est",
     "flag": "https://flagcdn.com/w160/tz.png",
-    "geography": { "position": "Côte Indien, îles Zanzibar, Kilimandjaro", "climate": "Tropical humide sur la côte, semi-aride à l'intérieur" },
-    "history": { "independence": "1961", "colonisateur": "Allemagne / Royaume-Uni" },
-    "culture": { "cuisine": ["Ugali", "Pilau", "Zanzibar mix", "Chips mayai"], "languages": ["Swahili", "Anglais"] },
-    "economy": { "mainSectors": ["Tourisme", "Agriculture (café, thé, coton)", "Or", "Tanzanite"], "exports": ["Or", "Café", "Coton", "Tanzanite"] },
-    "highlights": ["Kilimandjaro (5 895 m - UNESCO)", "Serengeti (UNESCO - Grande Migration)", "Zanzibar (Stone Town - UNESCO)", "Ngorongoro (UNESCO)", "Parc national Selous (UNESCO)"]
+    "geography": {
+      "position": "Côte Indien, îles Zanzibar, Kilimandjaro",
+      "climate": "Tropical humide sur la côte, semi-aride à l'intérieur"
+    },
+    "history": {
+      "independence": "1961",
+      "colonisateur": "Allemagne / Royaume-Uni"
+    },
+    "culture": {
+      "cuisine": [
+        "Ugali",
+        "Pilau",
+        "Zanzibar mix",
+        "Chips mayai"
+      ],
+      "languages": [
+        "Swahili",
+        "Anglais"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Tourisme",
+        "Agriculture (café, thé, coton)",
+        "Or",
+        "Tanzanite"
+      ],
+      "exports": [
+        "Or",
+        "Café",
+        "Coton",
+        "Tanzanite"
+      ]
+    },
+    "highlights": [
+      "Kilimandjaro (5 895 m - UNESCO)",
+      "Serengeti (UNESCO - Grande Migration)",
+      "Zanzibar (Stone Town - UNESCO)",
+      "Ngorongoro (UNESCO)",
+      "Parc national Selous (UNESCO)"
+    ],
+    "superficie": 945087,
+    "pib": 84.0,
+    "hdi": 0.532,
+    "religion": "Christianisme / Islam",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Tanzanie"
   },
   "ouganda": {
     "name": "Ouganda",
@@ -526,11 +2112,53 @@
     "currency": "UGX",
     "region": "Afrique de l'Est",
     "flag": "https://flagcdn.com/w160/ug.png",
-    "geography": { "position": "Grands Lacs, enclavé, source du Nil", "climate": "Tropical humide, modéré par l'altitude" },
-    "history": { "independence": "1962", "colonisateur": "Royaume-Uni" },
-    "culture": { "cuisine": ["Matoke", "Groundnut Soup", "Posho", "Rolex (chapati+omelette)"], "languages": ["Anglais", "Luganda", "Swahili"] },
-    "economy": { "mainSectors": ["Agriculture", "Café", "Tourisme", "Or"], "exports": ["Café", "Or", "Poissons", "Thé"] },
-    "highlights": ["Gorilles des Bwindi (UNESCO)", "Chutes Murchison (source du Nil)", "Lac Victoria", "Parc national Queen Elizabeth", "Chimpanzés de Kibale"]
+    "geography": {
+      "position": "Grands Lacs, enclavé, source du Nil",
+      "climate": "Tropical humide, modéré par l'altitude"
+    },
+    "history": {
+      "independence": "1962",
+      "colonisateur": "Royaume-Uni"
+    },
+    "culture": {
+      "cuisine": [
+        "Matoke",
+        "Groundnut Soup",
+        "Posho",
+        "Rolex (chapati+omelette)"
+      ],
+      "languages": [
+        "Anglais",
+        "Luganda",
+        "Swahili"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Agriculture",
+        "Café",
+        "Tourisme",
+        "Or"
+      ],
+      "exports": [
+        "Café",
+        "Or",
+        "Poissons",
+        "Thé"
+      ]
+    },
+    "highlights": [
+      "Gorilles des Bwindi (UNESCO)",
+      "Chutes Murchison (source du Nil)",
+      "Lac Victoria",
+      "Parc national Queen Elizabeth",
+      "Chimpanzés de Kibale"
+    ],
+    "superficie": 241038,
+    "pib": 49.0,
+    "hdi": 0.55,
+    "religion": "Christianisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Ouganda"
   },
   "comores": {
     "name": "Comores",
@@ -539,11 +2167,51 @@
     "currency": "KMF",
     "region": "Afrique de l'Est",
     "flag": "https://flagcdn.com/w160/km.png",
-    "geography": { "position": "Archipel du canal du Mozambique, entre Madagascar et Mozambique", "climate": "Tropical humide" },
-    "history": { "independence": "1975", "colonisateur": "France" },
-    "culture": { "cuisine": ["Langouste grillée", "Mkatra siniya", "Pilao"], "languages": ["Comorien (shingazidja)", "Arabe", "Français"] },
-    "economy": { "mainSectors": ["Ylang-ylang (1er mondial)", "Vanille", "Pêche", "Tourisme"], "exports": ["Ylang-ylang", "Vanille", "Girofle", "Cannelle"] },
-    "highlights": ["Mont Karthala (volcan actif)", "Plages de sable blanc", "Récifs coralliens", "Anciennes médinas de Moroni"]
+    "geography": {
+      "position": "Archipel du canal du Mozambique, entre Madagascar et Mozambique",
+      "climate": "Tropical humide"
+    },
+    "history": {
+      "independence": "1975",
+      "colonisateur": "France"
+    },
+    "culture": {
+      "cuisine": [
+        "Langouste grillée",
+        "Mkatra siniya",
+        "Pilao"
+      ],
+      "languages": [
+        "Comorien (shingazidja)",
+        "Arabe",
+        "Français"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Ylang-ylang (1er mondial)",
+        "Vanille",
+        "Pêche",
+        "Tourisme"
+      ],
+      "exports": [
+        "Ylang-ylang",
+        "Vanille",
+        "Girofle",
+        "Cannelle"
+      ]
+    },
+    "highlights": [
+      "Mont Karthala (volcan actif)",
+      "Plages de sable blanc",
+      "Récifs coralliens",
+      "Anciennes médinas de Moroni"
+    ],
+    "superficie": 1861,
+    "pib": 1.3,
+    "hdi": 0.558,
+    "religion": "Islam sunnite",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Comores"
   },
   "madagascar": {
     "name": "Madagascar",
@@ -552,11 +2220,51 @@
     "currency": "MGA",
     "region": "Afrique de l'Est",
     "flag": "https://flagcdn.com/w160/mg.png",
-    "geography": { "position": "Grande île de l'Océan Indien (4e plus grande du monde)", "climate": "Tropical humide à l'est, semi-aride à l'ouest et au sud" },
-    "history": { "independence": "1960", "colonisateur": "France" },
-    "culture": { "cuisine": ["Romazava", "Ravitoto", "Vary amin'anana"], "languages": ["Malgache", "Français"] },
-    "economy": { "mainSectors": ["Agriculture (vanille, girofle)", "Mines", "Pêche", "Tourisme"], "exports": ["Vanille", "Girofle", "Nickel", "Cobalt"] },
-    "highlights": ["Allée des Baobabs", "Tsingy de Bemaraha (UNESCO)", "Forêt de Ranomafana (lémuriens)", "Île Sainte-Marie", "Parc national de l'Isalo"]
+    "geography": {
+      "position": "Grande île de l'Océan Indien (4e plus grande du monde)",
+      "climate": "Tropical humide à l'est, semi-aride à l'ouest et au sud"
+    },
+    "history": {
+      "independence": "1960",
+      "colonisateur": "France"
+    },
+    "culture": {
+      "cuisine": [
+        "Romazava",
+        "Ravitoto",
+        "Vary amin'anana"
+      ],
+      "languages": [
+        "Malgache",
+        "Français"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Agriculture (vanille, girofle)",
+        "Mines",
+        "Pêche",
+        "Tourisme"
+      ],
+      "exports": [
+        "Vanille",
+        "Girofle",
+        "Nickel",
+        "Cobalt"
+      ]
+    },
+    "highlights": [
+      "Allée des Baobabs",
+      "Tsingy de Bemaraha (UNESCO)",
+      "Forêt de Ranomafana (lémuriens)",
+      "Île Sainte-Marie",
+      "Parc national de l'Isalo"
+    ],
+    "superficie": 587041,
+    "pib": 15.0,
+    "hdi": 0.483,
+    "religion": "Christianisme / Animisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Madagascar"
   },
   "maurice": {
     "name": "Maurice",
@@ -565,11 +2273,53 @@
     "currency": "MUR",
     "region": "Afrique de l'Est",
     "flag": "https://flagcdn.com/w160/mu.png",
-    "geography": { "position": "Île volcanique de l'Océan Indien", "climate": "Tropical maritime, humide et doux" },
-    "history": { "independence": "1968", "colonisateur": "Royaume-Uni / France" },
-    "culture": { "cuisine": ["Curry de poulpe", "Dholl puri", "Gâteau piment", "Rougaille"], "languages": ["Créole mauricien", "Anglais", "Français", "Bhojpuri"] },
-    "economy": { "mainSectors": ["Tourisme", "Finance offshore", "Textile", "TIC"], "exports": ["Vêtements", "Sucre", "Services financiers"] },
-    "highlights": ["Parc national des Gorges de la Rivière Noire (UNESCO)", "Île Rodrigues", "Îlot Gabriel", "Jardin de Pamplemousses", "Plongée sous-marine"]
+    "geography": {
+      "position": "Île volcanique de l'Océan Indien",
+      "climate": "Tropical maritime, humide et doux"
+    },
+    "history": {
+      "independence": "1968",
+      "colonisateur": "Royaume-Uni / France"
+    },
+    "culture": {
+      "cuisine": [
+        "Curry de poulpe",
+        "Dholl puri",
+        "Gâteau piment",
+        "Rougaille"
+      ],
+      "languages": [
+        "Créole mauricien",
+        "Anglais",
+        "Français",
+        "Bhojpuri"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Tourisme",
+        "Finance offshore",
+        "Textile",
+        "TIC"
+      ],
+      "exports": [
+        "Vêtements",
+        "Sucre",
+        "Services financiers"
+      ]
+    },
+    "highlights": [
+      "Parc national des Gorges de la Rivière Noire (UNESCO)",
+      "Île Rodrigues",
+      "Îlot Gabriel",
+      "Jardin de Pamplemousses",
+      "Plongée sous-marine"
+    ],
+    "superficie": 2040,
+    "pib": 13.0,
+    "hdi": 0.804,
+    "religion": "Hindouisme / Christianisme / Islam",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Maurice_(pays)"
   },
   "seychelles": {
     "name": "Seychelles",
@@ -578,11 +2328,49 @@
     "currency": "SCR",
     "region": "Afrique de l'Est",
     "flag": "https://flagcdn.com/w160/sc.png",
-    "geography": { "position": "Archipel de l'Océan Indien (115 îles)", "climate": "Tropical maritime, chaud et humide" },
-    "history": { "independence": "1976", "colonisateur": "Royaume-Uni / France" },
-    "culture": { "cuisine": ["Requin bouillon", "Ladob", "Cari de chauve-souris"], "languages": ["Créole seychellois", "Anglais", "Français"] },
-    "economy": { "mainSectors": ["Tourisme", "Pêche (thon)", "Finance offshore"], "exports": ["Thon en conserve", "Coprah"] },
-    "highlights": ["Vallée de Mai - coco de mer (UNESCO)", "Parc marin de Sainte-Anne", "Anse Source d'Argent (Praslin)", "Réserve de Cousin", "Aldabra (UNESCO)"]
+    "geography": {
+      "position": "Archipel de l'Océan Indien (115 îles)",
+      "climate": "Tropical maritime, chaud et humide"
+    },
+    "history": {
+      "independence": "1976",
+      "colonisateur": "Royaume-Uni / France"
+    },
+    "culture": {
+      "cuisine": [
+        "Requin bouillon",
+        "Ladob",
+        "Cari de chauve-souris"
+      ],
+      "languages": [
+        "Créole seychellois",
+        "Anglais",
+        "Français"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Tourisme",
+        "Pêche (thon)",
+        "Finance offshore"
+      ],
+      "exports": [
+        "Thon en conserve",
+        "Coprah"
+      ]
+    },
+    "highlights": [
+      "Vallée de Mai - coco de mer (UNESCO)",
+      "Parc marin de Sainte-Anne",
+      "Anse Source d'Argent (Praslin)",
+      "Réserve de Cousin",
+      "Aldabra (UNESCO)"
+    ],
+    "superficie": 452,
+    "pib": 2.1,
+    "hdi": 0.796,
+    "religion": "Christianisme catholique",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Seychelles"
   },
   "botswana": {
     "name": "Botswana",
@@ -591,11 +2379,48 @@
     "currency": "BWP",
     "region": "Afrique Australe",
     "flag": "https://flagcdn.com/w160/bw.png",
-    "geography": { "position": "Enclavé, plateau aride, désert du Kalahari", "climate": "Semi-aride à aride" },
-    "history": { "independence": "1966", "colonisateur": "Royaume-Uni" },
-    "culture": { "cuisine": ["Seswaa (viande pilée)", "Bogobe", "Morogo"], "languages": ["Setswana", "Anglais"] },
-    "economy": { "mainSectors": ["Diamants (1er mondial par valeur)", "Tourisme", "Agriculture"], "exports": ["Diamants", "Cuivre-nickel", "Viande"] },
-    "highlights": ["Delta de l'Okavango (UNESCO)", "Désert du Kalahari", "Parc national du Chobe (éléphants)", "Makgadikgadi (marais salants)"]
+    "geography": {
+      "position": "Enclavé, plateau aride, désert du Kalahari",
+      "climate": "Semi-aride à aride"
+    },
+    "history": {
+      "independence": "1966",
+      "colonisateur": "Royaume-Uni"
+    },
+    "culture": {
+      "cuisine": [
+        "Seswaa (viande pilée)",
+        "Bogobe",
+        "Morogo"
+      ],
+      "languages": [
+        "Setswana",
+        "Anglais"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Diamants (1er mondial par valeur)",
+        "Tourisme",
+        "Agriculture"
+      ],
+      "exports": [
+        "Diamants",
+        "Cuivre-nickel",
+        "Viande"
+      ]
+    },
+    "highlights": [
+      "Delta de l'Okavango (UNESCO)",
+      "Désert du Kalahari",
+      "Parc national du Chobe (éléphants)",
+      "Makgadikgadi (marais salants)"
+    ],
+    "superficie": 581730,
+    "pib": 20.0,
+    "hdi": 0.693,
+    "religion": "Christianisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Botswana"
   },
   "eswatini": {
     "name": "Eswatini",
@@ -604,11 +2429,49 @@
     "currency": "SZL",
     "region": "Afrique Australe",
     "flag": "https://flagcdn.com/w160/sz.png",
-    "geography": { "position": "Enclavé entre Afrique du Sud et Mozambique", "climate": "Subtropical, varié selon altitude" },
-    "history": { "independence": "1968", "colonisateur": "Royaume-Uni" },
-    "culture": { "cuisine": ["Sishwala", "Karoo (viande grillée)", "Emasi"], "languages": ["SiSwati", "Anglais"] },
-    "economy": { "mainSectors": ["Agriculture (canne à sucre)", "Textile", "Tourisme"], "exports": ["Concentrés (Coca-Cola)", "Sucre", "Coton", "Bois"] },
-    "highlights": ["Réserve de Mlilwane (rhinocéros blancs)", "Festival Incwala (royal)", "Festival Umhlanga (roseau)", "Parc national de Hlane"]
+    "geography": {
+      "position": "Enclavé entre Afrique du Sud et Mozambique",
+      "climate": "Subtropical, varié selon altitude"
+    },
+    "history": {
+      "independence": "1968",
+      "colonisateur": "Royaume-Uni"
+    },
+    "culture": {
+      "cuisine": [
+        "Sishwala",
+        "Karoo (viande grillée)",
+        "Emasi"
+      ],
+      "languages": [
+        "SiSwati",
+        "Anglais"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Agriculture (canne à sucre)",
+        "Textile",
+        "Tourisme"
+      ],
+      "exports": [
+        "Concentrés (Coca-Cola)",
+        "Sucre",
+        "Coton",
+        "Bois"
+      ]
+    },
+    "highlights": [
+      "Réserve de Mlilwane (rhinocéros blancs)",
+      "Festival Incwala (royal)",
+      "Festival Umhlanga (roseau)",
+      "Parc national de Hlane"
+    ],
+    "superficie": 17364,
+    "pib": 4.7,
+    "hdi": 0.597,
+    "religion": "Christianisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Eswatini"
   },
   "lesotho": {
     "name": "Lesotho",
@@ -617,11 +2480,49 @@
     "currency": "LSL",
     "region": "Afrique Australe",
     "flag": "https://flagcdn.com/w160/ls.png",
-    "geography": { "position": "Enclave dans l'Afrique du Sud, 'Royaume dans le Ciel' (altitude > 1 000 m partout)", "climate": "Tempéré, froid en hiver, neiges possibles" },
-    "history": { "independence": "1966", "colonisateur": "Royaume-Uni" },
-    "culture": { "cuisine": ["Papa (pâte de maïs)", "Motoho", "Moroho"], "languages": ["Sesotho", "Anglais"] },
-    "economy": { "mainSectors": ["Eau (barrage Katse)", "Textile", "Diamants", "Agriculture"], "exports": ["Eau", "Vêtements", "Diamants"] },
-    "highlights": ["Barrage de Katse", "Parc national de Sehlabathebe (UNESCO)", "Grottes de Liphofung", "Peintures rupestres San"]
+    "geography": {
+      "position": "Enclave dans l'Afrique du Sud, 'Royaume dans le Ciel' (altitude > 1 000 m partout)",
+      "climate": "Tempéré, froid en hiver, neiges possibles"
+    },
+    "history": {
+      "independence": "1966",
+      "colonisateur": "Royaume-Uni"
+    },
+    "culture": {
+      "cuisine": [
+        "Papa (pâte de maïs)",
+        "Motoho",
+        "Moroho"
+      ],
+      "languages": [
+        "Sesotho",
+        "Anglais"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Eau (barrage Katse)",
+        "Textile",
+        "Diamants",
+        "Agriculture"
+      ],
+      "exports": [
+        "Eau",
+        "Vêtements",
+        "Diamants"
+      ]
+    },
+    "highlights": [
+      "Barrage de Katse",
+      "Parc national de Sehlabathebe (UNESCO)",
+      "Grottes de Liphofung",
+      "Peintures rupestres San"
+    ],
+    "superficie": 30355,
+    "pib": 2.5,
+    "hdi": 0.514,
+    "religion": "Christianisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Lesotho"
   },
   "malawi": {
     "name": "Malawi",
@@ -630,11 +2531,50 @@
     "currency": "MWK",
     "region": "Afrique Australe",
     "flag": "https://flagcdn.com/w160/mw.png",
-    "geography": { "position": "Enclavé, Great Rift Valley, Lac Malawi (3e plus grand d'Afrique)", "climate": "Tropical humide" },
-    "history": { "independence": "1964", "colonisateur": "Royaume-Uni" },
-    "culture": { "cuisine": ["Nsima", "Chambo (poisson)", "Ndiwo"], "languages": ["Chichewa", "Anglais", "Tumbuka"] },
-    "economy": { "mainSectors": ["Agriculture (tabac, thé, sucre)", "Tourisme", "Pêche"], "exports": ["Tabac", "Thé", "Sucre", "Coton"] },
-    "highlights": ["Lac Malawi (UNESCO)", "Parc national de Liwonde", "Mont Mulanje", "Nyika (plateau de montagne)"]
+    "geography": {
+      "position": "Enclavé, Great Rift Valley, Lac Malawi (3e plus grand d'Afrique)",
+      "climate": "Tropical humide"
+    },
+    "history": {
+      "independence": "1964",
+      "colonisateur": "Royaume-Uni"
+    },
+    "culture": {
+      "cuisine": [
+        "Nsima",
+        "Chambo (poisson)",
+        "Ndiwo"
+      ],
+      "languages": [
+        "Chichewa",
+        "Anglais",
+        "Tumbuka"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Agriculture (tabac, thé, sucre)",
+        "Tourisme",
+        "Pêche"
+      ],
+      "exports": [
+        "Tabac",
+        "Thé",
+        "Sucre",
+        "Coton"
+      ]
+    },
+    "highlights": [
+      "Lac Malawi (UNESCO)",
+      "Parc national de Liwonde",
+      "Mont Mulanje",
+      "Nyika (plateau de montagne)"
+    ],
+    "superficie": 118484,
+    "pib": 13.0,
+    "hdi": 0.512,
+    "religion": "Christianisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Malawi"
   },
   "mozambique": {
     "name": "Mozambique",
@@ -643,11 +2583,53 @@
     "currency": "MZN",
     "region": "Afrique Australe",
     "flag": "https://flagcdn.com/w160/mz.png",
-    "geography": { "position": "Côte de l'Océan Indien, la plus longue façade maritime d'Afrique orientale", "climate": "Tropical humide au nord, subtropical au sud" },
-    "history": { "independence": "1975", "colonisateur": "Portugal" },
-    "culture": { "cuisine": ["Piri-piri de crevettes", "Matapa", "Xima"], "languages": ["Portugais", "Makhuwa", "Tsonga", "Sena"] },
-    "economy": { "mainSectors": ["Agriculture (noix de cajou, tabac)", "Gaz naturel", "Aluminium", "Tourisme"], "exports": ["Aluminium", "Gaz naturel", "Noix de cajou", "Tabac"] },
-    "highlights": ["Île de Mozambique (UNESCO)", "Parc national de Gorongosa", "Archipel Quirimbas", "Baie de Pemba", "Plages de Tofo"]
+    "geography": {
+      "position": "Côte de l'Océan Indien, la plus longue façade maritime d'Afrique orientale",
+      "climate": "Tropical humide au nord, subtropical au sud"
+    },
+    "history": {
+      "independence": "1975",
+      "colonisateur": "Portugal"
+    },
+    "culture": {
+      "cuisine": [
+        "Piri-piri de crevettes",
+        "Matapa",
+        "Xima"
+      ],
+      "languages": [
+        "Portugais",
+        "Makhuwa",
+        "Tsonga",
+        "Sena"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Agriculture (noix de cajou, tabac)",
+        "Gaz naturel",
+        "Aluminium",
+        "Tourisme"
+      ],
+      "exports": [
+        "Aluminium",
+        "Gaz naturel",
+        "Noix de cajou",
+        "Tabac"
+      ]
+    },
+    "highlights": [
+      "Île de Mozambique (UNESCO)",
+      "Parc national de Gorongosa",
+      "Archipel Quirimbas",
+      "Baie de Pemba",
+      "Plages de Tofo"
+    ],
+    "superficie": 801590,
+    "pib": 18.0,
+    "hdi": 0.446,
+    "religion": "Christianisme / Islam",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Mozambique"
   },
   "namibie": {
     "name": "Namibie",
@@ -656,11 +2638,54 @@
     "currency": "NAD",
     "region": "Afrique Australe",
     "flag": "https://flagcdn.com/w160/na.png",
-    "geography": { "position": "Côte atlantique, désert du Namib (le plus vieux du monde)", "climate": "Aride à semi-aride" },
-    "history": { "independence": "1990", "colonisateur": "Afrique du Sud / Allemagne" },
-    "culture": { "cuisine": ["Biltong", "Kapana", "Potjiekos"], "languages": ["Anglais", "Afrikaans", "Oshiwambo", "Otjiherero", "Allemand"] },
-    "economy": { "mainSectors": ["Mines (diamants, uranium, or)", "Agriculture", "Tourisme", "Pêche"], "exports": ["Diamants", "Uranium", "Or", "Poissons"] },
-    "highlights": ["Désert du Namib - Sossusvlei (dunes rouge sang)", "Parc Etosha (Big Five)", "Fish River Canyon (2e plus grand du monde)", "Côte des Squelettes", "Twyfelfontein (UNESCO)"]
+    "geography": {
+      "position": "Côte atlantique, désert du Namib (le plus vieux du monde)",
+      "climate": "Aride à semi-aride"
+    },
+    "history": {
+      "independence": "1990",
+      "colonisateur": "Afrique du Sud / Allemagne"
+    },
+    "culture": {
+      "cuisine": [
+        "Biltong",
+        "Kapana",
+        "Potjiekos"
+      ],
+      "languages": [
+        "Anglais",
+        "Afrikaans",
+        "Oshiwambo",
+        "Otjiherero",
+        "Allemand"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Mines (diamants, uranium, or)",
+        "Agriculture",
+        "Tourisme",
+        "Pêche"
+      ],
+      "exports": [
+        "Diamants",
+        "Uranium",
+        "Or",
+        "Poissons"
+      ]
+    },
+    "highlights": [
+      "Désert du Namib - Sossusvlei (dunes rouge sang)",
+      "Parc Etosha (Big Five)",
+      "Fish River Canyon (2e plus grand du monde)",
+      "Côte des Squelettes",
+      "Twyfelfontein (UNESCO)"
+    ],
+    "superficie": 824292,
+    "pib": 13.0,
+    "hdi": 0.615,
+    "religion": "Christianisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Namibie"
   },
   "afrique-sud": {
     "name": "Afrique du Sud",
@@ -669,11 +2694,51 @@
     "currency": "ZAR",
     "region": "Afrique Australe",
     "flag": "https://flagcdn.com/w160/za.png",
-    "geography": { "position": "Pointe méridionale de l'Afrique, façades Atlantique et Indien", "climate": "Méditerranéen au SO, subtropical à l'est, semi-aride à l'intérieur" },
-    "history": { "independence": "1910 (Union), 1994 (fin apartheid)" },
-    "culture": { "cuisine": ["Braai (barbecue)", "Bobotie", "Biltong", "Bunny chow"], "languages": ["11 langues officielles : Zoulou, Xhosa, Afrikaans, Anglais, Sotho..."] },
-    "economy": { "mainSectors": ["Mines (or, platine, charbon, diamants)", "Finance", "Industrie", "Agriculture"], "exports": ["Or", "Platine", "Charbon", "Diamants", "Vins"] },
-    "highlights": ["Parc Kruger (Big Five)", "Cap de Bonne-Espérance", "Grottes de Sterkfontein (UNESCO)", "Soweto (Johannesburg)", "Table Mountain (Le Cap)"]
+    "geography": {
+      "position": "Pointe méridionale de l'Afrique, façades Atlantique et Indien",
+      "climate": "Méditerranéen au SO, subtropical à l'est, semi-aride à l'intérieur"
+    },
+    "history": {
+      "independence": "1910 (Union), 1994 (fin apartheid)"
+    },
+    "culture": {
+      "cuisine": [
+        "Braai (barbecue)",
+        "Bobotie",
+        "Biltong",
+        "Bunny chow"
+      ],
+      "languages": [
+        "11 langues officielles : Zoulou, Xhosa, Afrikaans, Anglais, Sotho..."
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Mines (or, platine, charbon, diamants)",
+        "Finance",
+        "Industrie",
+        "Agriculture"
+      ],
+      "exports": [
+        "Or",
+        "Platine",
+        "Charbon",
+        "Diamants",
+        "Vins"
+      ]
+    },
+    "highlights": [
+      "Parc Kruger (Big Five)",
+      "Cap de Bonne-Espérance",
+      "Grottes de Sterkfontein (UNESCO)",
+      "Soweto (Johannesburg)",
+      "Table Mountain (Le Cap)"
+    ],
+    "superficie": 1219090,
+    "pib": 399.0,
+    "hdi": 0.713,
+    "religion": "Christianisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Afrique_du_Sud"
   },
   "zambie": {
     "name": "Zambie",
@@ -682,11 +2747,52 @@
     "currency": "ZMW",
     "region": "Afrique Australe",
     "flag": "https://flagcdn.com/w160/zm.png",
-    "geography": { "position": "Enclavé, Afrique australe-centrale, plateau du Zambèze", "climate": "Tropical humide" },
-    "history": { "independence": "1964", "colonisateur": "Royaume-Uni" },
-    "culture": { "cuisine": ["Nsima", "Kapenta (petits poissons)", "Mpunga"], "languages": ["Anglais", "Bemba", "Nyanja", "Tonga"] },
-    "economy": { "mainSectors": ["Cuivre", "Cobalt", "Agriculture", "Tourisme"], "exports": ["Cuivre (majeur)", "Cobalt", "Tabac", "Coton"] },
-    "highlights": ["Chutes Victoria (UNESCO)", "Parc national du Bas-Zambèze", "Parc national de South Luangwa", "Lac Bangweulu (grues de Wattled)"]
+    "geography": {
+      "position": "Enclavé, Afrique australe-centrale, plateau du Zambèze",
+      "climate": "Tropical humide"
+    },
+    "history": {
+      "independence": "1964",
+      "colonisateur": "Royaume-Uni"
+    },
+    "culture": {
+      "cuisine": [
+        "Nsima",
+        "Kapenta (petits poissons)",
+        "Mpunga"
+      ],
+      "languages": [
+        "Anglais",
+        "Bemba",
+        "Nyanja",
+        "Tonga"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Cuivre",
+        "Cobalt",
+        "Agriculture",
+        "Tourisme"
+      ],
+      "exports": [
+        "Cuivre (majeur)",
+        "Cobalt",
+        "Tabac",
+        "Coton"
+      ]
+    },
+    "highlights": [
+      "Chutes Victoria (UNESCO)",
+      "Parc national du Bas-Zambèze",
+      "Parc national de South Luangwa",
+      "Lac Bangweulu (grues de Wattled)"
+    ],
+    "superficie": 752612,
+    "pib": 30.0,
+    "hdi": 0.565,
+    "religion": "Christianisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Zambie"
   },
   "zimbabwe": {
     "name": "Zimbabwe",
@@ -695,10 +2801,49 @@
     "currency": "ZWG",
     "region": "Afrique Australe",
     "flag": "https://flagcdn.com/w160/zw.png",
-    "geography": { "position": "Enclavé, plateau central entre Zambèze et Limpopo", "climate": "Subtropical, modéré par l'altitude" },
-    "history": { "independence": "1980", "colonisateur": "Royaume-Uni (Rhodésie)" },
-    "culture": { "cuisine": ["Sadza", "Nyama (viande grillée)", "Muriwo"], "languages": ["Shona", "Ndebele", "Anglais"] },
-    "economy": { "mainSectors": ["Agriculture (tabac)", "Mines (platine, or, diamants)", "Tourisme"], "exports": ["Or", "Platine", "Tabac", "Diamants"] },
-    "highlights": ["Chutes Victoria (UNESCO)", "Ruines du Grand Zimbabwe (UNESCO)", "Parc national de Hwange", "Matobo Hills (UNESCO)"]
+    "geography": {
+      "position": "Enclavé, plateau central entre Zambèze et Limpopo",
+      "climate": "Subtropical, modéré par l'altitude"
+    },
+    "history": {
+      "independence": "1980",
+      "colonisateur": "Royaume-Uni (Rhodésie)"
+    },
+    "culture": {
+      "cuisine": [
+        "Sadza",
+        "Nyama (viande grillée)",
+        "Muriwo"
+      ],
+      "languages": [
+        "Shona",
+        "Ndebele",
+        "Anglais"
+      ]
+    },
+    "economy": {
+      "mainSectors": [
+        "Agriculture (tabac)",
+        "Mines (platine, or, diamants)",
+        "Tourisme"
+      ],
+      "exports": [
+        "Or",
+        "Platine",
+        "Tabac",
+        "Diamants"
+      ]
+    },
+    "highlights": [
+      "Chutes Victoria (UNESCO)",
+      "Ruines du Grand Zimbabwe (UNESCO)",
+      "Parc national de Hwange",
+      "Matobo Hills (UNESCO)"
+    ],
+    "superficie": 390757,
+    "pib": 21.0,
+    "hdi": 0.593,
+    "religion": "Christianisme",
+    "wikipedia": "https://fr.wikipedia.org/wiki/Zimbabwe"
   }
 }
