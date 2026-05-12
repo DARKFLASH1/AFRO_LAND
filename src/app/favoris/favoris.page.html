@@ -1,58 +1,82 @@
-<!-- favoris.page.html — Point 2 : Système de Favoris complet -->
+<!-- ── AFRO_LAND — Favoris Page ───────────────────────────────────────────── -->
+<!-- Partie 2 : FavorisService + badge count + skeletons + swipe delete        -->
+<!--            + bouton "Tout effacer" avec confirmation AlertController       -->
+<!-- ─────────────────────────────────────────────────────────────────────────── -->
+
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
+
     <ion-title>Pays Favoris</ion-title>
+
     <ion-buttons slot="end">
-      <!-- Badge affichant le nombre de favoris -->
+      <!-- Badge nombre de favoris -->
       <ion-badge *ngIf="paysFavoris.length > 0" color="warning" class="favoris-badge">
         {{ paysFavoris.length }}
       </ion-badge>
+      <!-- Bouton tout effacer (visible seulement si au moins 1 favori) -->
+      <ion-button
+        *ngIf="!chargement && paysFavoris.length > 0"
+        (click)="toutEffacer()"
+        fill="clear"
+        color="medium"
+        aria-label="Tout effacer">
+        <ion-icon name="trash-outline" slot="icon-only"></ion-icon>
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <!-- SKELETONS pendant le chargement -->
+  <!-- ── Skeletons pendant le chargement ──────────────────────────────────── -->
   <ion-list *ngIf="chargement" class="skeleton-list">
     <ion-item *ngFor="let i of [1,2,3,4]" class="skeleton-item">
       <ion-avatar slot="start" class="skeleton-avatar">
         <ion-skeleton-text animated></ion-skeleton-text>
       </ion-avatar>
       <ion-label>
-        <h2><ion-skeleton-text animated style="width: 55%;"></ion-skeleton-text></h2>
-        <p><ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text></p>
+        <h2><ion-skeleton-text animated style="width:55%;"></ion-skeleton-text></h2>
+        <p><ion-skeleton-text animated style="width:80%;"></ion-skeleton-text></p>
       </ion-label>
     </ion-item>
   </ion-list>
 
-  <!-- LISTE des favoris avec swipe gauche pour supprimer -->
+  <!-- ── Liste des favoris avec swipe gauche pour supprimer ───────────────── -->
   <ion-list *ngIf="!chargement && paysFavoris.length > 0">
-    <ion-item-sliding *ngFor="let pays of paysFavoris">
+    <ion-item-sliding *ngFor="let pays of paysFavoris; let i = index">
 
-      <!-- Option de suppression révélée au swipe gauche -->
+      <!-- Option suppression (swipe gauche) -->
       <ion-item-options side="end">
         <ion-item-option color="danger" (click)="supprimerFavori(pays.id)" expandable>
           <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
         </ion-item-option>
       </ion-item-options>
 
-      <!-- Item principal -->
-      <ion-item (click)="ouvrirPays(pays.id)" button detail>
+      <!-- Item principal — style animé avec délai par index -->
+      <ion-item
+        (click)="ouvrirPays(pays.id)"
+        button
+        detail
+        [style.animation-delay]="(i * 60) + 'ms'">
         <ion-avatar slot="start">
           <!-- Champ corrigé : flag (plus drapeaux?.[0]) -->
-          <img [src]="pays.flag" [alt]="pays.name" />
+          <img [src]="pays.flag" [alt]="pays.name"
+               (error)="$any($event.target).src='assets/images/afrique-1024x685-1.jpg'" />
         </ion-avatar>
         <ion-label>
           <h2>{{ pays.name }}</h2>
           <p>{{ pays.capital }} · {{ pays.region }}</p>
         </ion-label>
-        <!-- Bouton coeur pour retirer le favori -->
-        <ion-button fill="clear" color="danger" slot="end"
-          (click)="supprimerFavori(pays.id); $event.stopPropagation()">
+        <!-- Bouton cœur pour retirer -->
+        <ion-button
+          fill="clear"
+          color="danger"
+          slot="end"
+          (click)="supprimerFavori(pays.id); $event.stopPropagation()"
+          aria-label="Retirer des favoris">
           <ion-icon name="heart" slot="icon-only"></ion-icon>
         </ion-button>
       </ion-item>
@@ -60,7 +84,7 @@
     </ion-item-sliding>
   </ion-list>
 
-  <!-- ETAT VIDE ameliore -->
+  <!-- ── État vide amélioré ─────────────────────────────────────────────── -->
   <div *ngIf="!chargement && paysFavoris.length === 0" class="empty-state">
     <div class="empty-icon-wrapper">
       <ion-icon name="heart-outline"></ion-icon>

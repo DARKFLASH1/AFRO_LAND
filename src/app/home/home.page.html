@@ -1,12 +1,71 @@
+<!-- ── AFRO_LAND — Home Page ──────────────────────────────────────────────── -->
+<!-- Partie 3 : Recherche globale                                               -->
+<!-- ─────────────────────────────────────────────────────────────────────────── -->
+
 <ion-header class="header-toolbar">
   <ion-toolbar>
-    <ion-title class="header-title">
-      Bienvenue à AFRO_LAND
-    </ion-title>
+    <ion-title class="header-title">AFRO_LAND</ion-title>
+
+    <!-- Bouton loupe pour ouvrir/fermer la barre de recherche -->
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleRecherche()" [class.active]="afficherRecherche" aria-label="Rechercher">
+        <ion-icon [name]="afficherRecherche ? 'close-outline' : 'search-outline'" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <!-- Barre de recherche — visible seulement quand afficherRecherche = true -->
+  <ion-toolbar *ngIf="afficherRecherche" class="toolbar-search">
+    <ion-searchbar
+      placeholder="Pays, capitale, langue..."
+      [(ngModel)]="termeRecherche"
+      (ionInput)="onRecherche($event)"
+      (ionCancel)="fermerRecherche()"
+      show-cancel-button="always"
+      [debounce]="300"
+      autofocus="true">
+    </ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
+<!-- ── Overlay résultats de recherche ──────────────────────────────────────── -->
+<div *ngIf="afficherRecherche && termeRecherche.length > 1" class="recherche-overlay">
+
+  <!-- Spinner pendant la recherche -->
+  <div *ngIf="rechercheEnCours" class="recherche-spinner">
+    <ion-spinner name="crescent"></ion-spinner>
+  </div>
+
+  <!-- Liste de résultats -->
+  <ion-list *ngIf="!rechercheEnCours && resultatsRecherche.length > 0" lines="full">
+    <ion-item
+      *ngFor="let r of resultatsRecherche"
+      (click)="ouvrirPays(r.id)"
+      button
+      detail>
+      <ion-avatar slot="start" class="flag-avatar">
+        <img [src]="r.pays.flag" [alt]="r.pays.name" loading="lazy" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ r.pays.name }}</h2>
+        <p>{{ r.pays.capital }} · {{ r.pays.region }}</p>
+      </ion-label>
+      <ion-icon name="arrow-forward-outline" slot="end" color="medium"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <!-- Aucun résultat -->
+  <div *ngIf="!rechercheEnCours && resultatsRecherche.length === 0" class="aucun-resultat">
+    <ion-icon name="search-outline"></ion-icon>
+    <p>Aucun résultat pour <strong>« {{ termeRecherche }} »</strong></p>
+    <span>Essayez un autre nom, capitale ou langue</span>
+  </div>
+</div>
+
+<!-- ── Contenu principal ────────────────────────────────────────────────────── -->
 <ion-content class="page-background">
+
+  <!-- Carte principale Afrique -->
   <ion-card class="carte-afrique">
     <img alt="L'Afrique" src="assets/images/afrique-1024x685-1.jpg" />
     <ion-card-header>
@@ -14,8 +73,12 @@
       <ion-card-subtitle>Le Berceau de l'Humanité</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      L'Afrique, berceau de l'humanité, est le deuxième continent le plus vaste et peuplé au monde avec 54 pays et plus de 1,3 milliard d'habitants. Traversée par l'équateur, elle offre une diversité exceptionnelle de paysages, du désert du Sahara aux forêts tropicales du bassin du Congo.
+      L'Afrique, berceau de l'humanité, est le deuxième continent le plus vaste et peuplé
+      au monde avec 54 pays et plus de 1,3 milliard d'habitants. Traversée par l'équateur,
+      elle offre une diversité exceptionnelle de paysages, du désert du Sahara aux forêts
+      tropicales du bassin du Congo.
     </ion-card-content>
+
     <ion-button routerLink="/afrique" fill="clear" class="btn-discover">
       <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
       Découvrir par régions
@@ -28,8 +91,65 @@
       <ion-icon name="help-circle-outline" slot="start"></ion-icon>
       Tester vos connaissances (Quiz)
     </ion-button>
-  </ion-card> 
+  </ion-card>
+
+  <!-- ── Pays du jour ────────────────────────────────────────────────────── -->
+  <div class="section-pays-jour">
+    <h2 class="section-titre">
+      <ion-icon name="sunny-outline"></ion-icon>
+      Pays du jour
+    </h2>
+
+    <!-- Skeleton pendant le chargement -->
+    <ion-card *ngIf="chargementPaysJour" class="pays-jour-card skeleton-card">
+      <ion-card-header>
+        <ion-skeleton-text animated style="width: 60%; height: 20px; border-radius: 4px;"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 40%; height: 14px; border-radius: 4px; margin-top: 6px;"></ion-skeleton-text>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-skeleton-text animated style="width: 100%; height: 14px; border-radius: 4px;"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 80%; height: 14px; border-radius: 4px; margin-top: 6px;"></ion-skeleton-text>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Carte pays du jour -->
+    <ion-card *ngIf="!chargementPaysJour && paysduJour" class="pays-jour-card" (click)="ouvrirPaysduJour()" button>
+      <div class="pays-jour-header">
+        <img class="pays-jour-flag"
+             [src]="paysduJour.pays.flag"
+             [alt]="'Drapeau ' + paysduJour.pays.name"
+             loading="lazy" />
+        <div class="pays-jour-info">
+          <ion-card-title>{{ paysduJour.pays.name }}</ion-card-title>
+          <ion-card-subtitle>{{ paysduJour.pays.region }}</ion-card-subtitle>
+        </div>
+      </div>
+      <ion-card-content>
+        <div class="pays-jour-facts">
+          <div class="fait">
+            <ion-icon name="location-outline"></ion-icon>
+            <span>Capitale : <strong>{{ paysduJour.pays.capital }}</strong></span>
+          </div>
+          <div class="fait">
+            <ion-icon name="people-outline"></ion-icon>
+            <span>Population : <strong>{{ paysduJour.pays.population }}</strong></span>
+          </div>
+          <div class="fait">
+            <ion-icon name="cash-outline"></ion-icon>
+            <span>Monnaie : <strong>{{ paysduJour.pays.currency }}</strong></span>
+          </div>
+        </div>
+        <p class="pays-jour-cta">
+          <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+          Voir la fiche complète
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
 </ion-content>
+
+<!-- ── Footer navigation ────────────────────────────────────────────────────── -->
 <ion-footer>
   <ion-toolbar class="footer-toolbar">
     <ion-buttons class="footer-buttons">
@@ -42,9 +162,9 @@
       <ion-button routerLink="/quiz" fill="clear">
         <ion-icon name="help-circle-outline"></ion-icon>
       </ion-button>
-      <ion-button routerLink="/profil" fill="clear"> 
+      <ion-button routerLink="/profil" fill="clear">
         <ion-icon name="person-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-  </ion-toolbar> 
+  </ion-toolbar>
 </ion-footer>

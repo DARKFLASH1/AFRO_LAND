@@ -1,0 +1,236 @@
+/* ── AFRO_LAND — Carte Page SCSS ─────────────────────────────────────────────
+   Partie 4 : Popup aperçu, recherche, géolocalisation, légende améliorée
+   ──────────────────────────────────────────────────────────────────────────── */
+
+/* ── Header ─────────────────────────────────────────────────────────────── */
+.header-toolbar {
+  --background: var(--afro-header-gradient);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid var(--afro-gold);
+}
+
+.header-title {
+  color: var(--afro-gold);
+  font-weight: 600;
+  text-align: center;
+}
+
+ion-button.active ion-icon { color: var(--afro-gold); }
+
+.toolbar-search-carte {
+  --background: #1a1f2e;
+  ion-searchbar {
+    --background: rgba(255,255,255,0.08);
+    --color: #fff;
+    --placeholder-color: rgba(255,255,255,0.5);
+    --icon-color: var(--afro-gold);
+    --cancel-button-color: var(--afro-gold);
+    --border-radius: 12px;
+  }
+}
+
+/* ── Overlay suggestions de recherche ──────────────────────────────────── */
+.carte-recherche-overlay {
+  position: fixed;
+  top: 112px;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: #1e2535;
+  max-height: 40vh;
+  overflow-y: auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  ion-list { background: transparent; }
+
+  ion-item {
+    --background: transparent;
+    --border-color: rgba(255,255,255,0.06);
+    cursor: pointer;
+    &:hover, &:active { --background: rgba(var(--afro-gold-rgb), 0.08); }
+  }
+}
+
+.flag-avatar-sm {
+  width: 36px;
+  height: 24px;
+  border-radius: 4px;
+  overflow: hidden;
+  img { width: 100%; height: 100%; object-fit: cover; }
+}
+
+.suggestion-name {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.carte-spinner {
+  display: block;
+  margin: 16px auto;
+  color: var(--afro-gold);
+}
+
+.carte-aucun-resultat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.88rem;
+  ion-icon { font-size: 1.2rem; color: rgba(var(--afro-gold-rgb), 0.4); }
+}
+
+/* ── Carte Leaflet ──────────────────────────────────────────────────────── */
+ion-content {
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+}
+
+/* ── Tooltip Leaflet ────────────────────────────────────────────────────── */
+:host ::ng-deep .leaflet-tooltip-afro {
+  background: rgba(26, 31, 46, 0.95);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  white-space: nowrap;
+
+  &::before { border-top-color: rgba(26, 31, 46, 0.95) !important; }
+}
+
+/* ── Popup d'aperçu ─────────────────────────────────────────────────────── */
+:host ::ng-deep .afro-custom-popup {
+
+  .leaflet-popup-content-wrapper {
+    background: #1e2535;
+    border-radius: 12px;
+    border: 1px solid rgba(var(--afro-gold-rgb, 255,196,0), 0.25);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.55);
+    padding: 0;
+    overflow: hidden;
+    min-width: 200px;
+  }
+
+  .leaflet-popup-tip-container { display: none; }
+  .leaflet-popup-close-button {
+    color: rgba(255,255,255,0.5);
+    font-size: 18px;
+    top: 6px;
+    right: 10px;
+    &:hover { color: #fff; }
+  }
+  .leaflet-popup-content { margin: 0; }
+}
+
+/* Contenu interne de la popup */
+:host ::ng-deep .afro-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 14px 12px;
+  gap: 10px;
+  min-width: 190px;
+}
+
+:host ::ng-deep .afro-popup-flag {
+  width: 80px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+:host ::ng-deep .afro-popup-body {
+  text-align: center;
+  width: 100%;
+}
+
+:host ::ng-deep .afro-popup-name {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFD700;
+  line-height: 1.2;
+}
+
+:host ::ng-deep .afro-popup-sub {
+  margin: 2px 0;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.7);
+}
+
+:host ::ng-deep .afro-popup-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #FFD700, #ffb84d);
+  color: #1a1f2e;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-top: 2px;
+  &:hover { opacity: 0.88; }
+}
+
+/* ── Légende ────────────────────────────────────────────────────────────── */
+:host ::ng-deep .afro-legend {
+  background: rgba(26, 31, 46, 0.92) !important;
+  padding: 10px 14px !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.4) !important;
+  color: #fff !important;
+
+  strong {
+    display: block;
+    font-size: 0.8rem;
+    color: #FFD700;
+    margin-bottom: 7px;
+    letter-spacing: 0.5px;
+  }
+}
+
+:host ::ng-deep .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.85);
+  margin: 4px 0;
+  white-space: nowrap;
+
+  i {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    opacity: 0.85;
+    flex-shrink: 0;
+  }
+}
+
+/* ── Point de géolocalisation ───────────────────────────────────────────── */
+:host ::ng-deep .user-location-dot {
+  width: 18px;
+  height: 18px;
+  background: #4285F4;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.3);
+  animation: pulse-location 2s infinite;
+}
+
+@keyframes pulse-location {
+  0%   { box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.3); }
+  50%  { box-shadow: 0 0 0 8px rgba(66, 133, 244, 0.1); }
+  100% { box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.3); }
+}

@@ -1,8 +1,10 @@
-// ─── AFRO_LAND — FavorisPage (refactorisé) ──────────────────────────────────
-// Étape 6 : ionViewWillEnter + FavorisService (Capacitor Preferences)
+// ─── AFRO_LAND — FavorisPage ──────────────────────────────────────────────────
+// Partie 2 : ionViewWillEnter + FavorisService + bouton "Tout effacer" avec
+//            confirmation AlertController + animation par index
 // ─────────────────────────────────────────────────────────────────────────────
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 import { FavorisService } from '../services/favoris.service';
 import { FavoriItem } from '../models/pays.model';
 
@@ -15,11 +17,12 @@ import { FavoriItem } from '../models/pays.model';
 export class FavorisPage {
 
   paysFavoris: FavoriItem[] = [];
-  chargement: boolean = false;
+  chargement  = false;
 
   constructor(
     private favorisService: FavorisService,
-    private router: Router
+    private router: Router,
+    private alertCtrl: AlertController
   ) {}
 
   /**
@@ -31,15 +34,37 @@ export class FavorisPage {
   }
 
   async chargerFavoris() {
-    this.chargement = true;
+    this.chargement  = true;
     this.paysFavoris = await this.favorisService.getFavoris();
-    this.chargement = false;
+    this.chargement  = false;
   }
 
   async supprimerFavori(paysId: string) {
     await this.favorisService.supprimerFavori(paysId);
-    // Rafraîchir la liste localement sans recharger tout
+    // Mise à jour locale immédiate (sans rechargement complet)
     this.paysFavoris = this.paysFavoris.filter(p => p.id !== paysId);
+  }
+
+  /** Confirmation puis suppression de tous les favoris */
+  async toutEffacer() {
+    const alert = await this.alertCtrl.create({
+      header  : 'Effacer les favoris',
+      message : 'Supprimer les <strong>' + this.paysFavoris.length + '</strong> pays de ta liste de favoris ?',
+      buttons : [
+        { text: 'Annuler', role: 'cancel' },
+        {
+          text    : 'Tout effacer',
+          role    : 'destructive',
+          cssClass: 'alert-btn-danger',
+          handler : async () => {
+            await this.favorisService.toutEffacer();
+            this.paysFavoris = [];
+          }
+        }
+      ],
+      cssClass: 'afro-alert'
+    });
+    await alert.present();
   }
 
   ouvrirPays(paysId: string) {

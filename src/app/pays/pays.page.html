@@ -1,19 +1,27 @@
+<!-- ── AFRO_LAND — Pays Page ──────────────────────────────────────────────── -->
+<!-- Partie 1 : Skeletons complets + navigation région précédent/suivant       -->
+<!-- Partie 2 : FavorisService branché (bouton cœur)                           -->
+<!-- ─────────────────────────────────────────────────────────────────────────── -->
+
 <ion-header class="ion-no-border">
   <ion-toolbar class="header-toolbar">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/afrique" class="back-button"></ion-back-button>
     </ion-buttons>
+
     <ion-title>
-      <span *ngIf="pays"> {{ pays.name }}</span>
+      <span *ngIf="pays">{{ pays.name }}</span>
       <span *ngIf="!pays && !chargement">Détails du Pays</span>
-      <ion-skeleton-text *ngIf="chargement" animated style="width: 150px; height: 20px;"></ion-skeleton-text>
+      <ion-skeleton-text *ngIf="chargement" animated style="width:150px;height:20px;border-radius:6px;display:inline-block;vertical-align:middle;"></ion-skeleton-text>
     </ion-title>
+
     <ion-buttons slot="end">
-      <ion-button (click)="partager()" [disabled]="!pays">
+      <ion-button (click)="partager()" [disabled]="!pays" aria-label="Partager">
         <ion-icon slot="icon-only" name="share-social-outline"></ion-icon>
       </ion-button>
-      <ion-button (click)="ajouterFavoris()" [disabled]="!pays">
-        <ion-icon slot="icon-only" [name]="isFavoris ? 'heart' : 'heart-outline'"
+      <ion-button (click)="ajouterFavoris()" [disabled]="!pays" aria-label="Favori">
+        <ion-icon slot="icon-only"
+          [name]="isFavoris ? 'heart' : 'heart-outline'"
           [color]="isFavoris ? 'danger' : 'medium'">
         </ion-icon>
       </ion-button>
@@ -23,20 +31,65 @@
 
 <ion-content>
 
-  <!-- État de chargement -->
-  <div *ngIf="chargement" class="container-chargement ion-padding">
-    <ion-spinner name="crescent" color="primary"></ion-spinner>
-    <p>Exploration des données...</p>
+  <!-- ════════════════════════════════════════════════════════════════════════
+       SKELETONS — affichés pendant le chargement
+       ════════════════════════════════════════════════════════════════════════ -->
+  <div *ngIf="chargement" class="skeleton-wrapper">
+
+    <!-- Bannière skeleton -->
+    <div class="skeleton-banniere">
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </div>
+
+    <!-- Barre stats skeleton -->
+    <div class="barre-stats">
+      <div class="stat-item" *ngFor="let i of [1,2,3]">
+        <ion-skeleton-text animated style="width:24px;height:24px;border-radius:50%;margin:0 auto 6px;"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width:60px;height:10px;border-radius:4px;margin:0 auto 4px;"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width:80px;height:14px;border-radius:4px;margin:0 auto;"></ion-skeleton-text>
+      </div>
+    </div>
+
+    <!-- Cards skeleton -->
+    <div class="ion-padding" style="max-width:900px;margin:0 auto;">
+      <ion-skeleton-text animated style="width:160px;height:36px;border-radius:18px;margin-bottom:20px;"></ion-skeleton-text>
+      <ion-grid class="ion-no-padding">
+        <ion-row>
+          <ion-col size="12" size-md="6" *ngFor="let i of [1,2,3,4]">
+            <ion-card class="info-card">
+              <ion-item lines="none">
+                <ion-skeleton-text animated slot="start" style="width:28px;height:28px;border-radius:50%;"></ion-skeleton-text>
+                <ion-label>
+                  <ion-skeleton-text animated style="width:55%;height:14px;border-radius:4px;margin-bottom:8px;"></ion-skeleton-text>
+                  <ion-skeleton-text animated style="width:80%;height:12px;border-radius:4px;"></ion-skeleton-text>
+                </ion-label>
+              </ion-item>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
   </div>
 
-  <!-- Contenu principal -->
+  <!-- ════════════════════════════════════════════════════════════════════════
+       CONTENU PRINCIPAL
+       ════════════════════════════════════════════════════════════════════════ -->
   <div *ngIf="!chargement && pays" class="animate__animated animate__fadeIn">
 
-    <!-- Bannière avec image principale -->
+    <!-- Bannière hero -->
     <div class="banniere-hero" (click)="openImage(getImagePrincipale())">
       <div class="image-wrapper">
-        <img [src]="getImagePrincipale()" [alt]="pays.name" class="image-banniere" />
+        <img
+          [src]="getImagePrincipale()"
+          [alt]="pays.name"
+          class="image-banniere"
+          (error)="onErreurBanniere()" />
         <div class="overlay-gradient"></div>
+        <!-- Badge fallback drapeau -->
+        <div *ngIf="erreurBanniere" class="banniere-fallback-badge">
+          <ion-icon name="image-outline"></ion-icon>
+          <span>Photo bientôt disponible</span>
+        </div>
       </div>
       <div class="info-hero">
         <div class="tag-region">{{ pays.region }}</div>
@@ -45,7 +98,33 @@
       </div>
     </div>
 
-    <!-- Barre de statistiques rapides -->
+    <!-- ── Navigation région (précédent / position / suivant) ───────────── -->
+    <div class="navigation-region" *ngIf="paysRegion.length > 1">
+      <button
+        class="nav-btn nav-btn--prev"
+        [disabled]="!paysPrec"
+        (click)="paysPrec && allerAuPays(paysPrec.id)"
+        [attr.aria-label]="paysPrec ? 'Pays précédent : ' + paysPrec.pays.name : 'Premier pays'">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+        <span class="nav-nom" *ngIf="paysPrec">{{ paysPrec.pays.name }}</span>
+      </button>
+
+      <div class="nav-position">
+        <img *ngIf="pays.flag" [src]="pays.flag" [alt]="pays.name" class="nav-drapeau" />
+        <span class="nav-label">{{ paysRegionLabel }}</span>
+      </div>
+
+      <button
+        class="nav-btn nav-btn--next"
+        [disabled]="!paysSuiv"
+        (click)="paysSuiv && allerAuPays(paysSuiv.id)"
+        [attr.aria-label]="paysSuiv ? 'Pays suivant : ' + paysSuiv.pays.name : 'Dernier pays'">
+        <span class="nav-nom" *ngIf="paysSuiv">{{ paysSuiv.pays.name }}</span>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </button>
+    </div>
+
+    <!-- Barre stats rapides -->
     <div class="barre-stats">
       <div class="stat-item">
         <ion-icon name="business"></ion-icon>
@@ -62,42 +141,34 @@
         <div class="stat-label">Monnaie</div>
         <div class="stat-value">{{ pays.currency || '---' }}</div>
       </div>
+      <div class="stat-item" *ngIf="pays.superficie">
+        <ion-icon name="earth"></ion-icon>
+        <div class="stat-label">Superficie</div>
+        <div class="stat-value">{{ pays.superficie | number:'1.0-0' }} km²</div>
+      </div>
     </div>
 
     <div class="ion-padding responsive-container">
-      
-      <!-- Navigation par segments -->
+
+      <!-- Navigation segments -->
       <ion-segment scrollable value="general" (ionChange)="onSegmentChange($event)" class="navigation-segments">
-        <ion-segment-button value="general">
-          <ion-label>Général</ion-label>
-        </ion-segment-button>
-        <ion-segment-button value="geographie">
-          <ion-label>Géo</ion-label>
-        </ion-segment-button>
-        <ion-segment-button value="culture">
-          <ion-label>Culture</ion-label>
-        </ion-segment-button>
-        <ion-segment-button value="histoire">
-          <ion-label>Histoire</ion-label>
-        </ion-segment-button>
-        <ion-segment-button value="economie">
-          <ion-label>Éco</ion-label>
-        </ion-segment-button>
-        <ion-segment-button value="tourisme">
-          <ion-label>Sites</ion-label>
-        </ion-segment-button>
+        <ion-segment-button value="general"><ion-label>Général</ion-label></ion-segment-button>
+        <ion-segment-button value="geographie"><ion-label>Géo</ion-label></ion-segment-button>
+        <ion-segment-button value="culture"><ion-label>Culture</ion-label></ion-segment-button>
+        <ion-segment-button value="histoire"><ion-label>Histoire</ion-label></ion-segment-button>
+        <ion-segment-button value="economie"><ion-label>Éco</ion-label></ion-segment-button>
+        <ion-segment-button value="tourisme"><ion-label>Sites</ion-label></ion-segment-button>
       </ion-segment>
 
-      <!-- Informations détaillées -->
       <div class="sections-container">
-        
+
         <!-- SECTION GÉNÉRALE -->
         <section id="general" class="section-pays" [class.active]="activeSegment === 'general'">
           <div class="section-header">
             <ion-icon name="information-circle"></ion-icon>
             <h2>Informations Générales</h2>
           </div>
-          
+
           <ion-grid class="ion-no-padding">
             <ion-row>
               <ion-col size="12" size-md="6">
@@ -114,21 +185,21 @@
               <ion-col size="12" size-md="6">
                 <ion-card class="info-card">
                   <ion-item lines="none">
-                    <ion-icon name="earth" slot="start" color="primary"></ion-icon>
-                    <ion-label>
-                      <h3>Superficie</h3>
-                      <p>{{ pays.area || 'Non spécifié' }}</p>
-                    </ion-label>
-                  </ion-item>
-                </ion-card>
-              </ion-col>
-              <ion-col size="12" size-md="6">
-                <ion-card class="info-card">
-                  <ion-item lines="none">
                     <ion-icon name="calendar" slot="start" color="primary"></ion-icon>
                     <ion-label>
                       <h3>Indépendance</h3>
                       <p>{{ pays.history.independence || 'Non spécifié' }}</p>
+                    </ion-label>
+                  </ion-item>
+                </ion-card>
+              </ion-col>
+              <ion-col size="12" size-md="6" *ngIf="pays.religion">
+                <ion-card class="info-card">
+                  <ion-item lines="none">
+                    <ion-icon name="star-outline" slot="start" color="primary"></ion-icon>
+                    <ion-label>
+                      <h3>Religion principale</h3>
+                      <p>{{ pays.religion }}</p>
                     </ion-label>
                   </ion-item>
                 </ion-card>
@@ -144,6 +215,28 @@
                   </ion-item>
                 </ion-card>
               </ion-col>
+              <ion-col size="12" size-md="6" *ngIf="pays.pib">
+                <ion-card class="info-card">
+                  <ion-item lines="none">
+                    <ion-icon name="trending-up" slot="start" color="primary"></ion-icon>
+                    <ion-label>
+                      <h3>PIB</h3>
+                      <p>{{ pays.pib }} Mds USD</p>
+                    </ion-label>
+                  </ion-item>
+                </ion-card>
+              </ion-col>
+              <ion-col size="12" size-md="6" *ngIf="pays.hdi">
+                <ion-card class="info-card">
+                  <ion-item lines="none">
+                    <ion-icon name="stats-chart" slot="start" color="primary"></ion-icon>
+                    <ion-label>
+                      <h3>IDH</h3>
+                      <p>{{ pays.hdi }}</p>
+                    </ion-label>
+                  </ion-item>
+                </ion-card>
+              </ion-col>
               <ion-col size="12" *ngIf="pays.timezone">
                 <ion-card class="info-card">
                   <ion-item lines="none">
@@ -151,6 +244,18 @@
                     <ion-label>
                       <h3>Fuseau horaire</h3>
                       <p>{{ pays.timezone }}</p>
+                    </ion-label>
+                  </ion-item>
+                </ion-card>
+              </ion-col>
+              <!-- Lien Wikipedia -->
+              <ion-col size="12" *ngIf="pays.wikipedia">
+                <ion-card class="info-card">
+                  <ion-item lines="none" [href]="pays.wikipedia" target="_blank" detail>
+                    <ion-icon name="book-outline" slot="start" color="primary"></ion-icon>
+                    <ion-label>
+                      <h3>En savoir plus</h3>
+                      <p>Consulter la page Wikipédia</p>
                     </ion-label>
                   </ion-item>
                 </ion-card>
@@ -165,20 +270,17 @@
             <ion-icon name="map"></ion-icon>
             <h2>Géographie</h2>
           </div>
-          
           <ion-card class="detail-card">
             <ion-card-content>
               <div class="detail-item" *ngIf="pays.geography.position">
                 <label>Position géographique</label>
                 <p>{{ pays.geography.position }}</p>
               </div>
-              
               <div class="detail-item" *ngIf="pays.geography.climate">
                 <label>Climat</label>
                 <p>{{ pays.geography.climate }}</p>
               </div>
-
-              <div class="detail-item" *ngIf="pays.geography.neighbors">
+              <div class="detail-item" *ngIf="pays.geography.neighbors?.length">
                 <label>Pays frontaliers</label>
                 <div class="chips-container">
                   <ion-chip *ngFor="let voisin of pays.geography.neighbors">
@@ -186,7 +288,6 @@
                   </ion-chip>
                 </div>
               </div>
-
               <div class="grid-details">
                 <div class="grid-item" *ngIf="pays.geography.highestPoint">
                   <label>Point culminant</label>
@@ -207,10 +308,9 @@
             <ion-icon name="color-palette"></ion-icon>
             <h2>Culture & Traditions</h2>
           </div>
-
           <ion-card class="detail-card">
             <ion-card-content>
-              <div class="detail-item" *ngIf="pays.culture.cuisine">
+              <div class="detail-item" *ngIf="pays.culture.cuisine?.length">
                 <label>Spécialités culinaires</label>
                 <div class="chips-container">
                   <ion-chip *ngFor="let plat of pays.culture.cuisine" color="warning" outline>
@@ -219,15 +319,13 @@
                   </ion-chip>
                 </div>
               </div>
-
-              <div class="detail-item" *ngIf="pays.culture.religions">
+              <div class="detail-item" *ngIf="pays.culture.religions?.length">
                 <label>Religions</label>
-                <p>{{ pays.culture.religions.join(', ') }}</p>
+                <p>{{ pays.culture.religions!.join(', ') }}</p>
               </div>
-
-              <div class="detail-item" *ngIf="pays.culture.arts || pays.culture.music">
+              <div class="detail-item" *ngIf="(pays.culture.arts?.length || pays.culture.music?.length)">
                 <label>Patrimoine immatériel</label>
-                <p>{{ (pays.culture.arts || []).concat(pays.culture.music || []).join(', ') }}</p>
+                <p>{{ ((pays.culture.arts || []).concat(pays.culture.music || [])).join(', ') }}</p>
               </div>
             </ion-card-content>
           </ion-card>
@@ -239,7 +337,6 @@
             <ion-icon name="receipt"></ion-icon>
             <h2>Histoire</h2>
           </div>
-
           <div class="timeline">
             <div class="timeline-item" *ngIf="pays.history?.precolonial">
               <div class="timeline-dot"></div>
@@ -248,7 +345,6 @@
                 <p>{{ pays.history.precolonial }}</p>
               </div>
             </div>
-            
             <div class="timeline-item" *ngIf="pays.history?.colonial">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
@@ -256,7 +352,6 @@
                 <p>{{ pays.history.colonial }}</p>
               </div>
             </div>
-
             <div class="timeline-item highlight" *ngIf="pays.history?.independence">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
@@ -264,8 +359,7 @@
                 <p>{{ pays.history.independence }}</p>
               </div>
             </div>
-
-            <div class="timeline-item" *ngIf="pays.history?.historicalFigures">
+            <div class="timeline-item" *ngIf="pays.history?.historicalFigures?.length">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
                 <h3>Figures Historiques</h3>
@@ -281,10 +375,9 @@
             <ion-icon name="trending-up"></ion-icon>
             <h2>Économie</h2>
           </div>
-
           <ion-card class="detail-card">
             <ion-card-content>
-              <div class="detail-item" *ngIf="pays.economy.mainSectors">
+              <div class="detail-item" *ngIf="pays.economy.mainSectors?.length">
                 <label>Secteurs clés</label>
                 <div class="chips-container">
                   <ion-chip *ngFor="let secteur of pays.economy.mainSectors" color="secondary">
@@ -292,8 +385,7 @@
                   </ion-chip>
                 </div>
               </div>
-
-              <div class="detail-item" *ngIf="pays.economy.exports">
+              <div class="detail-item" *ngIf="pays.economy.exports?.length">
                 <label>Exportations majeures</label>
                 <p>{{ pays.economy.exports.join(', ') }}</p>
               </div>
@@ -302,16 +394,18 @@
         </section>
 
         <!-- TOURISME -->
-        <section id="tourisme" class="section-pays" *ngIf="pays.highlights" [class.active]="activeSegment === 'tourisme'">
+        <section id="tourisme" class="section-pays" *ngIf="pays.highlights?.length" [class.active]="activeSegment === 'tourisme'">
           <div class="section-header">
             <ion-icon name="camera"></ion-icon>
             <h2>Sites Touristiques</h2>
           </div>
-
           <div class="highlights-grid">
-            <div class="highlight-item" *ngFor="let site of pays.highlights; let i = index" (click)="openImage(getImageSite(i))">
+            <div class="highlight-item"
+              *ngFor="let site of pays.highlights; let i = index"
+              (click)="openImage(getImageSite(i))">
               <div class="highlight-img-container">
-                <img [src]="getImageSite(i)" [alt]="getTitreSite(site)" />
+                <img [src]="getImageSite(i)" [alt]="getTitreSite(site)"
+                     (error)="$any($event.target).src='assets/images/afrique-1024x685-1.jpg'" />
               </div>
               <div class="highlight-info">
                 <h3>{{ getTitreSite(site) }}</h3>
@@ -325,7 +419,7 @@
     </div>
   </div>
 
-  <!-- Visionneuse d'image plein écran -->
+  <!-- ── Visionneuse plein écran ────────────────────────────────────────── -->
   <ion-modal [isOpen]="isImageModalOpen" (didDismiss)="isImageModalOpen = false" class="image-viewer-modal">
     <ng-template>
       <div class="fullscreen-image-container" (click)="closeImage()">
@@ -337,7 +431,7 @@
     </ng-template>
   </ion-modal>
 
-  <!-- Erreur si pays non trouvé -->
+  <!-- ── Pays non trouvé ─────────────────────────────────────────────────── -->
   <div *ngIf="!chargement && !pays" class="container-erreur ion-padding ion-text-center">
     <ion-icon name="alert-circle-outline" size="large" color="danger"></ion-icon>
     <h2>Oups !</h2>

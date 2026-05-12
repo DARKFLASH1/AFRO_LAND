@@ -280,3 +280,17 @@ ion-content::-webkit-scrollbar       { width: 8px; }
 ion-content::-webkit-scrollbar-track { background: rgba(26, 31, 46, 0.8); border-radius: 4px; }
 ion-content::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ffc97b 0%, #ffb563 100%); border-radius: 4px; }
 ion-content::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #ffb563 0%, #ff9f4a 100%); }
+
+/* ── Alert "Tout effacer" ─────────────────────────────────────────────────── */
+/* Ces styles sont globaux (sur :root / ion-app) — à ajouter aussi
+   dans global.scss si l'alert ne s'affiche que dans d'autres contextes.      */
+.afro-alert {
+  --background: #1e2535;
+  --backdrop-opacity: 0.7;
+
+  .alert-title   { color: #ffc97b !important; font-weight: 700 !important; }
+  .alert-message { color: rgba(238,238,238,0.85) !important; }
+
+  .alert-button  { color: rgba(238,238,238,0.7) !important; }
+  .alert-btn-danger { color: #ff4444 !important; font-weight: 700 !important; }
+}
